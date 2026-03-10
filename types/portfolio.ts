@@ -1,0 +1,168 @@
+export type Locale = "pt" | "en";
+
+export interface LabelValue {
+  value: string;
+  labelPt: string;
+  labelEn: string;
+}
+
+export interface LocalizedText {
+  pt: string;
+  en: string;
+}
+
+export interface LanguageItem {
+  namePt: string;
+  nameEn: string;
+  levelPt: string;
+  levelEn: string;
+}
+
+export interface ExperienceItem {
+  company: string;
+  rolePt: string;
+  roleEn: string;
+  periodPt: string;
+  periodEn: string;
+  location: string;
+  bulletsPt: string[];
+  bulletsEn: string[];
+}
+
+export interface ProjectItem {
+  slug: string;
+  name: string;
+  categoryPt: string;
+  categoryEn: string;
+  rolePt: string;
+  roleEn: string;
+  periodPt: string;
+  periodEn: string;
+  summaryPt: string;
+  summaryEn: string;
+  highlightsPt: string[];
+  highlightsEn: string[];
+  stack: string[];
+  featured?: boolean;
+  link?: string;
+}
+
+export interface DeploymentItem {
+  slug: string;
+  namePt: string;
+  nameEn: string;
+  rolePt: string;
+  roleEn: string;
+  clients: string[];
+  summaryPt: string;
+  summaryEn: string;
+  bulletsPt: string[];
+  bulletsEn: string[];
+  stack: string[];
+}
+
+export interface SkillGroup {
+  namePt: string;
+  nameEn: string;
+  items: string[];
+}
+
+export interface EducationItem {
+  degreePt: string;
+  degreeEn: string;
+  institution: string;
+}
+
+export interface NavigationItem {
+  label: string;
+  href: string;
+}
+
+export interface PortfolioData {
+  personal: {
+    name: string;
+    headlinePt: string;
+    headlineEn: string;
+    summaryPt: string;
+    summaryEn: string;
+    location: string;
+    languages: LanguageItem[];
+    email: string;
+    phone: string;
+    github: string;
+    linkedin: string;
+    website: string;
+    heroTagsPt: string[];
+    heroTagsEn: string[];
+  };
+  metrics: LabelValue[];
+  competencies: {
+    titlePt: string;
+    titleEn: string;
+    items: LocalizedText[];
+  };
+  about: {
+    titlePt: string;
+    titleEn: string;
+    bodyPt: string[];
+    bodyEn: string[];
+  };
+  experience: {
+    titlePt: string;
+    titleEn: string;
+    items: ExperienceItem[];
+  };
+  featuredProjects: {
+    titlePt: string;
+    titleEn: string;
+    items: ProjectItem[];
+  };
+  freelanceDeployments: {
+    titlePt: string;
+    titleEn: string;
+    items: DeploymentItem[];
+  };
+  otherProducts: {
+    titlePt: string;
+    titleEn: string;
+    items: {
+      name: string;
+      typePt: string;
+      typeEn: string;
+      shortPt: string;
+      shortEn: string;
+    }[];
+  };
+  skills: {
+    titlePt: string;
+    titleEn: string;
+    groups: SkillGroup[];
+  };
+  leadership: {
+    titlePt: string;
+    titleEn: string;
+    introPt: string;
+    introEn: string;
+    strengths: string[];
+  };
+  education: {
+    titlePt: string;
+    titleEn: string;
+    items: EducationItem[];
+  };
+  additionalInfo: {
+    titlePt: string;
+    titleEn: string;
+    itemsPt: string[];
+    itemsEn: string[];
+  };
+  navigation: {
+    pt: NavigationItem[];
+    en: NavigationItem[];
+  };
+  seo: {
+    title: string;
+    description: string;
+    keywords: string[];
+  };
+}
