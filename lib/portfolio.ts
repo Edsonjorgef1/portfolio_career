@@ -47,12 +47,26 @@ export function assetExists(...segments: string[]) {
   return existsSync(path.join(process.cwd(), "public", ...segments));
 }
 
+function resolveAssetPath(folder: string, baseName: string) {
+  const jpgFile = `${baseName}.jpg`;
+  if (assetExists(folder, jpgFile)) {
+    return `/${folder}/${jpgFile}`;
+  }
+
+  const svgFile = `${baseName}.svg`;
+  if (assetExists(folder, svgFile)) {
+    return `/${folder}/${svgFile}`;
+  }
+
+  return null;
+}
+
 export function getProfileImage() {
-  return assetExists("profile", "profile.jpg") ? "/profile/profile.jpg" : null;
+  return resolveAssetPath("profile", "profile");
 }
 
 export function getProjectImage(slug: string) {
-  return assetExists("projects", `${slug}.jpg`) ? `/projects/${slug}.jpg` : null;
+  return resolveAssetPath("projects", slug);
 }
 
 export function getCvFile() {
