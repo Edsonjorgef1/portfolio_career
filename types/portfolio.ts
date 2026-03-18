@@ -45,6 +45,9 @@ export interface ProjectItem {
   stack: string[];
   featured?: boolean;
   link?: string;
+  donors?: string;
+  videoUrl?: string;
+  images?: string[];
 }
 
 export interface DeploymentItem {
@@ -92,6 +95,7 @@ export interface PortfolioData {
     github: string;
     linkedin: string;
     website: string;
+    wakatime?: string;
     heroTagsPt: string[];
     heroTagsEn: string[];
   };

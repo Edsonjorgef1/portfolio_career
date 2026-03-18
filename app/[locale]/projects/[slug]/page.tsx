@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Users } from "lucide-react";
 import { notFound } from "next/navigation";
 
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
@@ -81,6 +81,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
     impact: typedLocale === "pt" ? "Impacto" : "Impact",
     highlights: typedLocale === "pt" ? "Destaques" : "Highlights",
     liveProject: typedLocale === "pt" ? "Projecto online" : "Live project",
+    fundedBy: typedLocale === "pt" ? "Financiado por / Parceiros" : "Funded by / Partners",
   };
 
   return (
@@ -111,6 +112,14 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
               <Badge>{content.role}</Badge>
               <Badge>{content.period}</Badge>
             </div>
+            {content.donors && (
+              <div className="inline-flex items-center gap-2 rounded-xl border border-accent/20 bg-accent/5 px-4 py-2.5">
+                <Users className="h-4 w-4 text-accent shrink-0" />
+                <span className="text-sm text-accent/90">
+                  <span className="font-semibold">{labels.fundedBy}:</span> {content.donors}
+                </span>
+              </div>
+            )}
             {content.externalLink ? (
               <Button asChild>
                 <Link href={content.externalLink} target="_blank" rel="noreferrer">

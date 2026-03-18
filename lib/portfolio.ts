@@ -91,6 +91,7 @@ export function getCaseStudyContent(source: CaseStudySource, locale: Locale) {
       highlights,
       technologies: item.stack,
       externalLink: item.link,
+      donors: item.donors,
       sections: {
         context:
           locale === "pt"
@@ -127,6 +128,7 @@ export function getCaseStudyContent(source: CaseStudySource, locale: Locale) {
     highlights: bullets,
     technologies: item.stack,
     externalLink: undefined,
+    donors: undefined,
     sections: {
       context:
         locale === "pt"

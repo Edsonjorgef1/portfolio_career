@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Download, Github, Globe, Linkedin, Mail, MapPin } from "lucide-react";
+import { Download, Github, Globe, BarChart2, Linkedin, Mail, MapPin } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -79,8 +79,14 @@ export function HeroSection({ locale, data }: { locale: Locale; data: PortfolioD
             </div>
             <Link href={data.personal.website} target="_blank" className="inline-flex items-center gap-2 transition hover:text-white">
               <Globe className="h-4 w-4 text-primary" />
-              Website
+              {locale === "pt" ? "Currículo Digital" : "Digital Résumé"}
             </Link>
+            {data.personal.wakatime && (
+              <Link href={data.personal.wakatime} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-white">
+                <BarChart2 className="h-4 w-4 text-primary" />
+                {locale === "pt" ? "Métricas de Dev" : "Dev Metrics"}
+              </Link>
+            )}
           </div>
         </Reveal>
 
