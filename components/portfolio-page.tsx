@@ -2,6 +2,8 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { AboutSection } from "@/components/sections/about-section";
 import { AdditionalInfoSection } from "@/components/sections/additional-info-section";
+import { AwardsSection } from "@/components/sections/awards-section";
+import { CertificationsSection } from "@/components/sections/certifications-section";
 import { CompetenciesSection } from "@/components/sections/competencies-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { DeploymentsSection } from "@/components/sections/deployments-section";
@@ -27,12 +29,14 @@ export function PortfolioPage({ locale }: { locale: Locale }) {
         <AboutSection locale={locale} data={portfolioData} />
         <CompetenciesSection locale={locale} data={portfolioData} />
         <ExperienceSection locale={locale} data={portfolioData} />
+        <AwardsSection locale={locale} data={portfolioData} />
         <ProjectsSection locale={locale} data={portfolioData} />
         <DeploymentsSection locale={locale} data={portfolioData} />
         <OtherProductsSection locale={locale} data={portfolioData} />
         <SkillsSection locale={locale} data={portfolioData} />
         <LeadershipSection locale={locale} data={portfolioData} />
         <EducationSection locale={locale} data={portfolioData} />
+        <CertificationsSection locale={locale} data={portfolioData} />
         <AdditionalInfoSection locale={locale} data={portfolioData} />
         <ContactSection locale={locale} data={portfolioData} />
       </main>

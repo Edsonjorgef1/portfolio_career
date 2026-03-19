@@ -187,6 +187,16 @@ export interface PortfolioData {
     itemsPt: string[];
     itemsEn: string[];
   };
+  certifications: {
+    titlePt: string;
+    titleEn: string;
+    groups: CertificationGroup[];
+  };
+  awards: {
+    titlePt: string;
+    titleEn: string;
+    items: AwardItem[];
+  };
   navigation: {
     pt: NavigationItem[];
     en: NavigationItem[];
