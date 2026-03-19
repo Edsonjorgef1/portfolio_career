@@ -76,6 +76,33 @@ export interface EducationItem {
   institution: string;
 }
 
+export interface CertificationItem {
+  name: string;
+  issuer: string;
+  issuedPt: string;
+  issuedEn: string;
+  credentialId?: string;
+  skills?: string[];
+}
+
+export interface CertificationGroup {
+  namePt: string;
+  nameEn: string;
+  items: CertificationItem[];
+}
+
+export interface AwardItem {
+  titlePt: string;
+  titleEn: string;
+  issuer: string;
+  datePt: string;
+  dateEn: string;
+  placePt: string;
+  placeEn: string;
+  descriptionPt: string;
+  descriptionEn: string;
+}
+
 export interface NavigationItem {
   label: string;
   href: string;
