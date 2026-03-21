@@ -52,7 +52,7 @@ export const portfolioData: PortfolioData = {
       labelEn: "Operational service availability",
     },
     {
-      value: "10+",
+      value: "14+",
       labelPt: "Projectos e consultorias relevantes em destaque",
       labelEn: "Major highlighted projects and consultancies",
     },
