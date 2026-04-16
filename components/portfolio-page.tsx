@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from 'framer-motion';
+import { ParticlesCanvas } from "@/components/particles-canvas";
+
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { AboutSection } from "@/components/sections/about-section";
@@ -25,16 +30,27 @@ export function PortfolioPage({ locale }: { locale: Locale }) {
   return (
     <>
       <SiteHeader locale={locale} navigation={getNavigation(locale)} name={portfolioData.personal.name} />
-      <main>
+      <main className="parallax-container relative z-10">
         <HeroSection locale={locale} data={portfolioData} />
         <ExpertiseAreasSection locale={locale} data={portfolioData} />
         <MetricsSection locale={locale} data={portfolioData} />
         <DifferentiatorsSection locale={locale} data={portfolioData} />
         <AboutSection locale={locale} data={portfolioData} />
         <CompetenciesSection locale={locale} data={portfolioData} />
-        <ExperienceSection locale={locale} data={portfolioData} />
+        <motion.section 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="parallax-bg bg-gradient-to-b from-black/50 to-transparent"
+        >
+          <ExperienceSection locale={locale} data={portfolioData} />
+        </motion.section>
         <AwardsSection locale={locale} data={portfolioData} />
-        <ProjectsSection locale={locale} data={portfolioData} />
+        <motion.section 
+          className="parallax-bg bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"
+        >
+          <ProjectsSection locale={locale} data={portfolioData} />
+        </motion.section>
         <DeploymentsSection locale={locale} data={portfolioData} />
         <OtherProductsSection locale={locale} data={portfolioData} />
         <SkillsSection locale={locale} data={portfolioData} />

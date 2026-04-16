@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Reveal } from "@/components/ui/reveal";
+import { ParticlesCanvas } from "@/components/particles-canvas";
+import { ThreeDOrb } from "@/components/3d-orb";
 import { getCvFile, getLocalizedValue, getProfileImage } from "@/lib/portfolio";
 import type { Locale, PortfolioData } from "@/types/portfolio";
 
@@ -24,7 +26,7 @@ export function HeroSection({ locale, data }: { locale: Locale; data: PortfolioD
               {locale === "pt" ? "Posicionamento Executivo" : "Executive Positioning"}
             </Badge>
             <div className="space-y-4">
-              <h1 className="font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+<h1 className="font-display bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-5xl font-black tracking-tight text-transparent drop-shadow-2xl lg:text-7xl neon-glow sm:text-6xl">
                 {data.personal.name}
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-primary sm:text-xl">{headline}</p>
@@ -90,35 +92,24 @@ export function HeroSection({ locale, data }: { locale: Locale; data: PortfolioD
           </div>
         </Reveal>
 
-        <Reveal delay={0.08}>
-          <GlassCard className="overflow-hidden p-5">
-            <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
-              <div className="relative flex min-h-[420px] items-end overflow-hidden rounded-[1.25rem] bg-hero-grid p-6">
-                {profileImage ? (
-                  <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `linear-gradient(to top, rgba(6, 8, 14, 0.82), rgba(6, 8, 14, 0.24)), url(${profileImage})` }}
-                  />
-                ) : null}
-                <div className="relative z-10 w-full space-y-4">
-                  {!profileImage ? (
-                    <div className="flex h-24 w-24 items-center justify-center rounded-3xl border border-white/10 bg-white/10 font-display text-3xl font-semibold text-white">
-                      EF
-                    </div>
-                  ) : null}
-                  <div className="space-y-2">
-                    <p className="text-xs uppercase tracking-[0.3em] text-primary">
-                      {locale === "pt" ? "Perfil Executivo" : "Executive Profile"}
-                    </p>
-                    <h2 className="font-display text-2xl font-semibold text-white">{data.personal.name}</h2>
-                    <p className="max-w-sm text-sm leading-7 text-muted-foreground">
-                      {locale === "pt"
-                        ? "Liderança tecnológica, execução operacional e transformação digital com foco em impacto sustentável."
-                        : "Technology leadership, operational execution, and digital transformation focused on sustainable impact."}
-                    </p>
-                  </div>
-                </div>
-              </div>
+        <ParticlesCanvas />
+        <Reveal delay={0.2}>
+          <GlassCard neon className="overflow-hidden p-8 mx-auto max-w-md">
+            <ThreeDOrb 
+              image={profileImage} 
+              initials="EF"
+              className="neon-glow"
+            />
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="w-full h-full rounded-[2rem] bg-gradient-to-r from-primary/20 to-accent/20 blur-xl animate-pulse" />
+            </div>
+            <div className="relative z-10 mt-6 text-center">
+              <p className="neon-text text-xs uppercase tracking-[0.3em] mb-2">
+                {locale === "pt" ? "Perfil Executivo" : "Executive Profile"}
+              </p>
+              <h2 className="font-display text-3xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent drop-shadow-2xl">
+                {data.personal.name}
+              </h2>
             </div>
           </GlassCard>
         </Reveal>
