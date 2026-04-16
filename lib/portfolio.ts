@@ -1,6 +1,3 @@
-import { existsSync } from "node:fs";
-import path from "node:path";
-
 import { portfolioData } from "@/lib/portfolioData";
 import type { DeploymentItem, Locale, ProjectItem } from "@/types/portfolio";
 
@@ -43,34 +40,16 @@ export function getAllCaseStudySlugs() {
   ];
 }
 
-export function assetExists(...segments: string[]) {
-  return existsSync(path.join(process.cwd(), "public", ...segments));
+export function getProfileImage(): string | undefined {
+  return '/profile/profile.svg';
 }
 
-function resolveAssetPath(folder: string, baseName: string) {
-  const jpgFile = `${baseName}.jpg`;
-  if (assetExists(folder, jpgFile)) {
-    return `/${folder}/${jpgFile}`;
-  }
-
-  const svgFile = `${baseName}.svg`;
-  if (assetExists(folder, svgFile)) {
-    return `/${folder}/${svgFile}`;
-  }
-
-  return null;
+export function getProjectImage(slug: string): string | undefined {
+  return `/projects/${slug}.svg`;
 }
 
-export function getProfileImage() {
-  return resolveAssetPath("profile", "profile");
-}
-
-export function getProjectImage(slug: string) {
-  return resolveAssetPath("projects", slug);
-}
-
-export function getCvFile() {
-  return assetExists("Edson-Francisco-CV.pdf") ? "/Edson-Francisco-CV.pdf" : null;
+export function getCvFile(): string | undefined {
+  return undefined; // Adicionar CV.pdf quando disponível
 }
 
 export function getCaseStudyContent(source: CaseStudySource, locale: Locale) {
@@ -91,6 +70,7 @@ export function getCaseStudyContent(source: CaseStudySource, locale: Locale) {
       highlights,
       technologies: item.stack,
       externalLink: item.link,
+      donors: item.donors,
       sections: {
         context:
           locale === "pt"
@@ -127,6 +107,7 @@ export function getCaseStudyContent(source: CaseStudySource, locale: Locale) {
     highlights: bullets,
     technologies: item.stack,
     externalLink: undefined,
+    donors: undefined,
     sections: {
       context:
         locale === "pt"
@@ -147,3 +128,4 @@ export function getCaseStudyContent(source: CaseStudySource, locale: Locale) {
     },
   };
 }
+

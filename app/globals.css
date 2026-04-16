@@ -3,19 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: 225 28% 8%;
+  --background: 225 28% 5%;
   --foreground: 210 40% 98%;
-  --card: 224 29% 12%;
+  --card: 224 29% 10%;
   --card-foreground: 210 40% 96%;
-  --border: 220 18% 22%;
-  --muted: 220 18% 16%;
-  --muted-foreground: 215 20% 73%;
-  --primary: 191 97% 77%;
-  --primary-foreground: 222 47% 11%;
-  --accent: 42 72% 62%;
-  --accent-foreground: 222 47% 11%;
-  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
-  --font-display: "Satoshi", "Avenir Next", "Segoe UI", sans-serif;
+  --border: 220 13% 18%;
+  --muted: 220 18% 12%;
+  --muted-foreground: 215 20.8% 65.1%;
+  --primary: 189 100% 71%; /* Neon cyan */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 280 100% 65%; /* Neon purple */
+  --accent: 340 100% 65%; /* Neon pink */
+  --accent-foreground: 0 0% 98%;
+  --neon-glow: 0 0 20px hsl(var(--primary));
+  --font-sans: "Inter var", "Avenir Next", sans-serif;
+  --font-display: "Satoshi", "Inter var", sans-serif;
 }
 
 * {
@@ -27,11 +29,11 @@ html {
 }
 
 body {
-  @apply min-h-screen bg-background font-sans text-foreground antialiased;
-  background-image:
-    radial-gradient(circle at top left, rgba(255, 191, 105, 0.12), transparent 24%),
-    radial-gradient(circle at top right, rgba(88, 166, 255, 0.15), transparent 28%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  @apply min-h-screen bg-background font-sans text-foreground antialiased relative overflow-x-hidden;
+  background: 
+    radial-gradient(circle at 20% 80%, hsl(200 100% 30% / 0.3), transparent 50%),
+    radial-gradient(circle at 80% 20%, hsl(280 100% 25% / 0.2), transparent 50%),
+    radial-gradient(circle at 40% 40%, hsl(340 100% 20% / 0.2), transparent 50%);
 }
 
 ::selection {
@@ -40,8 +42,27 @@ body {
 
 @layer components {
   .glass-panel {
-    @apply border border-white/10 bg-white/5 backdrop-blur-xl;
-    box-shadow: 0 10px 45px rgba(7, 10, 20, 0.35);
+    @apply border border-white/20 bg-white/5 backdrop-blur-2xl;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  .neon-glow {
+    box-shadow: 
+      0 0 5px hsl(var(--primary) / 0.5),
+      0 0 20px hsl(var(--primary) / 0.3),
+      0 0 40px hsl(var(--primary) / 0.1),
+      inset 0 0 10px hsl(var(--primary) / 0.2);
+  }
+
+  .neon-text {
+    @apply bg-gradient-to-r from-[hsl(var(--primary))] via-[hsl(var(--secondary))] to-[hsl(var(--accent))] bg-clip-text text-transparent drop-shadow-lg;
+    filter: drop-shadow(0 0 5px hsl(var(--primary) / 0.5));
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    will-change: transform;
   }
 
   .section-shell {
@@ -49,7 +70,18 @@ body {
   }
 
   .section-spacing {
-    @apply py-16 sm:py-20 lg:py-24;
+    @apply py-20 sm:py-24 lg:py-32;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent, hsl(var(--primary)/0.2), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
   }
 }
 
