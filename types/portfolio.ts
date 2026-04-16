@@ -91,6 +91,22 @@ export interface CertificationGroup {
   items: CertificationItem[];
 }
 
+export interface ExpertiseArea {
+  icon: string;
+  namePt: string;
+  nameEn: string;
+  descriptionPt: string;
+  descriptionEn: string;
+}
+
+export interface Differentiator {
+  icon: string;
+  titlePt: string;
+  titleEn: string;
+  descriptionPt: string;
+  descriptionEn: string;
+}
+
 export interface AwardItem {
   titlePt: string;
   titleEn: string;
@@ -109,6 +125,14 @@ export interface NavigationItem {
 }
 
 export interface PortfolioData {
+  expertiseAreas: ExpertiseArea[];
+  differentiators: {
+    titlePt: string;
+    titleEn: string;
+    quotePt: string;
+    quoteEn: string;
+    items: Differentiator[];
+  };
   personal: {
     name: string;
     headlinePt: string;

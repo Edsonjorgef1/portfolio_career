@@ -7,7 +7,9 @@ import { CertificationsSection } from "@/components/sections/certifications-sect
 import { CompetenciesSection } from "@/components/sections/competencies-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { DeploymentsSection } from "@/components/sections/deployments-section";
+import { DifferentiatorsSection } from "@/components/sections/differentiators-section";
 import { EducationSection } from "@/components/sections/education-section";
+import { ExpertiseAreasSection } from "@/components/sections/expertise-areas-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { LeadershipSection } from "@/components/sections/leadership-section";
@@ -25,7 +27,9 @@ export function PortfolioPage({ locale }: { locale: Locale }) {
       <SiteHeader locale={locale} navigation={getNavigation(locale)} name={portfolioData.personal.name} />
       <main>
         <HeroSection locale={locale} data={portfolioData} />
+        <ExpertiseAreasSection locale={locale} data={portfolioData} />
         <MetricsSection locale={locale} data={portfolioData} />
+        <DifferentiatorsSection locale={locale} data={portfolioData} />
         <AboutSection locale={locale} data={portfolioData} />
         <CompetenciesSection locale={locale} data={portfolioData} />
         <ExperienceSection locale={locale} data={portfolioData} />
