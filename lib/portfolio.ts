@@ -48,16 +48,12 @@ export function assetExists(...segments: string[]) {
 }
 
 function resolveAssetPath(folder: string, baseName: string) {
-  const jpgFile = `${baseName}.jpg`;
-  if (assetExists(folder, jpgFile)) {
-    return `/${folder}/${jpgFile}`;
+  for (const ext of ["jpg", "png", "webp", "svg"]) {
+    const file = `${baseName}.${ext}`;
+    if (assetExists(folder, file)) {
+      return `/${folder}/${file}`;
+    }
   }
-
-  const svgFile = `${baseName}.svg`;
-  if (assetExists(folder, svgFile)) {
-    return `/${folder}/${svgFile}`;
-  }
-
   return null;
 }
 

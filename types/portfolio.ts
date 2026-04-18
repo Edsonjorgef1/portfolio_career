@@ -62,6 +62,7 @@ export interface DeploymentItem {
   bulletsPt: string[];
   bulletsEn: string[];
   stack: string[];
+  images?: string[];
 }
 
 export interface SkillGroup {
