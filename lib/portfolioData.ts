@@ -278,8 +278,8 @@ export const portfolioData: PortfolioData = {
     ],
   },
   featuredProjects: {
-    titlePt: "Projectos e Consultorias Relevantes",
-    titleEn: "Relevant Projects and Consultancies",
+    titlePt: "Projectos em Destaque",
+    titleEn: "Featured Projects",
     items: [
       {
         slug: "vamoz-competir",
@@ -310,6 +310,7 @@ export const portfolioData: PortfolioData = {
           "Adoption support and user training",
         ],
         stack: ["FAMS", "System Configuration", "Training", "Field Support", "Data Structuring"],
+        kind: "consultancy",
         featured: true,
       },
       {
@@ -355,6 +356,7 @@ export const portfolioData: PortfolioData = {
           "/projects/funae-complaints-platform/07.png",
         ],
         featured: true,
+        kind: "project",
       },
       {
         slug: "qr-code-attendance-system",
@@ -392,6 +394,7 @@ export const portfolioData: PortfolioData = {
           "/projects/qr-code-attendance-system/05.png",
         ],
         featured: true,
+        kind: "project",
       },
       {
         slug: "library-access-analytics-system",
@@ -421,7 +424,8 @@ export const portfolioData: PortfolioData = {
           "Contribution to the institutional partnership model 'Friends of the Library'",
         ],
         stack: ["Data Analytics", "Dashboarding", "Reporting", "Database Design", "Scalable Architecture"],
-        featured: true,
+        featured: false,
+        kind: "project",
       },
       {
         slug: "hr-absence-management-absentify",
@@ -451,6 +455,7 @@ export const portfolioData: PortfolioData = {
           "User enablement and organizational adoption support",
         ],
         stack: ["Absentify", "Microsoft Teams", "Workflow Automation", "HR Systems", "Change Management"],
+        kind: "consultancy",
         featured: true,
       },
       {
@@ -482,6 +487,7 @@ export const portfolioData: PortfolioData = {
           "Delivery within defined timelines and budget",
         ],
         stack: ["FAMS", "Laravel", "PHP", "MySQL", "Consulting", "AgriTech", "Delivery Management"],
+        kind: "consultancy",
         featured: true,
       },
       {
@@ -528,6 +534,7 @@ export const portfolioData: PortfolioData = {
           "/projects/fams-core/08.png",
         ],
         featured: true,
+        kind: "project",
         link: "https://fams.co.mz",
       },
       {
@@ -561,7 +568,8 @@ export const portfolioData: PortfolioData = {
           "Co-creation focused on social impact and community process formalization",
         ],
         stack: ["Mobile App", "Web Platform", "Data Management", "Community Tech", "Agile"],
-        featured: true,
+        featured: false,
+        kind: "project",
       },
       {
         slug: "juris-law-and-rights-app",
@@ -604,6 +612,7 @@ export const portfolioData: PortfolioData = {
           "/projects/juris-law-and-rights-app/03.png",
         ],
         featured: true,
+        kind: "project",
         link: "https://juris.co.mz",
       },
       {
@@ -632,7 +641,8 @@ export const portfolioData: PortfolioData = {
           "Contextualized content for Portuguese-speaking Africa",
         ],
         stack: ["Mobile", "Progressive Web App", "SMS", "WhatsApp API", "Content Delivery"],
-        featured: true,
+        featured: false,
+        kind: "project",
       },
       {
         slug: "aidai-emergency-response",
@@ -660,7 +670,8 @@ export const portfolioData: PortfolioData = {
           "Community feedback loops for needs assessment",
         ],
         stack: ["Emergency Communications", "SMS", "Web", "Radio", "Crisis Mapping"],
-        featured: true,
+        featured: false,
+        kind: "project",
       },
       {
         slug: "municipio-do-dondo",
@@ -688,7 +699,8 @@ export const portfolioData: PortfolioData = {
           "Hosting, security, and support managed through 2026",
         ],
         stack: ["WordPress", "Hosting", "Security Monitoring", "Content Governance"],
-        featured: true,
+        featured: false,
+        kind: "project",
         link: "https://www.municipiododondo.gov.mz/",
       },
       {
@@ -733,7 +745,8 @@ export const portfolioData: PortfolioData = {
           "/projects/manna-software/05.png",
           "/projects/manna-software/06.png",
         ],
-        featured: true,
+        featured: false,
+        kind: "project",
       },
       {
         slug: "casa-msika",
@@ -761,7 +774,8 @@ export const portfolioData: PortfolioData = {
           "Performance optimization and local SEO",
         ],
         stack: ["Next.js", "Tailwind CSS", "Form Integrations", "SEO"],
-        featured: true,
+        featured: false,
+        kind: "project",
         link: "https://casamsika.com",
       },
       {
@@ -799,7 +813,8 @@ export const portfolioData: PortfolioData = {
           "/projects/consultare-first-aid-app/01.png",
           "/projects/consultare-first-aid-app/02.png",
         ],
-        featured: true,
+        featured: false,
+        kind: "project",
         link: "https://consultare.app",
       },
       {
@@ -839,6 +854,7 @@ export const portfolioData: PortfolioData = {
           "/projects/doamoz-blood-donation/06.webp",
         ],
         featured: true,
+        kind: "project",
       },
       {
         slug: "frelimo-membership-system",
@@ -877,6 +893,7 @@ export const portfolioData: PortfolioData = {
           "/projects/frelimo-membership-system/06.png",
         ],
         featured: false,
+        kind: "concept",
       },
     ],
   },
@@ -1015,7 +1032,7 @@ export const portfolioData: PortfolioData = {
       { label: "Sobre", href: "#about" },
       { label: "Experiência", href: "#experience" },
       { label: "Projectos", href: "#projects" },
-      { label: "Consultorias", href: "#deployments" },
+      { label: "Consultorias", href: "#consulting" },
       { label: "Competências", href: "#skills" },
       { label: "Certificações", href: "#certifications" },
       { label: "Contacto", href: "#contact" },
@@ -1025,7 +1042,7 @@ export const portfolioData: PortfolioData = {
       { label: "About", href: "#about" },
       { label: "Experience", href: "#experience" },
       { label: "Projects", href: "#projects" },
-      { label: "Consulting", href: "#deployments" },
+      { label: "Consulting", href: "#consulting" },
       { label: "Skills", href: "#skills" },
       { label: "Certifications", href: "#certifications" },
       { label: "Contact", href: "#contact" },

@@ -17,7 +17,23 @@ export function getNavigation(locale: Locale) {
 }
 
 export function getFeaturedProjects() {
-  return portfolioData.featuredProjects.items.filter((item) => item.featured);
+  return portfolioData.featuredProjects.items.filter(
+    (item) => item.featured && (item.kind === "project" || !item.kind),
+  );
+}
+
+export function getConsultancyItems() {
+  return portfolioData.featuredProjects.items.filter((item) => item.kind === "consultancy");
+}
+
+export function getProjectItems() {
+  return portfolioData.featuredProjects.items.filter(
+    (item) => item.kind === "project" || !item.kind,
+  );
+}
+
+export function getConceptItems() {
+  return portfolioData.featuredProjects.items.filter((item) => item.kind === "concept");
 }
 
 export function getProjectBySlug(slug: string): CaseStudySource | undefined {
@@ -37,9 +53,7 @@ export function getProjectBySlug(slug: string): CaseStudySource | undefined {
 export function getAllCaseStudySlugs() {
   return [
     ...portfolioData.featuredProjects.items.map((item) => item.slug),
-    ...portfolioData.freelanceDeployments.items
-      .filter((item) => item.slug === "hospitality-network-deployments")
-      .map((item) => item.slug),
+    ...portfolioData.freelanceDeployments.items.map((item) => item.slug),
   ];
 }
 
