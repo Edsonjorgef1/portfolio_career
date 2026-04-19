@@ -43,7 +43,7 @@ export interface ProjectItem {
   highlightsPt: string[];
   highlightsEn: string[];
   stack: string[];
-  kind?: "project" | "consultancy" | "concept";
+  kind?: "project" | "consultancy" | "concept" | "initiative";
   featured?: boolean;
   link?: string;
   donors?: string;

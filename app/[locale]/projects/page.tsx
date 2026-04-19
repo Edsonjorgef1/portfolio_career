@@ -9,7 +9,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SectionTitle } from "@/components/layout/section-title";
 import { Reveal } from "@/components/ui/reveal";
-import { getConceptItems, getConsultancyItems, getNavigation, getProjectItems } from "@/lib/portfolio";
+import { getConceptItems, getConsultancyItems, getInitiativeItems, getNavigation, getProjectItems } from "@/lib/portfolio";
 import { portfolioData } from "@/lib/portfolioData";
 import type { Locale } from "@/types/portfolio";
 
@@ -43,6 +43,7 @@ export default async function ProjectsListPage({ params }: { params: Promise<Par
   const softwareProjects = getProjectItems();
   const conceptProjects = getConceptItems();
   const consultancyProjects = getConsultancyItems();
+  const initiativeItems = getInitiativeItems();
   const deployments = portfolioData.freelanceDeployments.items;
 
   return (
@@ -124,6 +125,21 @@ export default async function ProjectsListPage({ params }: { params: Promise<Par
               ))}
             </div>
           </section>
+
+          {/* Initiatives */}
+          {initiativeItems.length > 0 && (
+            <section className="mb-16">
+              <SectionTitle
+                eyebrow={isEn ? "Initiatives" : "Iniciativas"}
+                title={isEn ? "Other Products & Initiatives" : "Outros Produtos & Iniciativas"}
+              />
+              <div className="mt-8 grid gap-6 lg:grid-cols-2">
+                {initiativeItems.map((item, index) => (
+                  <ProjectCard key={item.slug} item={item} locale={locale} index={index} />
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </main>
       <SiteFooter locale={locale} name={portfolioData.personal.name} email={portfolioData.personal.email} />

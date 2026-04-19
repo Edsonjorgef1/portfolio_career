@@ -36,6 +36,10 @@ export function getConceptItems() {
   return portfolioData.featuredProjects.items.filter((item) => item.kind === "concept");
 }
 
+export function getInitiativeItems() {
+  return portfolioData.featuredProjects.items.filter((item) => item.kind === "initiative");
+}
+
 export function getProjectBySlug(slug: string): CaseStudySource | undefined {
   const project = portfolioData.featuredProjects.items.find((item) => item.slug === slug);
   if (project) {
