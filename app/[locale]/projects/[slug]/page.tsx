@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, Users } from "lucide-react";
 import { notFound } from "next/navigation";
@@ -8,6 +7,7 @@ import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { GlassCard } from "@/components/ui/glass-card";
+import { ImageLightbox } from "@/components/ui/image-lightbox";
 import {
   getAllCaseStudySlugs,
   getCaseStudyContent,
@@ -192,19 +192,11 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
               <h2 className="font-display text-2xl font-semibold text-white">
                 {typedLocale === "pt" ? "Galeria" : "Gallery"}
               </h2>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {source.item.images.map((img, idx) => (
-                  <div key={idx} className="relative overflow-hidden rounded-xl border border-white/10 aspect-video">
-                    <Image
-                      src={img}
-                      alt={`${content.title} – screenshot ${idx + 1}`}
-                      fill
-                      className="object-cover transition duration-500 hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  </div>
-                ))}
-              </div>
+              <ImageLightbox
+                images={source.item.images}
+                title={content.title}
+                galleryLabel={typedLocale === "pt" ? "Galeria" : "Gallery"}
+              />
             </GlassCard>
           </div>
         )}
