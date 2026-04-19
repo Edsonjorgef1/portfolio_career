@@ -13,7 +13,6 @@ import { ExperienceSection } from "@/components/sections/experience-section";
 import { GovTechSection } from "@/components/sections/govtech-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { LeadershipSection } from "@/components/sections/leadership-section";
-import { MetricsSection } from "@/components/sections/metrics-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { SkillsSection } from "@/components/sections/skills-section";
 import { getNavigation } from "@/lib/portfolio";
@@ -27,7 +26,6 @@ export function PortfolioPage({ locale }: { locale: Locale }) {
       <main>
         <HeroSection locale={locale} data={portfolioData} />
         <ExpertiseAreasSection locale={locale} data={portfolioData} />
-        <MetricsSection locale={locale} data={portfolioData} />
         <DifferentiatorsSection locale={locale} data={portfolioData} />
         <AboutSection locale={locale} data={portfolioData} />
         <CompetenciesSection locale={locale} data={portfolioData} />

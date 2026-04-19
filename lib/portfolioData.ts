@@ -71,6 +71,20 @@ export const portfolioData: PortfolioData = {
       descriptionPt: "Soluções de transformação digital para hotéis e restaurantes: infraestrutura de rede (Starlink/Ruijie), automação de pedidos, cardápio digital e presença online. Manna Software.",
       descriptionEn: "Digital transformation solutions for hotels and restaurants: network infrastructure (Starlink/Ruijie), order automation, digital menu, and online presence. Manna Software.",
     },
+    {
+      icon: "building-2",
+      namePt: "GovTech",
+      nameEn: "GovTech",
+      descriptionPt: "Plataformas institucionais para governos e agências públicas: portais municipais, sistemas de mecanismo de queixas (GRM), analytics para bibliotecas e aplicações cívicas com impacto nacional. FUNAE, Município do Dondo, JURIS.",
+      descriptionEn: "Institutional platforms for governments and public agencies: municipal portals, grievance redress mechanisms (GRM), library analytics, and civic applications with national impact. FUNAE, Município do Dondo, JURIS.",
+    },
+    {
+      icon: "users",
+      namePt: "SocialTech",
+      nameEn: "SocialTech",
+      descriptionPt: "Tecnologia orientada ao impacto social: plataformas comunitárias, ferramentas de inclusão digital, acessibilidade e iniciativas de mobilização cívica em Moçambique. KUKURA, Kukanela, DONANTE.",
+      descriptionEn: "Impact-driven technology: community platforms, digital inclusion tools, accessibility apps, and civic mobilisation initiatives in Mozambique. KUKURA, Kukanela, DONANTE.",
+    },
   ],
   metrics: [
     {
