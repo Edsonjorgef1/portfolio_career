@@ -200,7 +200,12 @@ export interface PortfolioData {
     titleEn: string;
     introPt: string;
     introEn: string;
-    strengths: string[];
+    strengths: {
+      nameEn: string;
+      namePt: string;
+      descriptionEn: string;
+      descriptionPt: string;
+    }[];
   };
   education: {
     titlePt: string;

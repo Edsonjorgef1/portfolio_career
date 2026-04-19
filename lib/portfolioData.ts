@@ -1366,7 +1366,38 @@ export const portfolioData: PortfolioData = {
     titleEn: "Leadership & Strengths",
     introPt: "Perfil orientado a resultados, tomada de decisão, crescimento de equipas e melhoria contínua, com forte capacidade de alinhar IT à estratégia e às prioridades do negócio. Mentalidade empreendedora (SPRINT 2025 – Renew Capital).",
     introEn: "Results-oriented profile focused on decision-making, team growth, and continuous improvement, with a strong ability to align IT with business strategy and priorities. Entrepreneurial mindset forged in accelerators like SPRINT 2025 (Renew Capital).",
-    strengths: ["Strategic", "Positivity", "Woo", "Arranger", "Maximizer"],
+    strengths: [
+      {
+        nameEn: "Strategic",
+        namePt: "Estratégico",
+        descriptionEn: "Creates alternative ways to proceed. Faced with any given scenario, quickly spots the relevant patterns and issues.",
+        descriptionPt: "Cria formas alternativas para prosseguir. Diante de qualquer cenário, sabe rapidamente detectar os padrões e as questões importantes.",
+      },
+      {
+        nameEn: "Positivity",
+        namePt: "Positivo",
+        descriptionEn: "Has contagious enthusiasm. Upbeat and able to get others excited about what they are going to do.",
+        descriptionPt: "Tem um entusiasmo contagiante. É alegre e estimula os outros com os seus planos e energia.",
+      },
+      {
+        nameEn: "Woo",
+        namePt: "Carisma",
+        descriptionEn: "Loves the challenge of meeting new people and winning them over. Derives satisfaction from breaking the ice and making a connection.",
+        descriptionPt: "Adora o desafio de conhecer novas pessoas e conquistá-las. Sente satisfação em quebrar o gelo e estabelecer contacto com alguém.",
+      },
+      {
+        nameEn: "Arranger",
+        namePt: "Organização",
+        descriptionEn: "Can organise, but also has a flexibility that complements this ability. Likes to determine how all pieces and resources can be arranged for maximum productivity.",
+        descriptionPt: "É capaz de organizar, mas tem também uma flexibilidade que complementa essa capacidade. Gosta de determinar como todos os recursos e partes podem ser organizados para máxima produtividade.",
+      },
+      {
+        nameEn: "Maximizer",
+        namePt: "Excelência",
+        descriptionEn: "Focuses on strengths as a way to stimulate personal and group excellence. Seeks to transform something strong into something superb.",
+        descriptionPt: "Concentra-se nos pontos fortes como modo de incentivar a excelência individual e do grupo. Procura transformar algo muito bom em algo fantástico.",
+      },
+    ],
   },
   education: {
     titlePt: "Formação Académica",
