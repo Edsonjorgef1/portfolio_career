@@ -1,4 +1,4 @@
-import { Landmark, HeartPulse, Wheat, GraduationCap, Hotel, Building2, Users, LucideIcon } from "lucide-react";
+import { Landmark, HeartPulse, Wheat, GraduationCap, Hotel, Building2, Users, Briefcase, LucideIcon } from "lucide-react";
 import { SectionTitle } from "@/components/layout/section-title";
 import { Reveal } from "@/components/ui/reveal";
 import { getLocalizedValue } from "@/lib/portfolio";
@@ -12,6 +12,7 @@ const iconMap: Record<string, LucideIcon> = {
   hotel: Hotel,
   "building-2": Building2,
   users: Users,
+  briefcase: Briefcase,
 };
 
 export function ExpertiseAreasSection({ locale, data }: { locale: Locale; data: PortfolioData }) {

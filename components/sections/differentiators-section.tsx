@@ -1,4 +1,4 @@
-import { WifiOff, RefreshCw, MapPin, Layers, Rocket, Quote } from "lucide-react";
+import { WifiOff, RefreshCw, MapPin, Layers, Rocket, TrendingUp, Quote } from "lucide-react";
 import { SectionTitle } from "@/components/layout/section-title";
 import { Reveal } from "@/components/ui/reveal";
 import { getLocalizedValue } from "@/lib/portfolio";
@@ -10,6 +10,7 @@ const iconMap: Record<string, React.ElementType> = {
   "map-pin": MapPin,
   layers: Layers,
   rocket: Rocket,
+  "trending-up": TrendingUp,
 };
 
 export function DifferentiatorsSection({ locale, data }: { locale: Locale; data: PortfolioData }) {
