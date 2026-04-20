@@ -598,14 +598,16 @@ export const portfolioData: PortfolioData = {
         periodEn: "2019–Present",
         donors: "Woord en Daad, Mozilla IRL Fund, African Union Civic Tech Fund 2.0",
         summaryPt:
-          "Aplicativo cívico-educativo co-criado pela EQUIP Mozambique em parceria com a AMAC para apresentar a lei moçambicana em linguagem simplificada (texto, imagens e áudio), ligado a um mecanismo de denúncias de injustiças e corrupção, com mais de 20.000 downloads. Beneficiário do Fundo Civic Tech 2.0 da União Africana.",
+          "Aplicativo cívico-educativo co-criado pela EQUIP Mozambique em parceria com a AMAC para apresentar a lei moçambicana em linguagem simplificada (texto, imagens e áudio), ligado a um mecanismo de denúncias de injustiças e corrupção, com mais de 20.000 downloads. Parceria e formação com o Gabinete Central de Combate Contra a Corrupção e o Gabinete Provincial de Sofala. Beneficiário do Fundo Civic Tech 2.0 da União Africana.",
         summaryEn:
-          "Civic education app co-created by EQUIP Mozambique in partnership with AMAC to present Mozambican law in simplified language (text, images, and audio), connected to a complaints mechanism for injustice and corruption, with 20,000+ downloads. Beneficiary of the African Union Civic Tech Fund 2.0.",
+          "Civic education app co-created by EQUIP Mozambique in partnership with AMAC to present Mozambican law in simplified language (text, images, and audio), connected to a complaints mechanism for injustice and corruption, with 20,000+ downloads. Partnership and training with the Central Anti-Corruption Bureau and the Provincial Bureau of Sofala. Beneficiary of the African Union Civic Tech Fund 2.0.",
         highlightsPt: [
           "Liderança técnica e co-criação da aplicação JURIS",
           "Educação jurídica acessível: texto, imagens e áudio em linguagem simplificada",
           "Mecanismo integrado de denúncias de injustiças e corrupção",
           "Encaminhamento de casos para advogados e departamentos governamentais",
+          "Parceria e formação com o Gabinete Central de Combate Contra a Corrupção",
+          "Parceria com o Gabinete Provincial de Combate Contra a Corrupção de Sofala",
           "20.000+ downloads demonstrando adopção à escala nacional",
           "Beneficiário do African Union Civic Tech Fund 2.0 — inovação em governação e acesso à justiça",
           "Campanhas multi-canal: redes sociais, rádio, teatro e palestras presenciais",
@@ -616,6 +618,8 @@ export const portfolioData: PortfolioData = {
           "Accessible legal education: simplified text, images, and audio",
           "Built-in complaints mechanism for injustice and corruption reporting",
           "Case routing to lawyers and government departments",
+          "Partnership and training with the Central Anti-Corruption Bureau (Gabinete Central de Combate Contra a Corrupção)",
+          "Partnership with the Provincial Anti-Corruption Bureau of Sofala",
           "20,000+ downloads showing nationwide adoption",
           "Beneficiary of the African Union Civic Tech Fund 2.0 — innovation in governance and access to justice",
           "Multi-channel campaigns: social media, radio, theatre, and in-person talks",

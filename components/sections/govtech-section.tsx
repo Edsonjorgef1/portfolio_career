@@ -29,19 +29,19 @@ const govtechItems = [
     namePt: "JURIS – Acesso à Justiça",
     nameEn: "JURIS – Access to Justice",
     descPt:
-      "Aplicação cívica co-criada com 20.000+ downloads: lei moçambicana simplificada, denúncias e encaminhamento de casos.",
+      "App cívica com 20.000+ downloads: lei moçambicana simplificada, denúncias e encaminhamento de casos. Parceria com o Gabinete Central e o Gabinete Provincial de Combate Contra a Corrupção de Sofala.",
     descEn:
-      "Civic app co-created with 20,000+ downloads: simplified Mozambican law, complaint mechanisms, and case routing.",
+      "Civic app with 20,000+ downloads: simplified Mozambican law, complaint mechanisms, and case routing. Partnership with the Central and Sofala Provincial Anti-Corruption Bureaus.",
   },
   {
-    tagPt: "GovTech / Dados",
-    tagEn: "GovTech / Data",
-    namePt: "Analytics para Bibliotecas",
-    nameEn: "Library Analytics System",
+    tagPt: "HealthTech / GovTech",
+    tagEn: "HealthTech / GovTech",
+    namePt: "Consultare – Aprovação MISAU",
+    nameEn: "Consultare – MISAU Approved",
     descPt:
-      "Sistema de dados para monitorar acesso a bibliotecas públicas, com relatórios mensais automáticos para liderança institucional.",
+      "Aplicação de saúde com aprovação oficial do Ministério da Saúde de Moçambique (MISAU), com informação sobre doenças comuns, primeiros socorros e back-office PT/EN.",
     descEn:
-      "Data system monitoring public library access with automated monthly reports for institutional decision-making.",
+      "Health app with official approval from Mozambique's Ministry of Health (MISAU), covering common diseases, first aid, with back-office and PT/EN website.",
   },
 ];
 
