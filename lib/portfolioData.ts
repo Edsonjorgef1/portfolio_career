@@ -7,10 +7,10 @@ const yearsLeadership = currentYear - 2022;   // leadership start: 2022
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Edson Francisco",
-    headlinePt: "Especialista TIC | Gestor de Projectos de IT | Programador, SysAdmin & Consultor Digital",
+    headlinePt: "Especialista TI | Gestor de Projectos de IT | Programador, SysAdmin & Consultor Digital",
     headlineEn: "ICT Specialist | IT Project Manager | Software Developer, SysAdmin & Digital Consultant",
     summaryPt:
-      `Especialista TIC com mais de ${yearsExperience} anos de experiência a transformar negócios e instituições com tecnologia de alto impacto — desenvolvimento de software, liderança de projectos, cloud e consultoria digital multisectorial.`,
+      `Especialista TI com mais de ${yearsExperience} anos de experiência a transformar negócios e instituições com tecnologia de alto impacto — desenvolvimento de software, liderança de projectos, cloud e consultoria digital multisectorial.`,
     summaryEn:
       `ICT Specialist with ${yearsExperience}+ years transforming businesses and institutions with high-impact technology — software development, project leadership, cloud, and multi-sector digital consulting.`,
     location: "Mozambique",
@@ -125,7 +125,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       value: "8+",
-      labelPt: "Anos de experiência em TIC",
+      labelPt: "Anos de experiência em TI",
       labelEn: "Years of ICT experience",
     },
   ],
@@ -197,7 +197,7 @@ export const portfolioData: PortfolioData = {
     titlePt: "Sobre",
     titleEn: "About",
     bodyPt: [
-      `Profissional de TIC com mais de ${yearsExperience} anos de experiência, ${yearsLeadership} anos em liderança de projectos de IT, transformação digital e implementação de software. Forte capacidade de gestão do ciclo integral de projectos e coordenação de equipas multidisciplinares.`,
+      `Profissional de TI com mais de ${yearsExperience} anos de experiência, ${yearsLeadership} anos em liderança de projectos de IT, transformação digital e implementação de software. Forte capacidade de gestão do ciclo integral de projectos e coordenação de equipas multidisciplinares.`,
       "Actuo na intersecção entre tecnologia, operação e negócio — assegurando que sistemas, redes, serviços cloud e equipas estejam alinhados com os objectivos organizacionais e com resultados concretos. Experiência sólida em projectos multi-site financiados por doadores (GIZ, Enabel e outros) e colaboração com consultoras internacionais (NIRAS, COMO Consult), traduzindo requisitos complexos em soluções de alto impacto.",
       "Com mentalidade empreendedora forjada em aceleradoras como SPRINT 2025 (Renew Capital), combino rigor técnico com visão de negócio, foco na execução e aprendizagem contínua. Fluente em Português e Inglês, adaptável a ambientes dinâmicos e orientados ao impacto.",
     ],
@@ -493,9 +493,9 @@ export const portfolioData: PortfolioData = {
       {
         slug: "proecon",
         name: "ProEcon – GIZ / COMO Consult",
-        categoryPt: "Consultoria TIC & AgriTech",
+        categoryPt: "Consultoria TI & AgriTech",
         categoryEn: "ICT & AgriTech Consulting",
-        rolePt: "Consultor de TIC para Soluções Agrícolas & Líder Técnico",
+        rolePt: "Consultor de TI para Soluções Agrícolas & Líder Técnico",
         roleEn: "ICT Consultant for Agricultural Solutions & Technical Lead",
         periodPt: "2023–2024",
         periodEn: "2023–2024",
@@ -1391,7 +1391,7 @@ export const portfolioData: PortfolioData = {
   leadership: {
     titlePt: "Liderança & Pontos Fortes",
     titleEn: "Leadership & Strengths",
-    introPt: `Perfil orientado a resultados, tomada de decisão, crescimento de equipas e melhoria contínua, com forte capacidade de alinhar IT à estratégia e às prioridades do negócio. Mais de ${yearsExperience} anos de experiência em TIC, ${yearsLeadership} em liderança. Mentalidade empreendedora (SPRINT 2025 – Renew Capital).`,
+    introPt: `Perfil orientado a resultados, tomada de decisão, crescimento de equipas e melhoria contínua, com forte capacidade de alinhar IT à estratégia e às prioridades do negócio. Mais de ${yearsExperience} anos de experiência em TI, ${yearsLeadership} em liderança. Mentalidade empreendedora (SPRINT 2025 – Renew Capital).`,
     introEn: `Results-oriented profile focused on decision-making, team growth, and continuous improvement, with a strong ability to align IT with business strategy and priorities. ${yearsExperience}+ years in ICT, ${yearsLeadership} in leadership. Entrepreneurial mindset forged in accelerators like SPRINT 2025 (Renew Capital).`,
     strengths: [
       {
