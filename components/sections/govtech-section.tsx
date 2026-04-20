@@ -59,9 +59,9 @@ export function GovTechSection({ locale }: { locale: Locale }) {
             {isEn ? "GovTech Track Record" : "Experiência em GovTech"}
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
-            {isEn
-              ? "Delivering institutional-grade technology for government agencies, civic organisations, and public-interest platforms across Mozambique — built for scale, operated for real-world impact."
-              : "Entrega de tecnologia de nível institucional para agências governamentais, organizações cívicas e plataformas de interesse público em Moçambique — construída para escala, operada para impacto real."}
+          {isEn
+              ? "Institutional-grade technology for government agencies, civic organisations, and public-interest platforms across Mozambique — from grievance redress mechanisms for national energy funds to civic justice apps with 20,000+ users."
+              : "Tecnologia de nível institucional para agências governamentais, organizações cívicas e plataformas de interesse público em Moçambique — desde mecanismos de queixas para fundos nacionais de energia a aplicações cívicas com mais de 20.000 utilizadores."}
           </p>
         </div>
       </Reveal>

@@ -1,14 +1,18 @@
 import type { PortfolioData } from "@/types/portfolio";
 
+const currentYear = new Date().getFullYear();
+const yearsExperience = currentYear - 2018;   // career start: 2018
+const yearsLeadership = currentYear - 2022;   // leadership start: 2022
+
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Edson Francisco",
     headlinePt: "Especialista TIC | Gestor de Projectos de IT | Programador & SysAdmin",
     headlineEn: "ICT Specialist | IT Project Manager | Software Developer & SysAdmin",
     summaryPt:
-      "Profissional de TIC com mais de 8 anos de experiência, 4 anos em liderança de projectos de IT, transformação digital e implementação de software. Forte capacidade de gestão do ciclo integral de projectos e coordenação de equipas multidisciplinares. Experiência sólida em infra-estrutura de IT, cloud e desenvolvimento de software, trabalhando em projectos multi-site financiados por doadores (GIZ, Enabel e outros). Colaboração com consultoras internacionais (NIRAS, COMO Consult), traduzindo requisitos complexos em soluções de alto impacto. Mentalidade empreendedora (SPRINT 2025 – Renew Capital). Fluente em Português e Inglês, adaptável a ambientes dinâmicos e orientados ao impacto.",
+      `Profissional de TIC com mais de ${yearsExperience} anos de experiência, ${yearsLeadership} anos em liderança de projectos de IT, transformação digital e implementação de software. Forte capacidade de gestão do ciclo integral de projectos e coordenação de equipas multidisciplinares. Experiência sólida em infra-estrutura de IT, cloud e desenvolvimento de software, trabalhando em projectos multi-site financiados por doadores. Colaboração com consultoras internacionais, traduzindo requisitos complexos em soluções de alto impacto. Mentalidade empreendedora. Fluente em Português e Inglês, adaptável a ambientes dinâmicos e orientados ao impacto.`,
     summaryEn:
-      "ICT Professional with over 8 years of experience, 4 years leading IT projects, digital transformation, and software implementation. Strong full project lifecycle management and multidisciplinary team coordination. Solid background in IT infrastructure, cloud, and software development on multi-site donor-funded projects (GIZ, Enabel, and others), collaborating with international consulting firms (NIRAS, COMO Consult). Entrepreneurial mindset (SPRINT 2025 – Renew Capital). Fluent in Portuguese and English, adaptable to dynamic, impact-driven environments.",
+      `ICT Professional with over ${yearsExperience} years of experience, ${yearsLeadership} years leading IT projects, digital transformation, and software implementation. Strong full project lifecycle management and multidisciplinary team coordination. Solid background in IT infrastructure, cloud, and software development on multi-site donor-funded projects, collaborating with international consulting firms. Entrepreneurial mindset. Fluent in Portuguese and English, adaptable to dynamic, impact-driven environments.`,
     location: "Mozambique",
     languages: [
       { namePt: "Português", nameEn: "Portuguese", levelPt: "Nativo", levelEn: "Native" },
@@ -26,6 +30,7 @@ export const portfolioData: PortfolioData = {
       "Desenvolvimento de Software",
       "Cloud & Infra-estrutura",
       "Liderança Técnica",
+      "GovTech & SocialTech",
     ],
     heroTagsEn: [
       "IT Project Management",
@@ -33,6 +38,7 @@ export const portfolioData: PortfolioData = {
       "Software Development",
       "Cloud & Infrastructure",
       "Technical Leadership",
+      "GovTech & SocialTech",
     ],
   },
   expertiseAreas: [
@@ -116,43 +122,43 @@ export const portfolioData: PortfolioData = {
   differentiators: {
     titlePt: "Diferenciadores",
     titleEn: "Differentiators",
-    quotePt: "Não construímos software. Construímos sistemas que funcionam onde outros falham.",
-    quoteEn: "We don't build software. We build systems that work where others fail.",
+    quotePt: "Não construo apenas software. Construo sistemas que funcionam onde outros falham.",
+    quoteEn: "I don't just build software. I build systems that work where others fail.",
     items: [
       {
         icon: "wifi-off",
         titlePt: "Offline-first",
         titleEn: "Offline-first",
-        descriptionPt: "Funciona onde internet não chega. Sincronização inteligente com 70% menos dados móveis.",
+        descriptionPt: "Funciona onde a internet não chega. Sincronização inteligente com 70% menos dados móveis.",
         descriptionEn: "Works where there's no internet. Smart sync with 70% less mobile data.",
       },
       {
         icon: "refresh-cw",
         titlePt: "Transformação Contínua",
         titleEn: "Continuous Transformation",
-        descriptionPt: "Não vendemos software — vendemos transformação digital contínua.",
-        descriptionEn: "We don't sell software — we sell continuous digital transformation.",
+        descriptionPt: "Não vendo software — entrego transformação digital contínua com acompanhamento real.",
+        descriptionEn: "I don't sell software — I deliver continuous digital transformation with real follow-through.",
       },
       {
         icon: "map-pin",
-        titlePt: "Conhecimento do Terreno",
-        titleEn: "Ground Knowledge",
-        descriptionPt: "Equipa local na Beira, não escritórios remotos. Presença física e compromisso real.",
-        descriptionEn: "Local team in Beira, not remote offices. Physical presence and real commitment.",
+        titlePt: "Conhecimento de Moçambique",
+        titleEn: "Knowledge of Mozambique",
+        descriptionPt: "Conhecimento profundo do contexto moçambicano — rural e urbano — com presença no terreno e compromisso com o impacto local.",
+        descriptionEn: "Deep knowledge of the Mozambican context — rural and urban — with on-the-ground presence and commitment to local impact.",
       },
       {
         icon: "layers",
         titlePt: "Multi-sector",
         titleEn: "Multi-sector",
-        descriptionPt: "AgriTech, Fintech, HealthTech, Hotelaria — experiência transversal.",
-        descriptionEn: "AgriTech, Fintech, HealthTech, Hospitality — cross-sector experience.",
+        descriptionPt: "AgriTech, Fintech, HealthTech, GovTech, Hotelaria — experiência transversal em 7 sectores.",
+        descriptionEn: "AgriTech, Fintech, HealthTech, GovTech, Hospitality — cross-sector experience across 7 verticals.",
       },
       {
         icon: "rocket",
         titlePt: "Da Concepção à Implementação",
         titleEn: "From Concept to Implementation",
-        descriptionPt: "Não só desenvolve — treina e acompanha até aos resultados.",
-        descriptionEn: "Not just development — training and follow-up until results are achieved.",
+        descriptionPt: "Não só desenvolvimento — treinamento e acompanhamento no terreno até aos resultados concretos.",
+        descriptionEn: "Not just development — on-ground training and follow-up until concrete results are achieved.",
       },
     ],
   },
@@ -174,14 +180,14 @@ export const portfolioData: PortfolioData = {
     titlePt: "Sobre",
     titleEn: "About",
     bodyPt: [
-      "Sou um profissional de TIC com sólida experiência em gestão estratégica de IT, liderança de projectos, desenvolvimento de software, cloud, infra-estrutura e transformação digital.",
-      "Actuo na intersecção entre tecnologia, operação e negócio — assegurando que sistemas, redes, serviços cloud e equipas estejam alinhados com os objectivos organizacionais e com resultados concretos. Tenho histórial comprovado em projectos multi-site financiados por doadores (GIZ, Enabel) e colaboração com consultoras internacionais (NIRAS, COMO Consult), traduzindo requisitos complexos em soluções de alto impacto.",
-      "Com uma mentalidade empreendedora forjada em aceleradoras como SPRINT 2025 (Renew Capital), combino rigor técnico com visão de negócio, foco na execução e aprendizagem contínua em ambientes de alto impacto.",
+      `Profissional de TIC com mais de ${yearsExperience} anos de experiência, ${yearsLeadership} anos em liderança de projectos de IT, transformação digital e implementação de software. Forte capacidade de gestão do ciclo integral de projectos e coordenação de equipas multidisciplinares.`,
+      "Actuo na intersecção entre tecnologia, operação e negócio — assegurando que sistemas, redes, serviços cloud e equipas estejam alinhados com os objectivos organizacionais e com resultados concretos. Experiência sólida em projectos multi-site financiados por doadores (GIZ, Enabel e outros) e colaboração com consultoras internacionais (NIRAS, COMO Consult), traduzindo requisitos complexos em soluções de alto impacto.",
+      "Com mentalidade empreendedora forjada em aceleradoras como SPRINT 2025 (Renew Capital), combino rigor técnico com visão de negócio, foco na execução e aprendizagem contínua. Fluente em Português e Inglês, adaptável a ambientes dinâmicos e orientados ao impacto.",
     ],
     bodyEn: [
-      "I am an ICT professional with strong experience in strategic IT management, project leadership, software development, cloud, infrastructure, and digital transformation.",
-      "I work at the intersection of technology, operations, and business — ensuring that systems, networks, cloud services, and teams are aligned with organizational goals and measurable delivery outcomes. I have a proven track record on multi-site donor-funded projects (GIZ, Enabel) and collaboration with international consulting firms (NIRAS, COMO Consult), translating complex requirements into high-impact solutions.",
-      "With an entrepreneurial mindset shaped by accelerators like SPRINT 2025 (Renew Capital), I combine technical rigor with business vision, a focus on execution, and continuous learning in high-impact environments.",
+      `ICT Professional with over ${yearsExperience} years of experience, ${yearsLeadership} years leading IT projects, digital transformation, and software implementation. Strong full project lifecycle management and multidisciplinary team coordination.`,
+      "I work at the intersection of technology, operations, and business — ensuring systems, networks, cloud services, and teams are aligned with organisational goals and measurable outcomes. Solid background on multi-site donor-funded projects (GIZ, Enabel, and others) and collaboration with international consulting firms (NIRAS, COMO Consult), translating complex requirements into high-impact solutions.",
+      "With an entrepreneurial mindset forged in accelerators like SPRINT 2025 (Renew Capital), I combine technical rigour with business vision, a focus on execution, and continuous learning. Fluent in Portuguese and English, adaptable to dynamic, impact-driven environments.",
     ],
   },
   experience: {
@@ -1364,8 +1370,8 @@ export const portfolioData: PortfolioData = {
   leadership: {
     titlePt: "Liderança & Pontos Fortes",
     titleEn: "Leadership & Strengths",
-    introPt: "Perfil orientado a resultados, tomada de decisão, crescimento de equipas e melhoria contínua, com forte capacidade de alinhar IT à estratégia e às prioridades do negócio. Mentalidade empreendedora (SPRINT 2025 – Renew Capital).",
-    introEn: "Results-oriented profile focused on decision-making, team growth, and continuous improvement, with a strong ability to align IT with business strategy and priorities. Entrepreneurial mindset forged in accelerators like SPRINT 2025 (Renew Capital).",
+    introPt: `Perfil orientado a resultados, tomada de decisão, crescimento de equipas e melhoria contínua, com forte capacidade de alinhar IT à estratégia e às prioridades do negócio. Mais de ${yearsExperience} anos de experiência em TIC, ${yearsLeadership} em liderança. Mentalidade empreendedora (SPRINT 2025 – Renew Capital).`,
+    introEn: `Results-oriented profile focused on decision-making, team growth, and continuous improvement, with a strong ability to align IT with business strategy and priorities. ${yearsExperience}+ years in ICT, ${yearsLeadership} in leadership. Entrepreneurial mindset forged in accelerators like SPRINT 2025 (Renew Capital).`,
     strengths: [
       {
         nameEn: "Strategic",
@@ -1450,9 +1456,9 @@ export const portfolioData: PortfolioData = {
     ],
   },
   seo: {
-    title: "Edson Francisco | ICT Specialist | IT Project Manager | Software Developer",
+    title: "Edson Francisco | ICT Specialist | IT Project Manager | Software Developer & SysAdmin",
     description:
-      "Portfolio of Edson Francisco — ICT Specialist, IT Project Manager, and Software Developer with 8+ years of experience. Digital transformation, cloud infrastructure, and impact-driven technology solutions in Mozambique.",
+      "Portfolio of Edson Francisco — ICT Specialist, IT Project Manager, and Software Developer with 8+ years of experience. Digital transformation, cloud infrastructure, donor-funded projects (GIZ, Enabel), and impact-driven technology in Mozambique.",
     keywords: [
       "Edson Francisco",
       "ICT Specialist",
