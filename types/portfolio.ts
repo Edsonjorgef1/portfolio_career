@@ -145,6 +145,7 @@ export interface PortfolioData {
     languages: LanguageItem[];
     email: string;
     phone: string;
+    phone2?: string;
     github: string;
     linkedin: string;
     website: string;

@@ -20,6 +20,7 @@ export const portfolioData: PortfolioData = {
     ],
     email: "edsonjorgef1@gmail.com",
     phone: "+258 84 56 33 335",
+    phone2: "+258 82 404 0426",
     github: "https://github.com/edsonjorgef1",
     linkedin: "https://www.linkedin.com/in/edsonjorgef1",
     website: "https://edsonjorgef1.github.io/Digital-Resume/",

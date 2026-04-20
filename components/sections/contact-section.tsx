@@ -16,7 +16,8 @@ export function ContactSection({ locale, data }: { locale: Locale; data: Portfol
 
   const links = [
     { icon: Mail, label: data.personal.email, href: `mailto:${data.personal.email}` },
-    { icon: Phone, label: data.personal.phone, href: `tel:${data.personal.phone.split(" / ")[0].replace(/\s+/g, "")}` },
+    { icon: Phone, label: data.personal.phone, href: `tel:${data.personal.phone.replace(/\s+/g, "")}` },
+    ...(data.personal.phone2 ? [{ icon: Phone, label: data.personal.phone2, href: `tel:${data.personal.phone2.replace(/\s+/g, "")}` }] : []),
     { icon: Linkedin, label: "LinkedIn", href: data.personal.linkedin },
     { icon: Github, label: "GitHub", href: data.personal.github },
     { icon: Globe, label: "Website", href: data.personal.website },
