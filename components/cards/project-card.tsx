@@ -4,12 +4,20 @@ import { ArrowUpRight, ExternalLink, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Reveal } from "@/components/ui/reveal";
-import { getLocalizedValue, getProjectImage } from "@/lib/portfolio";
+import { getLocalizedValue } from "@/lib/utils-i18n";
 import type { Locale, ProjectItem } from "@/types/portfolio";
 
-export function ProjectCard({ item, locale, index }: { item: ProjectItem; locale: Locale; index: number }) {
-  const image = getProjectImage(item.slug);
-
+export function ProjectCard({
+  item,
+  locale,
+  index,
+  image,
+}: {
+  item: ProjectItem;
+  locale: Locale;
+  index: number;
+  image?: string | null;
+}) {
   return (
     <Reveal delay={index * 0.06}>
       <GlassCard className="group overflow-hidden flex flex-col">

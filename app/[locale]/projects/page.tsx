@@ -3,13 +3,11 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 
-import { DeploymentCard } from "@/components/cards/deployment-card";
-import { ProjectCard } from "@/components/cards/project-card";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
-import { SectionTitle } from "@/components/layout/section-title";
 import { Reveal } from "@/components/ui/reveal";
-import { getConceptItems, getConsultancyItems, getInitiativeItems, getNavigation, getProjectItems } from "@/lib/portfolio";
+import { ProjectsFilter } from "@/components/sections/projects-filter";
+import { getConceptItems, getConsultancyItems, getInitiativeItems, getNavigation, getProjectImage, getProjectItems } from "@/lib/portfolio";
 import { portfolioData } from "@/lib/portfolioData";
 import type { Locale } from "@/types/portfolio";
 
@@ -46,12 +44,17 @@ export default async function ProjectsListPage({ params }: { params: Promise<Par
   const initiativeItems = getInitiativeItems();
   const deployments = portfolioData.freelanceDeployments.items;
 
+  // Pre-resolve images server-side (uses node:fs — cannot run in client components)
+  const allProjectItems = [...softwareProjects, ...conceptProjects, ...consultancyProjects, ...initiativeItems];
+  const images: Record<string, string | null> = Object.fromEntries(
+    allProjectItems.map((item) => [item.slug, getProjectImage(item.slug)])
+  );
+
   return (
     <>
       <SiteHeader locale={locale} navigation={getNavigation(locale)} name={portfolioData.personal.name} />
       <main className="min-h-screen pt-24">
         <div className="section-shell py-16">
-          {/* Page header */}
           <Reveal>
             <div className="mb-3">
               <Link
@@ -62,7 +65,7 @@ export default async function ProjectsListPage({ params }: { params: Promise<Par
                 {isEn ? "Back to Portfolio" : "Voltar ao Portfolio"}
               </Link>
             </div>
-            <div className="mb-14">
+            <div className="mb-10">
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
                 {isEn ? "Full Portfolio" : "Portfolio Completo"}
               </p>
@@ -77,72 +80,19 @@ export default async function ProjectsListPage({ params }: { params: Promise<Par
             </div>
           </Reveal>
 
-          {/* Software Projects */}
-          <section className="mb-16">
-            <SectionTitle
-              eyebrow={isEn ? "Software" : "Software"}
-              title={isEn ? "Software Projects" : "Projectos de Software"}
-            />
-            <div className="mt-8 grid gap-6 lg:grid-cols-2">
-              {softwareProjects.map((item, index) => (
-                <ProjectCard key={item.slug} item={item} locale={locale} index={index} />
-              ))}
-            </div>
-          </section>
-
-          {/* Concept Platforms */}
-          {conceptProjects.length > 0 && (
-            <section className="mb-16">
-              <SectionTitle
-                eyebrow={isEn ? "Concept" : "Conceito"}
-                title={isEn ? "Conceptual Platforms" : "Plataformas Conceito"}
-              />
-              <div className="mt-8 grid gap-6 lg:grid-cols-2">
-                {conceptProjects.map((item, index) => (
-                  <ProjectCard key={item.slug} item={item} locale={locale} index={index} />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Consulting & Deployments */}
-          <section className="mb-16">
-            <SectionTitle
-              eyebrow={isEn ? "Consulting" : "Consultoria"}
-              title={isEn ? "Consulting & Implementation" : "Consultoria & Implementação"}
-            />
-            <div className="mt-8 grid gap-6 lg:grid-cols-2">
-              {consultancyProjects.map((item, index) => (
-                <ProjectCard key={item.slug} item={item} locale={locale} index={index} />
-              ))}
-              {deployments.map((item, index) => (
-                <DeploymentCard
-                  key={item.slug}
-                  item={item}
-                  locale={locale}
-                  index={consultancyProjects.length + index}
-                />
-              ))}
-            </div>
-          </section>
-
-          {/* Initiatives */}
-          {initiativeItems.length > 0 && (
-            <section className="mb-16">
-              <SectionTitle
-                eyebrow={isEn ? "Initiatives" : "Iniciativas"}
-                title={isEn ? "Other Products & Initiatives" : "Outros Produtos & Iniciativas"}
-              />
-              <div className="mt-8 grid gap-6 lg:grid-cols-2">
-                {initiativeItems.map((item, index) => (
-                  <ProjectCard key={item.slug} item={item} locale={locale} index={index} />
-                ))}
-              </div>
-            </section>
-          )}
+          <ProjectsFilter
+            locale={locale}
+            softwareProjects={softwareProjects}
+            conceptProjects={conceptProjects}
+            consultancyProjects={consultancyProjects}
+            deployments={deployments}
+            initiativeItems={initiativeItems}
+            images={images}
+          />
         </div>
       </main>
       <SiteFooter locale={locale} name={portfolioData.personal.name} email={portfolioData.personal.email} />
     </>
   );
 }
+

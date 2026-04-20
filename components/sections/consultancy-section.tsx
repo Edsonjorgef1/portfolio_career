@@ -1,7 +1,7 @@
 import { DeploymentCard } from "@/components/cards/deployment-card";
 import { ProjectCard } from "@/components/cards/project-card";
 import { SectionTitle } from "@/components/layout/section-title";
-import { getConsultancyItems } from "@/lib/portfolio";
+import { getConsultancyItems, getProjectImage } from "@/lib/portfolio";
 import type { Locale, PortfolioData } from "@/types/portfolio";
 
 export function ConsultancySection({ locale, data }: { locale: Locale; data: PortfolioData }) {
@@ -20,7 +20,7 @@ export function ConsultancySection({ locale, data }: { locale: Locale; data: Por
       />
       <div className="mt-10 grid gap-6 lg:grid-cols-2">
         {consultancyProjects.map((item, index) => (
-          <ProjectCard key={item.slug} item={item} locale={locale} index={index} />
+          <ProjectCard key={item.slug} item={item} locale={locale} index={index} image={getProjectImage(item.slug)} />
         ))}
         {deployments.map((item, index) => (
           <DeploymentCard

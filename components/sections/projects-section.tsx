@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { ProjectCard } from "@/components/cards/project-card";
 import { SectionTitle } from "@/components/layout/section-title";
 import { Reveal } from "@/components/ui/reveal";
-import { getFeaturedProjects, getLocalizedValue } from "@/lib/portfolio";
+import { getFeaturedProjects, getLocalizedValue, getProjectImage } from "@/lib/portfolio";
 import type { Locale, PortfolioData } from "@/types/portfolio";
 
 export function ProjectsSection({ locale, data }: { locale: Locale; data: PortfolioData }) {
@@ -18,7 +18,7 @@ export function ProjectsSection({ locale, data }: { locale: Locale; data: Portfo
       />
       <div className="mt-10 grid gap-6 lg:grid-cols-2">
         {items.map((item, index) => (
-          <ProjectCard key={item.slug} item={item} locale={locale} index={index} />
+          <ProjectCard key={item.slug} item={item} locale={locale} index={index} image={getProjectImage(item.slug)} />
         ))}
       </div>
       <Reveal delay={0.3}>

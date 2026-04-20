@@ -74,7 +74,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
   const content = getCaseStudyContent(source, typedLocale);
 
   const labels = {
-    back: typedLocale === "pt" ? "Voltar ao portfólio" : "Back to portfolio",
+    back: typedLocale === "pt" ? "Voltar aos projectos" : "Back to projects",
     technologies: typedLocale === "pt" ? "Tecnologias" : "Technologies",
     context: typedLocale === "pt" ? "Contexto" : "Context",
     solution: typedLocale === "pt" ? "Solução" : "Solution",
@@ -90,7 +90,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
       <header className="border-b border-white/5 bg-background/70 backdrop-blur-xl">
         <div className="section-shell flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
           <Button asChild variant="ghost">
-            <Link href={`/${typedLocale}`}>
+            <Link href={`/${typedLocale}/projects`}>
               <ArrowLeft className="h-4 w-4" />
               {labels.back}
             </Link>
