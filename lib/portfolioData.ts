@@ -10,9 +10,9 @@ export const portfolioData: PortfolioData = {
     headlinePt: "Especialista TIC | Gestor de Projectos de IT | Programador, SysAdmin & Consultor Digital",
     headlineEn: "ICT Specialist | IT Project Manager | Software Developer, SysAdmin & Digital Consultant",
     summaryPt:
-      `Profissional de TIC com mais de ${yearsExperience} anos de experiência, ${yearsLeadership} anos em liderança de projectos de IT, transformação digital e implementação de software. Forte capacidade de gestão do ciclo integral de projectos e coordenação de equipas multidisciplinares. Experiência sólida em infra-estrutura de IT, cloud e desenvolvimento de software, trabalhando em projectos multi-site financiados por doadores. Colaboração com consultoras internacionais, traduzindo requisitos complexos em soluções de alto impacto. Mentalidade empreendedora. Fluente em Português e Inglês, adaptável a ambientes dinâmicos e orientados ao impacto.`,
+      `Especialista TIC com mais de ${yearsExperience} anos de experiência a transformar negócios e instituições com tecnologia de alto impacto — desenvolvimento de software, liderança de projectos, cloud e consultoria digital multisectorial.`,
     summaryEn:
-      `ICT Professional with over ${yearsExperience} years of experience, ${yearsLeadership} years leading IT projects, digital transformation, and software implementation. Strong full project lifecycle management and multidisciplinary team coordination. Solid background in IT infrastructure, cloud, and software development on multi-site donor-funded projects, collaborating with international consulting firms. Entrepreneurial mindset. Fluent in Portuguese and English, adaptable to dynamic, impact-driven environments.`,
+      `ICT Specialist with ${yearsExperience}+ years transforming businesses and institutions with high-impact technology — software development, project leadership, cloud, and multi-sector digital consulting.`,
     location: "Mozambique",
     languages: [
       { namePt: "Português", nameEn: "Portuguese", levelPt: "Nativo", levelEn: "Native" },
