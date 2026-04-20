@@ -23,9 +23,9 @@ export function PortfolioPage({ locale }: { locale: Locale }) {
       <SiteHeader locale={locale} navigation={getNavigation(locale)} name={portfolioData.personal.name} />
       <main>
         <HeroSection locale={locale} data={portfolioData} />
+        <AboutSection locale={locale} data={portfolioData} />
         <ExpertiseAreasSection locale={locale} data={portfolioData} />
         <DifferentiatorsSection locale={locale} data={portfolioData} />
-        <AboutSection locale={locale} data={portfolioData} />
         <ExperienceSection locale={locale} data={portfolioData} />
         <GovTechSection locale={locale} />
         <ProjectsSection locale={locale} data={portfolioData} />
