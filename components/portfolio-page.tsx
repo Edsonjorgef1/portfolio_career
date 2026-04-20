@@ -3,7 +3,6 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { AboutSection } from "@/components/sections/about-section";
 import { AwardsSection } from "@/components/sections/awards-section";
 import { CertificationsSection } from "@/components/sections/certifications-section";
-import { CompetenciesSection } from "@/components/sections/competencies-section";
 import { ConsultancySection } from "@/components/sections/consultancy-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { DifferentiatorsSection } from "@/components/sections/differentiators-section";
@@ -27,7 +26,6 @@ export function PortfolioPage({ locale }: { locale: Locale }) {
         <ExpertiseAreasSection locale={locale} data={portfolioData} />
         <DifferentiatorsSection locale={locale} data={portfolioData} />
         <AboutSection locale={locale} data={portfolioData} />
-        <CompetenciesSection locale={locale} data={portfolioData} />
         <ExperienceSection locale={locale} data={portfolioData} />
         <GovTechSection locale={locale} />
         <ProjectsSection locale={locale} data={portfolioData} />

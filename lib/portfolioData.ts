@@ -53,11 +53,11 @@ export const portfolioData: PortfolioData = {
       descriptionEn: "Multi-sector enterprise consulting to design, implement, and optimise digital solutions that cut operational costs and generate measurable gains. From requirements analysis to delivery and adoption — focused on real ROI.",
     },
     {
-      icon: "landmark",
-      namePt: "Fintech",
-      nameEn: "Fintech",
-      descriptionPt: "Desenvolvimento de soluções SaaS para inclusão financeira e gestão de poupanças comunitárias (xtiques), com integração de mobile money e sistemas bancários. myXtique: sistema inovador de gestão de poupanças comunitárias.",
-      descriptionEn: "Development of SaaS solutions for financial inclusion and community savings management (xtiques), with mobile money and banking integration. myXtique: innovative community savings management system.",
+      icon: "wheat",
+      namePt: "AgroTech",
+      nameEn: "AgroTech",
+      descriptionPt: "Desenvolvimento de tecnologias para o setor agrário, visando o aumento da produtividade e o desenvolvimento económico regional. FAMS: Farmers and Agent Management System.",
+      descriptionEn: "Development of technologies for the agricultural sector, aimed at increasing productivity and regional economic development. FAMS: Farmers and Agent Management System.",
     },
     {
       icon: "heart-pulse",
@@ -67,25 +67,11 @@ export const portfolioData: PortfolioData = {
       descriptionEn: "Creation of digital platforms for health and wellness management (DoaMOZ, SEMMO, Consultare), focused on efficiency and accessibility of critical health services in Mozambique.",
     },
     {
-      icon: "wheat",
-      namePt: "AgroTech",
-      nameEn: "AgroTech",
-      descriptionPt: "Desenvolvimento de tecnologias para o setor agrário, visando o aumento da produtividade e o desenvolvimento económico regional. FAMS: Farmers and Agent Management System.",
-      descriptionEn: "Development of technologies for the agricultural sector, aimed at increasing productivity and regional economic development. FAMS: Farmers and Agent Management System.",
-    },
-    {
       icon: "graduation-cap",
       namePt: "EduTech",
       nameEn: "EduTech",
       descriptionPt: "Implementação de ferramentas e sistemas que facilitam o acesso ao conhecimento e a gestão de instituições de ensino. Start Escolar, Bibliotecas e plataformas educacionais.",
       descriptionEn: "Implementation of tools and systems that facilitate access to knowledge and management of educational institutions. Start Escolar, Libraries and educational platforms.",
-    },
-    {
-      icon: "hotel",
-      namePt: "Hospitality & Tourism",
-      nameEn: "Hospitality & Tourism",
-      descriptionPt: "Soluções de transformação digital para hotéis e restaurantes: infraestrutura de rede (Starlink/Ruijie), automação de pedidos, cardápio digital e presença online. Manna Software.",
-      descriptionEn: "Digital transformation solutions for hotels and restaurants: network infrastructure (Starlink/Ruijie), order automation, digital menu, and online presence. Manna Software.",
     },
     {
       icon: "building-2",
@@ -100,6 +86,20 @@ export const portfolioData: PortfolioData = {
       nameEn: "SocialTech",
       descriptionPt: "Tecnologia orientada ao impacto social: plataformas comunitárias, ferramentas de inclusão digital, acessibilidade e iniciativas de mobilização cívica em Moçambique. KUKURA, Kukanela, DONANTE.",
       descriptionEn: "Impact-driven technology: community platforms, digital inclusion tools, accessibility apps, and civic mobilisation initiatives in Mozambique. KUKURA, Kukanela, DONANTE.",
+    },
+    {
+      icon: "hotel",
+      namePt: "Hospitality & Tourism",
+      nameEn: "Hospitality & Tourism",
+      descriptionPt: "Soluções de transformação digital para hotéis e restaurantes: infraestrutura de rede (Starlink/Ruijie), automação de pedidos, cardápio digital e presença online. Manna Software.",
+      descriptionEn: "Digital transformation solutions for hotels and restaurants: network infrastructure (Starlink/Ruijie), order automation, digital menu, and online presence. Manna Software.",
+    },
+    {
+      icon: "landmark",
+      namePt: "Fintech",
+      nameEn: "Fintech",
+      descriptionPt: "Desenvolvimento de soluções SaaS para inclusão financeira e gestão de poupanças comunitárias (xtiques), com integração de mobile money e sistemas bancários. myXtique: sistema inovador de gestão de poupanças comunitárias.",
+      descriptionEn: "Development of SaaS solutions for financial inclusion and community savings management (xtiques), with mobile money and banking integration. myXtique: innovative community savings management system.",
     },
   ],
   metrics: [
