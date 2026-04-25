@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Reveal } from "@/components/ui/reveal";
-import { getLocalizedValue } from "@/lib/portfolio";
+import { getLocalizedValue } from "@/lib/utils-i18n";
 import type { DeploymentItem, Locale } from "@/types/portfolio";
 
 export function DeploymentCard({

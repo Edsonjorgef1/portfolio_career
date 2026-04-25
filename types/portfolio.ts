@@ -43,8 +43,12 @@ export interface ProjectItem {
   highlightsPt: string[];
   highlightsEn: string[];
   stack: string[];
+  kind?: "project" | "consultancy" | "concept" | "initiative";
   featured?: boolean;
   link?: string;
+  donors?: string;
+  videoUrl?: string;
+  images?: string[];
 }
 
 export interface DeploymentItem {
@@ -59,6 +63,7 @@ export interface DeploymentItem {
   bulletsPt: string[];
   bulletsEn: string[];
   stack: string[];
+  images?: string[];
 }
 
 export interface SkillGroup {
@@ -73,12 +78,63 @@ export interface EducationItem {
   institution: string;
 }
 
+export interface CertificationItem {
+  name: string;
+  issuer: string;
+  issuedPt: string;
+  issuedEn: string;
+  credentialId?: string;
+  skills?: string[];
+}
+
+export interface CertificationGroup {
+  namePt: string;
+  nameEn: string;
+  items: CertificationItem[];
+}
+
+export interface ExpertiseArea {
+  icon: string;
+  namePt: string;
+  nameEn: string;
+  descriptionPt: string;
+  descriptionEn: string;
+}
+
+export interface Differentiator {
+  icon: string;
+  titlePt: string;
+  titleEn: string;
+  descriptionPt: string;
+  descriptionEn: string;
+}
+
+export interface AwardItem {
+  titlePt: string;
+  titleEn: string;
+  issuer: string;
+  datePt: string;
+  dateEn: string;
+  placePt: string;
+  placeEn: string;
+  descriptionPt: string;
+  descriptionEn: string;
+}
+
 export interface NavigationItem {
   label: string;
   href: string;
 }
 
 export interface PortfolioData {
+  expertiseAreas: ExpertiseArea[];
+  differentiators: {
+    titlePt: string;
+    titleEn: string;
+    quotePt: string;
+    quoteEn: string;
+    items: Differentiator[];
+  };
   personal: {
     name: string;
     headlinePt: string;
@@ -89,9 +145,11 @@ export interface PortfolioData {
     languages: LanguageItem[];
     email: string;
     phone: string;
+    phone2?: string;
     github: string;
     linkedin: string;
     website: string;
+    wakatime?: string;
     heroTagsPt: string[];
     heroTagsEn: string[];
   };
@@ -143,7 +201,12 @@ export interface PortfolioData {
     titleEn: string;
     introPt: string;
     introEn: string;
-    strengths: string[];
+    strengths: {
+      nameEn: string;
+      namePt: string;
+      descriptionEn: string;
+      descriptionPt: string;
+    }[];
   };
   education: {
     titlePt: string;
@@ -155,6 +218,16 @@ export interface PortfolioData {
     titleEn: string;
     itemsPt: string[];
     itemsEn: string[];
+  };
+  certifications: {
+    titlePt: string;
+    titleEn: string;
+    groups: CertificationGroup[];
+  };
+  awards: {
+    titlePt: string;
+    titleEn: string;
+    items: AwardItem[];
   };
   navigation: {
     pt: NavigationItem[];

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Users } from "lucide-react";
 import { notFound } from "next/navigation";
 
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { GlassCard } from "@/components/ui/glass-card";
+import { ImageLightbox } from "@/components/ui/image-lightbox";
 import {
   getAllCaseStudySlugs,
   getCaseStudyContent,
@@ -73,7 +74,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
   const content = getCaseStudyContent(source, typedLocale);
 
   const labels = {
-    back: typedLocale === "pt" ? "Voltar ao portfólio" : "Back to portfolio",
+    back: typedLocale === "pt" ? "Voltar aos projectos" : "Back to projects",
     technologies: typedLocale === "pt" ? "Tecnologias" : "Technologies",
     context: typedLocale === "pt" ? "Contexto" : "Context",
     solution: typedLocale === "pt" ? "Solução" : "Solution",
@@ -81,6 +82,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
     impact: typedLocale === "pt" ? "Impacto" : "Impact",
     highlights: typedLocale === "pt" ? "Destaques" : "Highlights",
     liveProject: typedLocale === "pt" ? "Projecto online" : "Live project",
+    fundedBy: typedLocale === "pt" ? "Financiado por / Parceiros" : "Funded by / Partners",
   };
 
   return (
@@ -88,7 +90,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
       <header className="border-b border-white/5 bg-background/70 backdrop-blur-xl">
         <div className="section-shell flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
           <Button asChild variant="ghost">
-            <Link href={`/${typedLocale}`}>
+            <Link href={`/${typedLocale}/projects`}>
               <ArrowLeft className="h-4 w-4" />
               {labels.back}
             </Link>
@@ -111,6 +113,14 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
               <Badge>{content.role}</Badge>
               <Badge>{content.period}</Badge>
             </div>
+            {content.donors && (
+              <div className="inline-flex items-center gap-2 rounded-xl border border-accent/20 bg-accent/5 px-4 py-2.5">
+                <Users className="h-4 w-4 text-accent shrink-0" />
+                <span className="text-sm text-accent/90">
+                  <span className="font-semibold">{labels.fundedBy}:</span> {content.donors}
+                </span>
+              </div>
+            )}
             {content.externalLink ? (
               <Button asChild>
                 <Link href={content.externalLink} target="_blank" rel="noreferrer">
@@ -175,6 +185,21 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
             </div>
           </GlassCard>
         </div>
+
+        {source.item.images && source.item.images.length > 0 && (
+          <div className="mt-12">
+            <GlassCard className="p-8">
+              <h2 className="font-display text-2xl font-semibold text-white">
+                {typedLocale === "pt" ? "Galeria" : "Gallery"}
+              </h2>
+              <ImageLightbox
+                images={source.item.images}
+                title={content.title}
+                galleryLabel={typedLocale === "pt" ? "Galeria" : "Gallery"}
+              />
+            </GlassCard>
+          </div>
+        )}
       </main>
     </div>
   );
