@@ -7,7 +7,7 @@ const yearsLeadership = currentYear - 2022;   // leadership start: 2022
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Edson Francisco",
-    headlinePt: "Especialista TI | Gestor de Projectos de IT | Programador, SysAdmin & Consultor Digital",
+    headlinePt: "Especialista TI | Gestor de Projectos de IT | Programador, Administrador de Sistemas & Consultor Digital",
     headlineEn: "ICT Specialist | IT Project Manager | Software Developer, SysAdmin & Digital Consultant",
     summaryPt:
       `Especialista TI com mais de ${yearsExperience} anos de experiência a transformar negócios e instituições com tecnologia de alto impacto — desenvolvimento de software, liderança de projectos, cloud e consultoria digital multisectorial.`,
