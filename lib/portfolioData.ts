@@ -10,9 +10,9 @@ export const portfolioData: PortfolioData = {
     headlinePt: "Especialista TI | Gestor de Projectos de IT | Programador, Administrador de Sistemas & Consultor Digital",
     headlineEn: "ICT Specialist | IT Project Manager | Software Developer, SysAdmin & Digital Consultant",
     summaryPt:
-      `Especialista TI com mais de ${yearsExperience} anos de experiência a transformar negócios e instituições com tecnologia de alto impacto — desenvolvimento de software, liderança de projectos, cloud e consultoria digital multisectorial.`,
+      `Com experiência a transformar negócios e instituições com tecnologia de alto impacto — desenvolvimento de software, liderança de projectos, cloud e consultoria digital multisectorial.`,
     summaryEn:
-      `ICT Specialist with ${yearsExperience}+ years transforming businesses and institutions with high-impact technology — software development, project leadership, cloud, and multi-sector digital consulting.`,
+      `With experience transforming businesses and institutions with high-impact technology — software development, project leadership, cloud, and multi-sector digital consulting.`,
     location: "Mozambique",
     languages: [
       { namePt: "Português", nameEn: "Portuguese", levelPt: "Nativo", levelEn: "Native" },
