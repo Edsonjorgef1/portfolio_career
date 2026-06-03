@@ -17,8 +17,8 @@ export function ConsultancySection({ locale, data }: { locale: Locale; data: Por
         }
         description={
           locale === "pt"
-            ? "As 4 implementações de maior impacto em consultoria e transformação digital."
-            : "Top 4 highest-impact consulting and digital transformation implementations."
+            ? "As implementações de maior impacto em consultoria e transformação digital."
+            : "Top highest-impact consulting and digital transformation implementations."
         }
       />
       <div className="mt-10 grid gap-6 lg:grid-cols-2">
