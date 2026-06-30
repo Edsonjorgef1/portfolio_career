@@ -1624,7 +1624,9 @@ export const portfolioData: PortfolioData = {
       { namePt: "Cloud & Infra-estrutura", nameEn: "Cloud & Infrastructure", items: ["AWS", "GCP", "Azure", "Google Workspace", "Microsoft 365", "Linux Servers", "Networking", "Starlink", "Operational Monitoring"] },
       { namePt: "Desenvolvimento & DevOps", nameEn: "Development & DevOps", items: ["PHP", "Laravel", "JavaScript", "TypeScript", "React Native", "REST APIs", "Backend Architecture", "CI/CD Pipelines", "System Integration"] },
       { namePt: "Bases de Dados", nameEn: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB", "SQL"] },
+      { namePt: "Competências Digitais (Digital Resume)", nameEn: "Digital Competencies (Digital Resume)", items: ["Software Development", "System Administration", "Agile / Scrum / Kanban", "API Design & Integration", "LAMP", "Postman", "jQuery", "JSON", "macOS", "Linux (Ubuntu/CentOS)", "Windows"] },
       { namePt: "Execução & Implementação", nameEn: "Execution & Implementation", items: ["Digital Transformation", "Field Implementation", "End-user Training", "Agile / Scrum / Sprint Planning", "Operational Continuity", "SLA Management", "Documentation"] },
+      { namePt: "Competências Interpessoais", nameEn: "Interpersonal Competencies", items: ["Liderança eficaz e exemplar", "Pensamento estratégico e julgamento crítico", "Integração em equipe e adaptabilidade", "Abordagem dinâmica para resolução de problemas"] },
     ],
   },
   leadership: {
