@@ -1,0 +1,93 @@
+name: Deploy Releases to Vercel
+
+on:
+  push:
+    tags:
+      - "portfolio.edsonfrancisco.site"
+      - "resume.edsonfrancisco.site"
+  workflow_dispatch:
+    inputs:
+      release_target:
+        description: "Release target to deploy"
+        required: true
+        type: choice
+        options:
+          - portfolio
+          - resume
+      git_ref:
+        description: "Branch, commit, or tag to deploy (ex: portfolio-only, digital-resume, portfolio.edsonfrancisco.site)"
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.git_ref || github.ref }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Resolve release target
+        id: target
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_TARGET: ${{ inputs.release_target }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          TARGET=""
+
+          if [ "$EVENT_NAME" = "push" ]; then
+            case "$REF_NAME" in
+              portfolio.edsonfrancisco.site) TARGET="portfolio" ;;
+              resume.edsonfrancisco.site) TARGET="resume" ;;
+            esac
+          else
+            TARGET="$INPUT_TARGET"
+          fi
+
+          if [ -z "$TARGET" ]; then
+            echo "Could not resolve release target from ref '$REF_NAME'."
+            exit 1
+          fi
+
+          echo "target=$TARGET" >> "$GITHUB_OUTPUT"
+
+      - name: Install Vercel CLI
+        run: npm i -g vercel@latest
+
+      - name: Deploy Portfolio release
+        if: steps.target.outputs.target == 'portfolio'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PORTFOLIO_PROJECT_ID }}
+        run: |
+          vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          vercel build --prod --token="$VERCEL_TOKEN"
+          URL="$(vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN")"
+          echo "Portfolio deploy URL: $URL"
+
+      - name: Deploy Resume release
+        if: steps.target.outputs.target == 'resume'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_RESUME_PROJECT_ID }}
+        run: |
+          vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          vercel build --prod --token="$VERCEL_TOKEN"
+          URL="$(vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN")"
+          echo "Resume deploy URL: $URL"
