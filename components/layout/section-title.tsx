@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
 export function SectionTitle({
@@ -15,7 +14,7 @@ export function SectionTitle({
   return (
     <div className={cn("max-w-3xl space-y-4", align === "center" && "mx-auto text-center")}>
       {eyebrow ? (
-        <Badge className="border-primary/20 bg-primary/10 text-primary">{eyebrow}</Badge>
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/80">{eyebrow}</p>
       ) : null}
       <div className="space-y-3">
         <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">{title}</h2>

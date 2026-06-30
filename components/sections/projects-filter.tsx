@@ -5,7 +5,7 @@ import { DeploymentCard } from "@/components/cards/deployment-card";
 import { ProjectCard } from "@/components/cards/project-card";
 import type { DeploymentItem, Locale, ProjectItem } from "@/types/portfolio";
 
-type Category = "all" | "projects" | "consulting" | "initiatives";
+type Category = "all" | "projects" | "consulting" | "initiatives" | "contributors" | "supervisors";
 
 interface Props {
   locale: Locale;
@@ -28,6 +28,15 @@ export function ProjectsFilter({
 }: Props) {
   const [active, setActive] = useState<Category>("all");
   const isEn = locale === "en";
+  const softwareAndConcept = [...softwareProjects, ...conceptProjects];
+  const contributorProjects = softwareAndConcept.filter((item) => {
+    const role = `${item.rolePt} ${item.roleEn}`.toLowerCase();
+    return role.includes("contributor") || role.includes("contribuidor");
+  });
+  const supervisorProjects = softwareAndConcept.filter((item) => {
+    const role = `${item.rolePt} ${item.roleEn}`.toLowerCase();
+    return role.includes("supervisor");
+  });
 
   const tabs: { id: Category; labelPt: string; labelEn: string; count: number }[] = [
     {
@@ -54,6 +63,18 @@ export function ProjectsFilter({
       count: consultancyProjects.length + deployments.length,
     },
     {
+      id: "contributors",
+      labelPt: "Contribuidor",
+      labelEn: "Contributor",
+      count: contributorProjects.length,
+    },
+    {
+      id: "supervisors",
+      labelPt: "Supervisor",
+      labelEn: "Supervisor",
+      count: supervisorProjects.length,
+    },
+    {
       id: "initiatives",
       labelPt: "Iniciativas",
       labelEn: "Initiatives",
@@ -64,6 +85,8 @@ export function ProjectsFilter({
   const showProjects = active === "all" || active === "projects";
   const showConsulting = active === "all" || active === "consulting";
   const showInitiatives = active === "all" || active === "initiatives";
+  const showContributorRole = active === "contributors";
+  const showSupervisorRole = active === "supervisors";
 
   return (
     <>
@@ -103,7 +126,43 @@ export function ProjectsFilter({
             </h2>
           </div>
           <div className="grid gap-6 lg:grid-cols-2">
-            {[...softwareProjects, ...conceptProjects].map((item, index) => (
+            {softwareAndConcept.map((item, index) => (
+              <ProjectCard key={item.slug} item={item} locale={locale} index={index} image={images[item.slug]} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {showContributorRole && (
+        <section className="mb-16">
+          <div className="mb-6">
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-1">
+              {isEn ? "Role" : "Papel"}
+            </p>
+            <h2 className="font-display text-2xl font-bold text-white">
+              {isEn ? "Contributor Projects" : "Projectos como Contribuidor"}
+            </h2>
+          </div>
+          <div className="grid gap-6 lg:grid-cols-2">
+            {contributorProjects.map((item, index) => (
+              <ProjectCard key={item.slug} item={item} locale={locale} index={index} image={images[item.slug]} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {showSupervisorRole && (
+        <section className="mb-16">
+          <div className="mb-6">
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-1">
+              {isEn ? "Role" : "Papel"}
+            </p>
+            <h2 className="font-display text-2xl font-bold text-white">
+              {isEn ? "Supervisor Projects" : "Projectos como Supervisor"}
+            </h2>
+          </div>
+          <div className="grid gap-6 lg:grid-cols-2">
+            {supervisorProjects.map((item, index) => (
               <ProjectCard key={item.slug} item={item} locale={locale} index={index} image={images[item.slug]} />
             ))}
           </div>

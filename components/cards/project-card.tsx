@@ -18,6 +18,10 @@ export function ProjectCard({
   index: number;
   image?: string | null;
 }) {
+  const role = getLocalizedValue(locale, item.rolePt, item.roleEn);
+  const isContributor = /contribuidor|contributor/i.test(role);
+  const isSupervisor = /supervisor/i.test(role);
+
   return (
     <Reveal delay={index * 0.06}>
       <GlassCard className="group overflow-hidden flex flex-col">
@@ -28,7 +32,18 @@ export function ProjectCard({
               style={{ backgroundImage: `url(${image})` }}
             />
           ) : (
-            <div className="h-full w-full bg-hero-grid" />
+            <div className="flex h-full w-full items-end bg-[radial-gradient(circle_at_top_left,rgba(88,166,255,0.24),transparent_30%),linear-gradient(135deg,rgba(12,18,30,0.95),rgba(12,18,30,0.7))] p-4">
+              <div className="flex flex-wrap gap-2">
+                {item.stack.slice(0, 5).map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.18em] text-white/80"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
           {item.donors && (
@@ -42,7 +57,18 @@ export function ProjectCard({
         </div>
         <div className="flex flex-col flex-1 space-y-5 p-6">
           <div className="space-y-3 flex-1">
-            <Badge>{getLocalizedValue(locale, item.categoryPt, item.categoryEn)}</Badge>
+            <div className="flex flex-wrap gap-2">
+              <Badge>{getLocalizedValue(locale, item.categoryPt, item.categoryEn)}</Badge>
+              <Badge
+                className={
+                  isContributor || isSupervisor
+                    ? "border-primary/35 bg-primary/10 text-primary"
+                    : "border-white/15 bg-white/10 text-white"
+                }
+              >
+                {role}
+              </Badge>
+            </div>
             <div>
               <h3 className="font-display text-xl font-semibold text-white">{item.name}</h3>
               <p className="mt-2 text-sm text-muted-foreground line-clamp-3">

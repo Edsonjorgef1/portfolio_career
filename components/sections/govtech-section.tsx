@@ -1,3 +1,4 @@
+import { SectionTitle } from "@/components/layout/section-title";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Reveal } from "@/components/ui/reveal";
 import type { Locale } from "@/types/portfolio";
@@ -51,19 +52,15 @@ export function GovTechSection({ locale }: { locale: Locale }) {
   return (
     <section id="govtech" className="section-shell section-spacing">
       <Reveal>
-        <div className="mb-10">
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-            {isEn ? "Government & Civic Technology" : "Tecnologia Governamental & Cívica"}
-          </p>
-          <h2 className="font-display text-3xl font-bold text-white md:text-4xl">
-            {isEn ? "GovTech Track Record" : "Experiência em GovTech"}
-          </h2>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
-          {isEn
+        <SectionTitle
+          eyebrow={isEn ? "Government & Civic Technology" : "Tecnologia Governamental & Cívica"}
+          title={isEn ? "GovTech Track Record" : "Experiência em GovTech"}
+          description={
+            isEn
               ? "Institutional-grade technology for government agencies, civic organisations, and public-interest platforms across Mozambique — from grievance redress mechanisms for national energy funds to civic justice apps with 20,000+ users."
-              : "Tecnologia de nível institucional para agências governamentais, organizações cívicas e plataformas de interesse público em Moçambique — desde mecanismos de queixas para fundos nacionais de energia a aplicações cívicas com mais de 20.000 utilizadores."}
-          </p>
-        </div>
+              : "Tecnologia de nível institucional para agências governamentais, organizações cívicas e plataformas de interesse público em Moçambique — desde mecanismos de queixas para fundos nacionais de energia a aplicações cívicas com mais de 20.000 utilizadores."
+          }
+        />
       </Reveal>
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

@@ -13,6 +13,7 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { LeadershipSection } from "@/components/sections/leadership-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { SkillsSection } from "@/components/sections/skills-section";
+import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { getNavigation } from "@/lib/portfolio";
 import { portfolioData } from "@/lib/portfolioData";
 import type { Locale } from "@/types/portfolio";
@@ -26,6 +27,7 @@ export function PortfolioPage({ locale }: { locale: Locale }) {
         <AboutSection locale={locale} data={portfolioData} />
         <ExpertiseAreasSection locale={locale} data={portfolioData} />
         <DifferentiatorsSection locale={locale} data={portfolioData} />
+        <TestimonialsSection locale={locale} />
         <ExperienceSection locale={locale} data={portfolioData} />
         <GovTechSection locale={locale} />
         <ProjectsSection locale={locale} data={portfolioData} />
