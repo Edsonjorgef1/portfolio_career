@@ -26,10 +26,26 @@ export function getConsultancyItems() {
   return portfolioData.featuredProjects.items.filter((item) => item.kind === "consultancy");
 }
 
+function getRoleWeight(item: ProjectItem) {
+  const role = `${item.rolePt} ${item.roleEn}`.toLowerCase();
+  if (role.includes("contributor") || role.includes("contribuidor")) {
+    return 2;
+  }
+  if (role.includes("supervisor")) {
+    return 1;
+  }
+  return 0;
+}
+
 export function getProjectItems() {
-  return portfolioData.featuredProjects.items.filter(
-    (item) => item.kind === "project" || !item.kind,
-  );
+  return portfolioData.featuredProjects.items
+    .filter((item) => item.kind === "project" || !item.kind)
+    .sort((a, b) => {
+      if (a.featured !== b.featured) {
+        return a.featured ? -1 : 1;
+      }
+      return getRoleWeight(a) - getRoleWeight(b);
+    });
 }
 
 export function getConceptItems() {

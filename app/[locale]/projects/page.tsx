@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Reveal } from "@/components/ui/reveal";
 import { ProjectsFilter } from "@/components/sections/projects-filter";
-import { getConceptItems, getConsultancyItems, getInitiativeItems, getNavigation, getProjectImage, getProjectItems } from "@/lib/portfolio";
+import { getConceptItems, getConsultancyItems, getInitiativeItems, getProjectImage, getProjectItems } from "@/lib/portfolio";
 import { portfolioData } from "@/lib/portfolioData";
-import type { Locale } from "@/types/portfolio";
+import type { Locale, NavigationItem } from "@/types/portfolio";
 
 const allowedLocales: Locale[] = ["pt", "en"];
 
@@ -43,6 +41,12 @@ export default async function ProjectsListPage({ params }: { params: Promise<Par
   const consultancyProjects = getConsultancyItems();
   const initiativeItems = getInitiativeItems();
   const deployments = portfolioData.freelanceDeployments.items;
+  const projectsNavigation: NavigationItem[] = [
+    {
+      label: isEn ? "Back to Portfolio" : "Voltar ao Portfolio",
+      href: `/${locale}`,
+    },
+  ];
 
   // Pre-resolve images server-side (uses node:fs — cannot run in client components)
   const allProjectItems = [...softwareProjects, ...conceptProjects, ...consultancyProjects, ...initiativeItems];
@@ -52,19 +56,10 @@ export default async function ProjectsListPage({ params }: { params: Promise<Par
 
   return (
     <>
-      <SiteHeader locale={locale} navigation={getNavigation(locale)} name={portfolioData.personal.name} />
+      <SiteHeader locale={locale} navigation={projectsNavigation} name={portfolioData.personal.name} />
       <main className="min-h-screen pt-24">
         <div className="section-shell py-16">
           <Reveal>
-            <div className="mb-3">
-              <Link
-                href={`/${locale}`}
-                className="inline-flex items-center gap-2 text-sm text-muted-foreground transition hover:text-white"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                {isEn ? "Back to Portfolio" : "Voltar ao Portfolio"}
-              </Link>
-            </div>
             <div className="mb-10">
               <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
                 {isEn ? "Full Portfolio" : "Portfolio Completo"}

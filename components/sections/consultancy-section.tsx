@@ -12,13 +12,13 @@ export function ConsultancySection({ locale, data }: { locale: Locale; data: Por
         eyebrow={locale === "pt" ? "Consultoria" : "Consulting"}
         title={
           locale === "pt"
-            ? "Implementações em Destaque"
-            : "Featured Implementations"
+            ? "Consultorias Seleccionadas"
+            : "Selected Consulting Engagements"
         }
         description={
           locale === "pt"
-            ? "As 4 implementações de maior impacto em consultoria e transformação digital."
-            : "Top 4 highest-impact consulting and digital transformation implementations."
+            ? "Projectos de consultoria em arquitectura de sistemas, transformação digital e implementação estratégica."
+            : "Consulting engagements across systems architecture, digital transformation, and strategic implementation."
         }
       />
       <div className="mt-10 grid gap-6 lg:grid-cols-2">

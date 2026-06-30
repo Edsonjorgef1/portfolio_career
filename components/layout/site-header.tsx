@@ -28,9 +28,15 @@ export function SiteHeader({
 
         <nav className="hidden items-center gap-6 lg:flex">
           {navigation.map((item) => (
-            <a key={item.href} href={item.href} className="text-sm text-muted-foreground transition hover:text-white">
-              {item.label}
-            </a>
+            item.href.startsWith("/") ? (
+              <Link key={item.href} href={item.href} className="text-sm text-muted-foreground transition hover:text-white">
+                {item.label}
+              </Link>
+            ) : (
+              <a key={item.href} href={item.href} className="text-sm text-muted-foreground transition hover:text-white">
+                {item.label}
+              </a>
+            )
           ))}
         </nav>
 
@@ -53,14 +59,25 @@ export function SiteHeader({
         <div className="section-shell glass-panel mb-4 rounded-[1.5rem] px-4 py-4 lg:hidden">
           <div className="flex flex-col gap-3">
             {navigation.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="rounded-xl px-3 py-2 text-sm text-muted-foreground transition hover:bg-white/5 hover:text-white"
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </a>
+              item.href.startsWith("/") ? (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-xl px-3 py-2 text-sm text-muted-foreground transition hover:bg-white/5 hover:text-white"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-xl px-3 py-2 text-sm text-muted-foreground transition hover:bg-white/5 hover:text-white"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </a>
+              )
             ))}
             <div className="pt-2">
               <LanguageSwitcher locale={locale} />
