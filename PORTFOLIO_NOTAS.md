@@ -1,0 +1,126 @@
+# Notas do portefólio
+
+Ponto de partida para a próxima actualização. Última revisão: **2026-09-30**.
+Caminhos de repositórios são relativos a `~/DEV_SETUP/` (excepto os que começam por `/`).
+
+## Como está organizado
+
+- Conteúdo dos projectos: `lib/content/projects/*.ts` (tipos em `types/content.ts`), um ficheiro por grupo.
+- Perfil, experiência, "Agora" e números do hero: `lib/content/profile.ts`. Certificações: `lib/content/certifications.ts`.
+- Categorias e nomes canónicos de tecnologias (filtro da galeria): `lib/content/categories.ts`.
+- Imagens: `public/work/<slug>/NN.webp` (≤ 1600 px, < 300 KB). A primeira imagem desktop é a capa do cartão.
+- CV: página `/pt/cv` e `/en/cv` → PDF em `public/cv/` (gerar com o browser headless: `page.pdf`, A4, margens 14 mm).
+- Texto para o LinkedIn: `LINKEDIN.md`.
+
+## Decisões de 2026-10-04 (Edson)
+
+- **Ocultos** (ficam no código com `hidden: true`, não aparecem no site): GrievanceSaaS, Alto Molócuè, MozLab Innovation Center.
+- **Sem referências de GitHub no site**: não mostrar números de commits, notas de autoria nem fontes "git log/repositório". Manter só o período de actividade. Os campos `authorship` continuam nos dados mas não são mostrados.
+- **Destaque na página inicial**: FAMS, JURIS, Kukura e os casos de sucesso MHC (mel) e OLIMAX (copra), ligados ao trabalho com a NIRAS (VaMoz Competir). Todos os projectos ficam em `/pt/projects` e `/en/projects`.
+- **Posicionamento**: liderança técnica com perfil hands-on — gestão e coordenação (incl. projectos com coordenação internacional) sem largar o código: programação diária, revisão de código, integrações, decisões de arquitectura, pipelines e resolução de problemas em produção.
+- **e-Acácia**: portal e app do Conselho Municipal de Maputo (eacacia.gov.mz; app da TechSolutions no Google Play, 500+ downloads em Out 2026); papel do Edson: revisão, testes e submissão às lojas.
+
+- **Município do Dondo**: novas capturas (secretaria virtual, prestação de contas, departamentos; sem pessoas). Rodapé do site: "Desenvolvido por: Empoderando Moçambique". GIZ confirmado só no portal de transparência ("With support of GIZ/BGF-Mozambique"); a parceria GIZ no portal principal e na secretaria vem do Edson.
+- **equipmoz.org/projects/tech-team e /other-apps**: fonte de AIDai (app de pontos de apoio pós-Idai, 2019), KULTUARE (registo de participantes em igrejas na COVID-19, 2020), HLink (origem no hackathon de 2020), e capturas de Consultare, Fonte da Vida, HLink, AIDai, KULTUARE. Downloads usados: Google Play (Fonte da Vida 50 mil+, JURIS 10 mil+, Out 2026); os contadores do equipmoz.org (80 000 e 30 000) não foram usados.
+
+## Regras usadas (manter)
+
+1. **Autoria (uso interno, não mostrar no site) = só `git log --all -i --author=edson`** (nomes Edson Famanda, Edson Jorge Francisco, edsonjorgef1; emails edson@equipmoz.org e Edsonjorgef1@gmail.com). O domínio `@equipmoz.org` é da equipa toda — não conta.
+2. Nenhum número sem fonte. Cada `results[]` tem `source`. Números retirados em 2026-09 por falta de fonte: 100K+ utilizadores, 20.000 downloads JURIS, 50.000/80.000 Fonte da Vida, 55.000 produtores, 15+ empresas / 6 províncias, 16 profissionais liderados, 98–99,9% uptime, 70% menos dados.
+3. Projectos com ~0 commits próprios aparecem como "team" com o papel real.
+4. Capturas: nunca dados pessoais, emails, nomes de utentes/alunos/membros, tokens, IPs/MACs/números de série, barra de favoritos, caminhos com o nome de utilizador. Nunca logótipos de terceiros sem autorização.
+
+## Projectos (46)
+
+| Ordem | Slug | Nome | Período | Estado | Autoria | Imagens | Fonte |
+|---|---|---|---|---|---|---|---|
+| 1 | `fams` | FAMS – Farmer & Agribusiness Management System | 2021–2026 | production | main | 6 | EQUIPMOZ/FAMS_Backend, EQUIPMOZ/fams-desktop (changelog.json), EQUIPMOZ/fams-mobile, EQUIPMOZ/fams-electron-desktop, fams-pwa-monorepo |
+| 2 | `fams-mahala` | FAMS Mahala – plano gratuito multi-empresa | 2026 | production | contributor | 2 | EQUIPMOZ/fams-desktop (branch deploy/mahala), EQUIPMOZ/FAMS_Freemium |
+| 3 | `fams-implementations` | Implementações do FAMS em clientes | 2024–2026 | production | consulting | 0 | sem repo — relatórios NIRAS/GIZ, CV |
+| 4 | `vamoz-competir` | VaMoz Competir – GIZ / NIRAS | 2025–2026 | production | consulting | 0 | sem repo — relatório NIRAS |
+| 5 | `proecon` | ProEcon – GIZ / COMO Consult | 2021–2023 | archived | consulting | 0 | sem repo — CV GIZ |
+| 6 | `fams-website` | Site do FAMS | 2024–2026 | production | main | 3 | EQUIPMOZ/fams-website |
+| 7 | `laravel-teams-logging` | laravel-teams-logging | 2022 | production | contributor | 2 | EDSON/GitHub/laravel-teams-logging (fork), Packagist |
+| 20 | `funae-mgqr` | FUNAE – MGQR (Mecanismo de Gestão de Queixas e Reclamações) | 2025–2026 | archived | main | 5 | PROJECTOS_CLIENTES/TECHSOLUTIONS/FUNAE |
+| 21 | `siga-ipp` | SIGA – Instituto Politécnico Planalto | 2026 | development | contributor | 3 | /Applications/MAMP/htdocs/ipp |
+| 22 | `municipio-do-dondo` | Município do Dondo – Portal Oficial | 2019–2026 | production | consulting | 0 | sem repo — site público |
+| 23 | `sigem-plus` | SIGEM+ – Sistema Integrado de Gestão de Membros | 2026 | prototype | contributor | 5 | PROJECTOS_CLIENTES/FRENTE (sigem-web, sigem-mobile) |
+| 24 | `start-escolar` | Start Escolar | 2019–2022 | archived | main | 0 | EQUIPMOZ/Start%20Escolar |
+| 25 | `djobar` | Djobar – Plataforma de Emprego | 2022 | archived | main | 0 | EDSON/GitHub/2 - WORK PROJECTS/djobar_platform |
+| 26 | `library-access-analytics` | Biblioteca Beireano – Registo de Presenças | 2023–2026 | production | lead | 4 | sem repo — PORTFOLIO/BIBLIOTECA, app Vercel |
+| 27 | `aem-controle-ponto` | AEM Controle de Ponto (CPonto) | 2025–2026 | development | contributor | 3 | EDSON/AEM_Controle-Ponto, PORTFOLIO/Cponto.vercel |
+| 28 | `grievance-saas` | GrievanceSaaS | 2026 | concept | lead | 0 | PROJECTOS_CLIENTES/PESSOAL/grievance-saas |
+| 29 | `absentify-teams` | Gestão de Ausências com Absentify e Microsoft Teams | 2024–2026 | production | consulting | 3 | sem repo — capturas em PORTFOLIO |
+| 30 | `alto-molocue-website` | Alto Molócuè – Website Institucional | 2022 | prototype | lead | 4 | EDSON/alto_mulocue-website |
+| 31 | `e-acacia` | E.Acacia – Pagamento de Taxas Municipais | 2025–2026 | archived | consulting | 0 | sem repo — CV |
+| 40 | `consultare` | Consultare | 2019–2021 | production | main | 5 | EQUIPMOZ/consultare-api, PORTFOLIO/CONSULTAR |
+| 41 | `juris` | JURIS | 2020–2024 | production | contributor | 5 | EQUIPMOZ/juris_api, EDSON/GitHub/4-FORKED_REPO/Juris_Website |
+| 42 | `fonte-da-vida` | Fonte da Vida | 2021–2022 | production | main | 2 | EQUIPMOZ/fonte_api_laravel, EQUIPMOZ/FONTE-WHATSAPP |
+| 43 | `kukura` | Kukura | 2024–2026 | production | contributor | 3 | EQUIPMOZ/DPT_Backend, EQUIPMOZ/Kukura_App, MOBILE_APPS/DPT_App |
+| 44 | `hlink` | H-Link | 2021–2022 | archived | main | 0 | EQUIPMOZ/hlink-backend |
+| 45 | `abastece` | Abastece | 2026 | production | contributor | 3 | EQUIPMOZ/Abastece_Marketing, Abastece_App, Abastece_Backend |
+| 46 | `c-yanga` | C-Yanga | 2020–2021 | archived | contributor | 0 | EDSON/c-yanga_api, EDSON/c-yanga |
+| 47 | `mozsaude` | MozSaúde | 2022–2025 | prototype | lead | 3 | EDSON/mozsaude_app, EDSON/Laravel_Admin_Panel/craftable_admin |
+| 48 | `donante` | Donante | 2021 | prototype | main | 4 | EDSON/GitHub/3 - COLLABORATION PROJECTS/donante-marketplace |
+| 49 | `doamoz` | DoaMoz | 2026 | concept | team | 4 | mozlab-innovation-center (conceito), PORTFOLIO/Doa |
+| 50 | `kukanela` | Kukanela | 2021–2022 | prototype | team | 0 | EDSON/GitHub/3 - COLLABORATION PROJECTS/ko-kanela |
+| 51 | `semmo` | SEMMO | 2021 | concept | team | 0 | sem repo — texto do site anterior |
+| 52 | `aidai` | Aidai | 2019 | concept | team | 0 | sem repo — texto do site anterior |
+| 53 | `kultuare` | KULTUARE | 2021 | concept | team | 0 | sem repo — texto do site anterior |
+| 70 | `karibu-menu` | Karibu Menu | 2025–2026 | development | main | 6 | PROJECTOS_CLIENTES/PESSOAL/karibu-menu (antes Manna), PORTFOLIO/MANNA |
+| 71 | `mygym` | MyGym (FF Gym) | 2025–2026 | development | lead | 2 | PROJECTOS_CLIENTES/HENRY/ffgym-mvp (+ ff_gym, ffgym-app, ffgym_app) |
+| 72 | `hospitality-networks` | Redes Wi-Fi para hotelaria | 2024–2025 | production | consulting | 4 | sem repo — PORTFOLIO/RUIJIIE + TENDA |
+| 73 | `edsonfrancisco-site` | edsonfrancisco.site | 2026 | production | lead | 2 | EDSON/edsonfrancisco-site |
+| 74 | `casa-msika` | Casa Msika Lodge | 2022 | production | lead | 2 | sem repo — site público |
+| 75 | `github-actions-template` | GitHub Actions Template | 2024 | archived | lead | 0 | EDSON/GitHub/4-FORKED_REPO/GitHub-Actions-Template |
+| 76 | `sitehealth` | SiteHealth | 2022 | prototype | lead | 0 | EQUIPMOZ/SiteHealth |
+| 77 | `perpi-dashboard` | Perpi Dashboard | 2025 | development | contributor | 0 | MOZ-Coders/perpi_desktop |
+| 78 | `residencial-bendiak` | Residencial Bendiak | 2025 | prototype | contributor | 2 | MOZ-Coders/Residencial-Bendiak |
+| 79 | `mozlab` | MozLab Innovation Center | 2026 | concept | lead | 0 | EQUIPMOZ/mozlab-innovation-center |
+| 80 | `sms-usendit` | uSendIt PHP | 2022 | prototype | lead | 0 | EDSON/PHP_PACKAGES/SMS_uSendIt |
+| 81 | `micacao-wallet` | MiCacao Wallet (estudo) | 2026 | development | contributor | 0 | EDSON/micacao-wallet (fork) |
+| 82 | `learning-wisdom` | Learning Wisdom | 2026 | development | team | 0 | sem repo — texto do site anterior |
+
+Fora do site (decisão 2026-09): Recall e SecureLink API (0 commits próprios), sysadmin-linux_tips, laravel-livewire_challenge, ePetition-API, Digital-Resume (capturas com email/telefone), FAMS Mobile e FAMS Electron como projectos separados (são da equipa; mencionados no estudo de caso FAMS).
+
+## Fontes das capturas
+
+- **Novas (2026-09-29/30):** browser headless (Playwright, Chromium) em 1440×900 e 390×844.
+  - Sites públicos, sem login nem formulários: fams.co.mz, mahala.fams.co.mz, juris.co.mz, abastece.co.mz, fontedavida.org, consultare, kukura.co.mz, casamsika.com, edsonfrancisco.site, Packagist/GitHub (laravel-teams-logging), páginas públicas de login do SIGA.
+  - Execução local sem base de dados: fams-website (`php -S`), SIGEM+ (dados demo em localStorage), MozSaúde (cópia no scratchpad), Kukura App (ecrã de login), Donante, Alto Molócuè, MyGym e Residencial Bendiak (ecrãs de login).
+- **Existentes:** `~/DEV_SETUP/PORTFOLIO/**`, só as marcadas SAFE no inventário, ou recortadas e verificadas visualmente (ex.: barra de favoritos nas capturas FUNAE, faixa preta no mapa FAMS, linha de email no Packagist).
+- **Não usar (UNSAFE):** QR attendance 03/04 (funcionários AEM), redes de hotelaria 03/04/05/06 (token `stok=`, SN, MAC), FAMS com nomes reais, FUNAE #01/#02 (emails) e #40 (email em queixa anónima), SIGEM+ `05.png`/`06.png` e dashboards com totais por província, Consultare login com autofill, dashboard JURIS com contagem de denúncias, capturas do Digital Resume, login de produção do FAMS (mostra o Laravel Debugbar), fotos/WhatsApp com pessoas privadas, Dondo (caras e nomes de beneficiários).
+
+## Referências externas (verificadas em 2026-10-04)
+
+- **VaMoz Competir** — ficha GIZ (Out 2025): BMZ, cofinanciado pela UE, 01.09.2023–31.03.2029, EUR 32,5 M, hubs Inhambane/Beira/Maputo/Nampula, linha de trabalho com "digital solutions for supply chain management". https://www.giz.de/sites/default/files/media/pkb-document/2025-12/giz2025-en-vamoz-competir-factsheet.pdf · NIRAS: implementado pela NIRAS com o MADER; 10 empresas-âncora, 70 MPME, 8 000 pequenas explorações (números do programa, não do FAMS). https://library.niras.com/capstat/agri/inclusive-resilient-agriculture-market-systems
+- **Kulima ndi Malonda** (guia NIRAS/GIZ) — descreve o FAMS como desenvolvido pela ONG Empoderando com apoio da GIZ; no piloto (Nov 2022) a Luteari usou o FAMS para dados de base e notas dos técnicos. O "até 80% de produtividade" e os 1 500 produtores formados são resultados da formação KnM, **não** do FAMS — não atribuir ao FAMS. https://www.niras.com/media/cchl2swj/kulima-ndi-malonda_reduce-size.pdf
+- **COMO Consult** — programa de promoção de empresas locais da GIZ (desde 2015, 40+ projectos locais; critérios de competitividade; códigos de barras para rastreabilidade). Não nomeia o ProEcon nem o FAMS: usado só como contexto. https://como-consult.de/en/cases/promotionoflocalcompaniesinmozambiqueandtheirsuppliers/
+- Não usados: textos colados com "15+ agroindústrias" e "dezenas de milhares de produtores" — sem fonte primária.
+
+## Relatórios internos usados (enviados pelo Edson a 2026-10-04)
+
+- *Report_FAMS_NIRAS_Out2025-Jul2026* (relatório técnico geral para a NIRAS; dados dos painéis a 10 Set 2026) — fonte dos números VaMoz e implementações: 13 300+ produtores em 5 empresas; Thandizana 6 329 (2 937 em Fev 2026); Moz Agri 4 780 (72 em Jan 2026); ~150 duplicados corrigidos na Green Agro; 740 registos de presença GIZ/Reframe.
+- *Trip_Report_FAMS_Missions_NIRAS_EN* (Jul 2026) e *Relatório de Viagem à Catandica* (MozAgri) — adopção: ~25 agentes, 11 usam a app, 1 sincroniza com regularidade.
+- *Relatorio_Implementacao_FAMS_MHC* (30 Set 2026) — rastreabilidade do mel por balde.
+- Deixado de fora de propósito: nomes de pessoas dos clientes, preços de equipamento, rendimentos de fábrica, cartas de conformidade/licenças e negociações, suspensões e decisões de saída de clientes, ajudas de custo, links do Google Photos, telefone.
+- **Por confirmar:** a missão de seguimento MozAgri aparece como 20–23 Jun 2026 no relatório em português e 20–24 Jul 2026 nos relatórios consolidados (usou-se Jul 2026). A refactorização do módulo de Formações aparece como "prevista Ago–Set" no relatório de viagem e "concluída" no relatório geral (usou-se o mais recente).
+
+## Informação dada pelo Edson (2026-10-04)
+
+- **JURIS**: em produção; o Edson é supervisor do departamento técnico que o mantém; Juris Bot (sistema de chat no WhatsApp) lançado a 30 Set 2026. Sem repositório do bot localizado nem commits recentes na `juris_api` — a fonte destes factos é o próprio Edson; **não há** detalhes técnicos do bot no site. Para a próxima actualização: indicar o repositório do bot para se poder descrever o que ele faz.
+
+## Para a próxima actualização
+
+1. Correr o levantamento: procurar repositórios em `~/DEV_SETUP` e `/Applications/MAMP/htdocs`, contar commits com a regra 1 e comparar com a tabela acima.
+2. Actualizar `NOW` em `lib/content/profile.ts` (cada ponto com evidência de commit recente) e o `PROOF` do hero (commits e versões do FAMS: `changelog.json`).
+3. Regenerar os PDFs do CV depois de alterar experiência ou projectos.
+4. Verificar em headless (desktop + mobile): 0 imagens partidas, 0 erros de consola, sem scroll horizontal, `lang` certo em /pt e /en.
+
+## Por confirmar com o Edson
+
+- FUNAE MGQR: está "arquivado" porque o domínio de produção não resolve — mudar se ainda estiver no ar.
+- Reconhecimentos dos hackathons (C-Yanga 1.º lugar 2020, Donante 2.º lugar 2021): vêm do site anterior; o git do Donante mostra Out 2021 (o site dizia Nov 2021).
+- SIGEM+: os commits estão com a identidade genérica "SIGEM Dev"; o repo está na conta do Edson.
+- Biblioteca: autoria "lead" baseada no papel indicado no site anterior (não há repositório).
+- Aidai, KULTUARE, SEMMO, Learning Wisdom, E.Acacia: só há texto do CV/site anterior — sem capturas nem repositório.

@@ -1,93 +1,46 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 
-import { SiteFooter } from "@/components/layout/site-footer";
-import { SiteHeader } from "@/components/layout/site-header";
-import { Reveal } from "@/components/ui/reveal";
-import { ProjectsFilter } from "@/components/sections/projects-filter";
-import { getConceptItems, getConsultancyItems, getInitiativeItems, getProjectImage, getProjectItems } from "@/lib/portfolio";
-import { portfolioData } from "@/lib/portfolioData";
-import type { Locale, NavigationItem } from "@/types/portfolio";
+import { Gallery } from "@/components/site/gallery";
+import { OpenSource } from "@/components/site/home-sections";
+import { Shell } from "@/components/site/shell";
+import { OPEN_SOURCE_SLUGS, PROJECTS, getUsedTech } from "@/lib/content/projects";
+import { pageMetadata } from "@/lib/content/seo";
+import { UI, t } from "@/lib/content/ui";
+import type { Locale } from "@/types/content";
 
-const allowedLocales: Locale[] = ["pt", "en"];
+type Params = Promise<{ locale: string }>;
 
-type Params = { locale: string };
-
-export function generateStaticParams() {
-  return allowedLocales.map((locale) => ({ locale }));
-}
-
-export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { locale } = await params;
-  const isEn = locale === "en";
-  return {
-    title: isEn
-      ? "Projects & Consultancies | Edson Francisco"
-      : "Projectos & Consultorias | Edson Francisco",
-    description: isEn
-      ? "All software projects, civic tech platforms, and consulting engagements by Edson Francisco."
-      : "Todos os projectos de software, plataformas cívicas e consultorias de Edson Francisco.",
-  };
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "/projects",
+    title: t(locale as Locale, UI.gallery.title),
+    description: t(locale as Locale, UI.gallery.metaDescription),
+  });
 }
 
-export default async function ProjectsListPage({ params }: { params: Promise<Params> }) {
-  const { locale: localeStr } = await params;
-  if (!allowedLocales.includes(localeStr as Locale)) notFound();
-  const locale = localeStr as Locale;
-  const isEn = locale === "en";
-
-  const softwareProjects = getProjectItems();
-  const conceptProjects = getConceptItems();
-  const consultancyProjects = getConsultancyItems();
-  const initiativeItems = getInitiativeItems();
-  const deployments = portfolioData.freelanceDeployments.items;
-  const projectsNavigation: NavigationItem[] = [
-    {
-      label: isEn ? "Back to Portfolio" : "Voltar ao Portfolio",
-      href: `/${locale}`,
-    },
-  ];
-
-  // Pre-resolve images server-side (uses node:fs — cannot run in client components)
-  const allProjectItems = [...softwareProjects, ...conceptProjects, ...consultancyProjects, ...initiativeItems];
-  const images: Record<string, string | null> = Object.fromEntries(
-    allProjectItems.map((item) => [item.slug, getProjectImage(item.slug)])
+export default async function ProjectsIndex({ params }: { params: Params }) {
+  const { locale: raw } = await params;
+  const locale = raw as Locale;
+  const openSource = OPEN_SOURCE_SLUGS.map((slug) => PROJECTS.find((p) => p.slug === slug)).filter(
+    (p): p is NonNullable<typeof p> => Boolean(p),
   );
 
   return (
-    <>
-      <SiteHeader locale={locale} navigation={projectsNavigation} name={portfolioData.personal.name} />
-      <main className="min-h-screen pt-24">
-        <div className="section-shell py-16">
-          <Reveal>
-            <div className="mb-10">
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-                {isEn ? "Full Portfolio" : "Portfolio Completo"}
-              </p>
-              <h1 className="font-display text-4xl font-bold text-white md:text-5xl">
-                {isEn ? "Projects & Initiatives" : "Projectos & Iniciativas"}
-              </h1>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
-                {isEn
-                  ? "All software platforms, civic tech applications, and digital transformation projects built and led by Edson Francisco."
-                  : "Todas as plataformas de software, aplicações de tecnologia cívica e projectos de transformação digital construídos e liderados por Edson Francisco."}
-              </p>
-            </div>
-          </Reveal>
-
-          <ProjectsFilter
-            locale={locale}
-            softwareProjects={softwareProjects}
-            conceptProjects={conceptProjects}
-            consultancyProjects={consultancyProjects}
-            deployments={deployments}
-            initiativeItems={initiativeItems}
-            images={images}
-          />
+    <Shell locale={locale}>
+      <section aria-labelledby="work" className="container-page pb-8 pt-16 sm:pt-20">
+        <div className="max-w-prose">
+          <h1 id="work" className="fade-up text-4xl font-semibold tracking-tight sm:text-5xl">
+            {t(locale, UI.gallery.title)}
+          </h1>
+          <p className="mt-4 leading-relaxed text-muted">{t(locale, UI.gallery.intro)}</p>
         </div>
-      </main>
-      <SiteFooter locale={locale} name={portfolioData.personal.name} email={portfolioData.personal.email} />
-    </>
+        <div className="mt-10">
+          <Gallery projects={PROJECTS} techs={getUsedTech()} locale={locale} />
+        </div>
+      </section>
+      <OpenSource locale={locale} projects={openSource} />
+    </Shell>
   );
 }
-

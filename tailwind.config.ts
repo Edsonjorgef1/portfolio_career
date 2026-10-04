@@ -1,37 +1,31 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ["class"],
-  content: [
-    "./app/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./lib/**/*.{ts,tsx}",
-  ],
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        card: "hsl(var(--card))",
-        "card-foreground": "hsl(var(--card-foreground))",
-        border: "hsl(var(--border))",
-        muted: "hsl(var(--muted))",
-        "muted-foreground": "hsl(var(--muted-foreground))",
-        primary: "hsl(var(--primary))",
-        "primary-foreground": "hsl(var(--primary-foreground))",
-        accent: "hsl(var(--accent))",
-        "accent-foreground": "hsl(var(--accent-foreground))",
+        background: "var(--background)",
+        surface: "var(--surface)",
+        "surface-2": "var(--surface-2)",
+        foreground: "var(--foreground)",
+        muted: "var(--muted)",
+        subtle: "var(--subtle)",
+        border: "var(--border)",
+        "border-strong": "var(--border-strong)",
+        accent: "var(--accent)",
+        "accent-foreground": "var(--accent-foreground)",
       },
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        display: ["var(--font-display)"],
+        sans: ["var(--font-geist-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "ui-monospace", "SFMono-Regular", "monospace"],
       },
-      boxShadow: {
-        glow: "0 12px 60px rgba(104, 139, 255, 0.15)",
+      maxWidth: {
+        page: "72rem",
+        prose: "42rem",
       },
-      backgroundImage: {
-        "hero-grid":
-          "radial-gradient(circle at top, rgba(103, 120, 255, 0.2), transparent 30%), linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0))",
+      borderRadius: {
+        xl: "0.75rem",
       },
     },
   },

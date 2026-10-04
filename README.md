@@ -36,12 +36,12 @@ Atuo como a ponte entre a visão de negócio e a execução técnica. Minha abor
 
 Este portfólio foi construído com:
 
-- **Next.js** - Framework React com SSR e SSG
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS** - Estilização utility-first
-- **Framer Motion** - Animações suaves
-- **shadcn/ui** - Componentes UI acessíveis
-- **Lucide React** - Ícones
+- **Next.js 15** (App Router, páginas geradas estaticamente por idioma)
+- **TypeScript**
+- **Tailwind CSS 3** com tokens próprios (tema escuro "minimal premium", contraste WCAG AA)
+- **Geist** (via `next/font`)
+
+Sem bibliotecas de animação nem de UI: movimento só em CSS e desligado com `prefers-reduced-motion`.
 
 ## 📋 Requisitos
 
@@ -50,73 +50,53 @@ Este portfólio foi construído com:
 
 ## 🚀 Como rodar localmente
 
-1. Instalar dependências:
-
 ```bash
 npm install
-```
-
-2. Iniciar o servidor de desenvolvimento:
-
-```bash
 npm run dev
-```
-
-3. Abrir no browser:
-
-```text
-http://localhost:3000
+# http://localhost:3000
 ```
 
 ## 📁 Estrutura do Projeto
 
 ```
-src/
-├── app/                    # Rotas da aplicação
-│   ├── [locale]/           # Internacionalização (pt/en)
-│   │   ├── projects/
-│   │   │   └── [slug]/     # Páginas de projetos
-│   │   └── page.tsx        # Página inicial
-├── components/            # Componentes React
-│   ├── cards/             # Cartões de projeto
-│   ├── sections/          # Secções da página
-│   └── ui/                # Componentes shadcn/ui
-├── lib/                   # Utilitários e dados
-│   └── portfolioData.ts    # Dados do portfólio
-└── types/                 # Definições TypeScript
+app/
+├── [locale]/                # pt | en
+│   ├── layout.tsx           # <html lang>, fontes
+│   ├── page.tsx             # Página inicial
+│   ├── projects/[slug]/     # Página de cada projecto
+│   ├── now/                 # Página "Agora"
+│   └── cv/                  # CV imprimível (origem dos PDFs em public/cv)
+├── sitemap.ts
+components/site/             # Componentes do site
+lib/content/                 # Todo o conteúdo PT/EN
+├── projects/*.ts            # Projectos (um ficheiro por grupo)
+├── profile.ts               # Hero, sobre, experiência, "Agora"
+├── categories.ts            # Áreas e nomes de tecnologias (filtros)
+└── ui.ts                    # Textos da interface
+public/work/<slug>/          # Capturas (WebP, ≤ 1600 px, < 300 KB)
+public/cv/                   # CV em PDF (PT e EN)
+middleware.ts                # "/" → /pt ou /en; links antigos → /pt
 ```
 
 ## 🌐 Rotas
 
-- `/` - Redireciona para `/pt`
-- `/pt` - Página em português
-- `/en` - Página em inglês
-- `/pt/projects/[slug]` - Detalhes do projeto (PT)
-- `/en/projects/[slug]` - Detalhes do projeto (EN)
+- `/` – redirecciona para `/pt` ou `/en` (idioma do browser)
+- `/pt`, `/en` – página inicial
+- `/pt/projects/[slug]`, `/en/projects/[slug]` – projecto
+- `/pt/now`, `/en/now` – o que estou a fazer agora
+- `/pt/cv`, `/en/cv` – CV imprimível
 
 ## 🔧 Comandos Úteis
 
 ```bash
-# Build de produção
-npm run build
-
-# Iniciar app compilada
-npm run start
-
-# Linting
+npm run build   # build de produção
+npm run start   # servir o build
 npm run lint
-
-# TypeScript
-npm run typecheck
 ```
 
-## 📦 Assets Opcionais
+## 🔁 Actualizar o conteúdo
 
-Adicionar quando disponíveis:
-
-- `/public/profile/profile.jpg` - Foto de perfil
-- `/public/projects/<slug>.jpg` - Imagens dos projetos
-- `/public/Edson-Francisco-CV.pdf` - Currículo
+Ver `PORTFOLIO_NOTAS.md` (lista de projectos, fontes das capturas, regras de autoria e números) e `LINKEDIN.md`.
 
 ## ☁️ Deploy
 
