@@ -81,6 +81,45 @@ export const projects: Project[] = [
     ],
     results: [
       {
+        value: "55 422",
+        label: { pt: "produtores digitalizados, 50,5% mulheres", en: "farmers digitised, 50.5% of them women" },
+        source: { pt: "painel de impacto do FAMS (Out 2026)", en: "FAMS impact dashboard (Oct 2026)" },
+      },
+      {
+        value: "US$ 1 526 984",
+        label: {
+          pt: "em rendimento pago aos agricultores (97,6 milhões de MZN)",
+          en: "in income paid to farmers (MZN 97.6 million)",
+        },
+        source: { pt: "painel de impacto do FAMS (Out 2026)", en: "FAMS impact dashboard (Oct 2026)" },
+      },
+      {
+        value: "US$ 1 775 361",
+        label: { pt: "valor total de compras registadas no FAMS", en: "total purchase value recorded in FAMS" },
+        source: { pt: "painel de impacto do FAMS (Out 2026)", en: "FAMS impact dashboard (Oct 2026)" },
+      },
+      {
+        value: "10 126",
+        label: {
+          pt: "insumos distribuídos e rastreados, em 343 distribuições a 321 produtores",
+          en: "inputs distributed and tracked, in 343 distributions to 321 farmers",
+        },
+        source: { pt: "painel de impacto do FAMS (Out 2026)", en: "FAMS impact dashboard (Oct 2026)" },
+      },
+      {
+        value: "26 199 ha",
+        label: { pt: "de área cultivada registada", en: "of cultivated land recorded" },
+        source: { pt: "painel de impacto do FAMS (Out 2026)", en: "FAMS impact dashboard (Oct 2026)" },
+      },
+      {
+        value: "9 · 7",
+        label: {
+          pt: "cadeias de valor (copra, algodão, milho, soja, mel, gado…) em 7 províncias",
+          en: "value chains (copra, cotton, maize, soy, honey, livestock…) across 7 provinces",
+        },
+        source: { pt: "painel de impacto do FAMS (Out 2026)", en: "FAMS impact dashboard (Oct 2026)" },
+      },
+      {
         value: "99",
         label: { pt: "versões no changelog do produto (v10 → v114)", en: "versions in the product changelog (v10 → v114)" },
         source: { pt: "código-fonte do projecto", en: "project source code" },
@@ -110,6 +149,7 @@ export const projects: Project[] = [
           pt: "NIRAS / GIZ, guia \"Kulima ndi Malonda — Farming as a Business\", secções 4 e M&E",
           en: "NIRAS / GIZ, \"Kulima ndi Malonda — Farming as a Business\" guide, sections 4 and M&E",
         },
+        url: "https://www.niras.com/media/cchl2swj/kulima-ndi-malonda_reduce-size.pdf",
       },
     ],
     learnings: {
@@ -343,6 +383,7 @@ export const projects: Project[] = [
         value: "500",
         label: { pt: "produtores no plano gratuito (até 2 utilizadores, 0 MZN)", en: "farmers on the free plan (up to 2 users, 0 MZN)" },
         source: { pt: "página pública mahala.fams.co.mz", en: "public page mahala.fams.co.mz" },
+        url: "https://mahala.fams.co.mz",
       },
       {
         value: "24",
@@ -550,7 +591,147 @@ export const projects: Project[] = [
       pt: "Desenhar o processo com o campo e a fábrica na mesma sala encurta tudo: as lacunas aparecem durante a formação, são resolvidas no mesmo dia e o teste de campo do dia seguinte já valida a solução.",
       en: "Designing the process with field and factory staff in the same room shortens everything: gaps surface during training, get fixed the same day, and the next day's field test already validates the fix.",
     },
-    images: [],
+    flow: [
+      { pt: "Apicultor", en: "Beekeeper" },
+      { pt: "Compra + código do balde", en: "Purchase + bucket code" },
+      { pt: "Peso confirmado", en: "Weight confirmed" },
+      { pt: "Filtração", en: "Filtering" },
+      { pt: "Prensagem", en: "Pressing" },
+      { pt: "Cor: claro · médio · escuro", en: "Colour: light · medium · dark" },
+      { pt: "Garrafa", en: "Bottle" },
+    ],
+    images: [
+      {
+        src: "/work/mhc/01.webp",
+        alt: {
+          pt: "Placa do Centro de Serviços de Mel de Zomba, na zona tampão do Parque Nacional de Chimanimani, onde a MHC compra mel aos apicultores",
+          en: "Sign at the Zomba Honey Service Centre, in the Chimanimani National Park buffer zone, where MHC buys honey from beekeepers",
+        },
+        width: 1600,
+        height: 900,
+        device: "desktop",
+      },
+      {
+        src: "/work/mhc/02.webp",
+        alt: {
+          pt: "Dia de compra no campo: apicultores trazem os baldes de mel, que são pesados na balança e registados",
+          en: "Field buying day: beekeepers bring their buckets of honey, which are weighed on the scale and recorded",
+        },
+        width: 1600,
+        height: 900,
+        device: "desktop",
+      },
+      {
+        src: "/work/mhc/03.webp",
+        alt: {
+          pt: "Registo da compra junto à balança, com a lista em papel e o telemóvel lado a lado durante a transição para o FAMS",
+          en: "Recording the purchase next to the scale, with the paper list and the phone side by side during the move to FAMS",
+        },
+        width: 1600,
+        height: 900,
+        device: "desktop",
+      },
+      {
+        src: "/work/mhc/04.webp",
+        alt: {
+          pt: "Técnico de campo com o terminal móvel do FAMS a registar a compra junto aos baldes (crachá desfocado)",
+          en: "Field technician using the FAMS handheld terminal to record a purchase next to the buckets (badge blurred)",
+        },
+        width: 1600,
+        height: 753,
+        device: "desktop",
+      },
+      {
+        src: "/work/mhc/05.webp",
+        alt: {
+          pt: "Etiqueta do balde: data, lote, número, peso, área de origem, humidade, açúcar (Brix) e cor — os dados que o FAMS passa a ligar ao apicultor (nome do técnico desfocado)",
+          en: "Bucket label: date, lot, number, weight, source area, moisture, sugar (Brix) and colour — the data FAMS now links to the beekeeper (technician's name blurred)",
+        },
+        width: 900,
+        height: 1600,
+        device: "mobile",
+      },
+      {
+        src: "/work/mhc/06.webp",
+        alt: {
+          pt: "Baldes de mel bruto com código de barras no armazém de matéria-prima da fábrica de Chimoio, ao lado da balança e da prensa",
+          en: "Raw honey buckets with barcodes in the raw-material store at the Chimoio factory, next to the scale and the press",
+        },
+        width: 900,
+        height: 1600,
+        device: "mobile",
+      },
+      {
+        src: "/work/mhc/07.webp",
+        alt: {
+          pt: "Mel de lichia (edição especial) engarrafado na linha de enchimento da fábrica",
+          en: "Lychee honey (special edition) bottled on the factory filling line",
+        },
+        width: 900,
+        height: 1600,
+        device: "mobile",
+      },
+      {
+        src: "/work/mhc/08.webp",
+        alt: {
+          pt: "Embalagem de 500 g na linha de enchimento, com a equipa da fábrica ao fundo",
+          en: "A 500 g bottle on the filling line, with the factory team in the background",
+        },
+        width: 900,
+        height: 1600,
+        device: "mobile",
+      },
+      {
+        src: "/work/mhc/09.webp",
+        alt: {
+          pt: "Palete de mel embalado, pronto para expedição",
+          en: "A pallet of packed honey, ready for shipping",
+        },
+        width: 900,
+        height: 1600,
+        device: "mobile",
+      },
+      {
+        src: "/work/mhc/10.webp",
+        alt: {
+          pt: "Produtos finais da MHC: Mel de Chimanimani, Mozambican Honey e Mel do Miombo",
+          en: "MHC's final products: Chimanimani Honey, Mozambican Honey and Miombo Honey",
+        },
+        width: 1600,
+        height: 900,
+        device: "desktop",
+      },
+      {
+        src: "/work/mhc/11.webp",
+        alt: {
+          pt: "App FAMS configurada para a Mozambique Honey Company: Produtores, Formações, Inquéritos, Compras e Sincronização (nome do técnico desfocado)",
+          en: "The FAMS app configured for Mozambique Honey Company: Farmers, Trainings, Surveys, Purchases and Sync (technician's name blurred)",
+        },
+        width: 720,
+        height: 1600,
+        device: "mobile",
+      },
+      {
+        src: "/work/mhc/12.webp",
+        alt: {
+          pt: "Equipa do FAMS e equipa da MHC na fábrica de Chimoio, no fim da missão de implementação (Set 2026)",
+          en: "The FAMS and MHC teams at the Chimoio factory at the end of the implementation mission (Sep 2026)",
+        },
+        width: 1600,
+        height: 1200,
+        device: "desktop",
+      },
+      {
+        src: "/work/mhc/13.webp",
+        alt: {
+          pt: "Equipas do FAMS e da MHC na missão de implementação em Chimoio (Set 2026)",
+          en: "The FAMS and MHC teams during the implementation mission in Chimoio (Sep 2026)",
+        },
+        width: 1600,
+        height: 1200,
+        device: "desktop",
+      },
+    ],
     links: [],
     featured: true,
     order: 4,
@@ -564,7 +745,7 @@ export const projects: Project[] = [
       pt: "Da copra comprada no campo ao óleo embarcado: lotes, rendimento, acidez (FFA) e transporte rastreados no FAMS.",
       en: "From copra bought in the field to shipped oil: batches, yield, acidity (FFA) and transport traced in FAMS.",
     },
-    period: "2024–2026",
+    period: "2023–2026",
     status: "production",
     categories: ["agritech"],
     tech: ["Laravel", "PHP", "MySQL"],
@@ -580,8 +761,8 @@ export const projects: Project[] = [
       en: "OLIMAX buys copra in the field and at the factory gate, turns it into oil on several lines, stores it in tanks and ships it in trucks and containers. It needed to know, per batch, where the copra came from, how much oil it yielded, at what quality and where it went.",
     },
     solution: {
-      pt: "A OLIMAX foi o primeiro cliente a contratar o FAMS directamente, sem financiamento de doadores. A implementação começou em 2024 com a análise de qualidade do óleo (FFA); em 2025 juntaram-se o registo do óleo produzido por linha, os depósitos e o transporte (camião, contentor, data de embarque e peso). Em Setembro de 2026 a produção de copra passou a módulo próprio, com rastreabilidade do lote redesenhada, relatórios da fábrica e um bloco no painel de controlo.",
-      en: "OLIMAX was the first client to contract FAMS directly, without donor funding. The rollout began in 2024 with oil quality analysis (FFA); in 2025 came oil output per line, tanks and transport (truck, container, shipping date and weight). In September 2026 copra production became its own module, with redesigned batch traceability, factory reports and a dashboard block.",
+      pt: "A OLIMAX foi o primeiro cliente a contratar o FAMS directamente, sem financiamento de doadores. O sistema foi implementado em Maio de 2023 para as compras de copra no campo e na fábrica; em 2024 juntou-se a análise de qualidade do óleo (FFA) e em 2025 juntaram-se o registo do óleo produzido por linha, os depósitos e o transporte (camião, contentor, data de embarque e peso). Em Setembro de 2026 a produção de copra passou a módulo próprio, com rastreabilidade do lote redesenhada, relatórios da fábrica e um bloco no painel de controlo.",
+      en: "OLIMAX was the first client to contract FAMS directly, without donor funding. The system went live in May 2023 for copra purchases in the field and at the factory; oil quality analysis (FFA) followed in 2024, and in 2025 came oil output per line, tanks and transport (truck, container, shipping date and weight). In September 2026 copra production became its own module, with redesigned batch traceability, factory reports and a dashboard block.",
     },
     decisions: [
       {
@@ -615,8 +796,16 @@ export const projects: Project[] = [
     ],
     results: [
       {
-        value: "2024 → 2026",
-        label: { pt: "da primeira análise de FFA ao módulo próprio de produção de copra", en: "from the first FFA analysis to a dedicated copra production module" },
+        value: "US$ 1 700 000",
+        label: {
+          pt: "em compras de copra registadas no FAMS — no campo e na fábrica — desde a implementação em Maio de 2023",
+          en: "in copra purchases recorded in FAMS — in the field and at the factory — since go-live in May 2023",
+        },
+        source: { pt: "dados do FAMS da OLIMAX, indicados pelo Edson (Out 2026)", en: "OLIMAX FAMS data, provided by Edson (Oct 2026)" },
+      },
+      {
+        value: "2023 → 2026",
+        label: { pt: "das primeiras compras no FAMS ao módulo próprio de produção de copra", en: "from the first purchases in FAMS to a dedicated copra production module" },
         source: { pt: "changelog do FAMS", en: "FAMS changelog" },
       },
       {
@@ -629,7 +818,117 @@ export const projects: Project[] = [
       pt: "Um cliente que paga directamente pede números em que pode confiar. Assinalar o que está fora do esperado — rendimento, acidez — valeu mais do que acrescentar gráficos.",
       en: "A client paying directly wants numbers it can trust. Flagging what falls outside expectations — yield, acidity — was worth more than adding charts.",
     },
-    images: [],
+    flow: [
+      { pt: "Copra no campo", en: "Copra in the field" },
+      { pt: "Guia de transporte", en: "Waybill" },
+      { pt: "Recepção na linha", en: "Line intake" },
+      { pt: "Lote de produção", en: "Production batch" },
+      { pt: "Óleo + FFA", en: "Oil + FFA" },
+      { pt: "Depósito", en: "Tank" },
+      { pt: "Embarque", en: "Shipment" },
+    ],
+    images: [
+      {
+        src: "/work/olimax/01.webp",
+        alt: {
+          pt: "Compra de copra no campo: sacos de copra junto a um camião da OLIMAX à beira da estrada",
+          en: "Buying copra in the field: sacks of copra next to an OLIMAX truck by the road",
+        },
+        width: 1600,
+        height: 900,
+        device: "desktop",
+      },
+      {
+        src: "/work/olimax/02.webp",
+        alt: {
+          pt: "Copra a secar em grelhas antes de seguir para a fábrica",
+          en: "Copra drying on racks before going to the factory",
+        },
+        width: 1600,
+        height: 1205,
+        device: "desktop",
+      },
+      {
+        src: "/work/olimax/03.webp",
+        alt: {
+          pt: "Exterior da fábrica de óleo da OLIMAX, com camiões no pátio",
+          en: "Outside the OLIMAX oil factory, with trucks in the yard",
+        },
+        width: 1600,
+        height: 1205,
+        device: "desktop",
+      },
+      {
+        src: "/work/olimax/04.webp",
+        alt: {
+          pt: "Sacos de copra recebidos no armazém da fábrica",
+          en: "Sacks of copra received in the factory warehouse",
+        },
+        width: 1600,
+        height: 900,
+        device: "desktop",
+      },
+      {
+        src: "/work/olimax/05.webp",
+        alt: {
+          pt: "Equipas do FAMS e da OLIMAX no armazém de copra",
+          en: "The FAMS and OLIMAX teams in the copra warehouse",
+        },
+        width: 1600,
+        height: 1200,
+        device: "desktop",
+      },
+      {
+        src: "/work/olimax/06.webp",
+        alt: {
+          pt: "Reunião de trabalho com a equipa da OLIMAX",
+          en: "Working meeting with the OLIMAX team",
+        },
+        width: 1600,
+        height: 1205,
+        device: "desktop",
+      },
+      {
+        src: "/work/olimax/07.webp",
+        alt: {
+          pt: "Equipa do FAMS com a equipa da OLIMAX no escritório da fábrica",
+          en: "The FAMS team with the OLIMAX team at the factory office",
+        },
+        width: 1205,
+        height: 1600,
+        device: "mobile",
+      },
+      {
+        src: "/work/olimax/08.webp",
+        alt: {
+          pt: "Preparação dos dispositivos: FAMS web no portátil e telemóveis novos para a equipa de campo",
+          en: "Device setup: FAMS web on the laptop and new phones for the field team",
+        },
+        width: 1600,
+        height: 1205,
+        device: "desktop",
+      },
+      {
+        src: "/work/olimax/09.webp",
+        alt: {
+          pt: "Página de rastreabilidade de um lote de produção no FAMS: linha, datas, copra de entrada, óleo produzido, rácio e separadores de compras no campo, compras na fábrica e FFA",
+          en: "Batch traceability page in FAMS: line, dates, incoming copra, oil produced, ratio and tabs for field purchases, factory purchases and FFA",
+        },
+        width: 1600,
+        height: 900,
+        device: "desktop",
+      },
+      {
+        src: "/work/olimax/10.webp",
+        alt: {
+          pt: "App FAMS com a marca OLIMAX em dois telemóveis da equipa (nomes desfocados)",
+          en: "The OLIMAX-branded FAMS app on two team phones (names blurred)",
+        },
+        width: 900,
+        height: 1600,
+        device: "mobile",
+      },
+    ],
     links: [],
     featured: true,
     order: 5,
@@ -944,6 +1243,7 @@ export const projects: Project[] = [
         value: "113",
         label: { pt: "instalações no Packagist", en: "Packagist installs" },
         source: { pt: "packagist.org, consultado em 29/09/2026", en: "packagist.org, checked 29 Sep 2026" },
+        url: "https://packagist.org/packages/edsonjorgef1/laravel-teams-logging",
       },
       {
         value: "FAMS",
