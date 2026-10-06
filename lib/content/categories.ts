@@ -126,3 +126,15 @@ export const AUTHORSHIP_LABEL: Record<string, L> = {
   team: { pt: "Trabalho de equipa", en: "Team project" },
   consulting: { pt: "Consultoria / implementação", en: "Consulting / implementation" },
 };
+
+/** Decorative accent per area (used only in cover backgrounds, never for text). */
+export const CATEGORY_ACCENT: Record<CategoryId, string> = {
+  "offline-first": "56,189,248",
+  agritech: "52,211,153",
+  saas: "167,139,250",
+  govtech: "251,191,36",
+  health: "251,113,133",
+  community: "45,212,191",
+  reliability: "129,140,248",
+  hospitality: "251,146,60",
+};

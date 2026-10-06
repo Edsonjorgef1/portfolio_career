@@ -72,7 +72,8 @@ export const UI = {
     problem: { pt: "Problema", en: "Problem" },
     solution: { pt: "Solução", en: "Solution" },
     decisions: { pt: "Decisões técnicas", en: "Technical decisions" },
-    screens: { pt: "Capturas", en: "Screens" },
+    screens: { pt: "Imagens", en: "Images" },
+    flow: { pt: "Etapas digitalizadas no FAMS", en: "Stages digitised in FAMS" },
     tech: { pt: "Tecnologias", en: "Technologies" },
     results: { pt: "Resultados verificáveis", en: "Verifiable results" },
     learnings: { pt: "O que aprendi", en: "What I learned" },
@@ -83,7 +84,6 @@ export const UI = {
     authorship: { pt: "Autoria", en: "Authorship" },
     client: { pt: "Cliente", en: "Client" },
     partners: { pt: "Parceiros", en: "Partners" },
-    source: { pt: "Fonte", en: "Source" },
     openImage: { pt: "Abrir imagem em tamanho real", en: "Open full-size image" },
     next: { pt: "Projecto seguinte", en: "Next project" },
     prev: { pt: "Projecto anterior", en: "Previous project" },
@@ -102,8 +102,8 @@ export const UI = {
   },
   footer: {
     built: {
-      pt: "Construído com Next.js. Números com fonte; capturas sem dados pessoais.",
-      en: "Built with Next.js. Numbers are sourced; screenshots contain no personal data.",
+      pt: "Construído com Next.js. Números verificáveis; capturas sem dados pessoais.",
+      en: "Built with Next.js. Numbers are verifiable; screenshots contain no personal data.",
     },
   },
 } as const;

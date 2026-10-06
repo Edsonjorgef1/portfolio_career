@@ -34,11 +34,12 @@ export type ProjectImage = {
   device: "desktop" | "mobile";
 };
 
-/** A number or fact that can be checked. `source` is shown in small print. */
+/** A number or fact. `source` is kept for our records; only `url` (a public, checkable link) is shown. */
 export type Fact = {
   value: string;
   label: L;
   source: L;
+  url?: string;
 };
 
 export type Decision = {
@@ -80,6 +81,8 @@ export type Project = {
   results: Fact[];
   learnings?: L;
   images: ProjectImage[];
+  /** Process steps digitised in FAMS, drawn on the cover (cards and project page) instead of a screenshot. */
+  flow?: L[];
   links: ProjectLink[];
   /** Long-form case study (only FAMS and FUNAE MGQR). */
   caseStudy?: CaseStudySection[];

@@ -119,3 +119,28 @@ body {
     color: #000;
   }
 }
+
+/* Typographic project covers scale with their own width (card vs. featured), not the viewport. */
+.cover {
+  container-type: inline-size;
+}
+.cover-title {
+  font-size: clamp(1.75rem, 9cqi, 3.25rem);
+}
+.cover-subtitle {
+  font-size: clamp(0.8125rem, 2.6cqi, 1rem);
+}
+.cover-step-label {
+  display: none;
+}
+.cover-step-ends {
+  display: flex;
+}
+@container (min-width: 560px) {
+  .cover-step-label {
+    display: block;
+  }
+  .cover-step-ends {
+    display: none;
+  }
+}

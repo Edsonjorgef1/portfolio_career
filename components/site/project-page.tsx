@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { ProjectCover } from "@/components/site/project-cover";
 import { CATEGORIES, STATUS_LABEL } from "@/lib/content/categories";
 import { UI, projectHref, t, nameOf } from "@/lib/content/ui";
 import type { Locale, Project } from "@/types/content";
@@ -56,6 +57,22 @@ export function ProjectPage({
         <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">{nameOf(project, locale)}</h1>
         <p className="mt-4 text-lg leading-relaxed text-muted">{project.tagline[locale]}</p>
       </header>
+
+      {project.flow && project.flow.length > 0 && (
+        <figure className="mt-10">
+          <div className="overflow-hidden rounded-xl border border-border">
+            <ProjectCover
+              project={project}
+              locale={locale}
+              sizes="(min-width: 1024px) 60rem, 100vw"
+              aspect="aspect-[16/10] sm:aspect-[21/8]"
+            />
+          </div>
+          <figcaption className="mt-2 text-xs text-subtle">
+            {t(locale, UI.project.flow)}: {project.flow.map((step) => step[locale]).join(" → ")}
+          </figcaption>
+        </figure>
+      )}
 
       <dl className="mt-10 grid overflow-hidden rounded-xl border border-border sm:grid-cols-2 lg:grid-cols-4">
         {meta.map((item) => (
@@ -150,9 +167,15 @@ export function ProjectPage({
                 <div key={fact.value + fact.label.en} className="card flex flex-col p-5">
                   <dt className="text-sm text-muted">{fact.label[locale]}</dt>
                   <dd className="order-first text-2xl font-semibold tracking-tight text-foreground">{fact.value}</dd>
-                  <dd className="mt-3 font-mono text-[11px] leading-relaxed text-subtle">
-                    {t(locale, UI.project.source)}: {fact.source[locale]}
-                  </dd>
+                  {fact.url && (
+                    <dd className="mt-3 text-xs">
+                      <a href={fact.url} className="link text-muted" rel="noopener" target="_blank">
+                        {new URL(fact.url).hostname.replace(/^www\./, "")}
+                        <span aria-hidden="true"> ↗</span>
+                        <span className="sr-only"> ({locale === "pt" ? "abre noutro separador" : "opens in a new tab"})</span>
+                      </a>
+                    </dd>
+                  )}
                 </div>
               ))}
             </dl>
