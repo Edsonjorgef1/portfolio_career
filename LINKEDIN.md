@@ -28,9 +28,9 @@ Desde 2021 sou cofundador e responsável técnico do FAMS, a plataforma de gest�
 • SIGA — modernização do sistema académico de um instituto politécnico: segurança, testes automáticos às facturas e deploy em Coolify.
 • Karibu Menu — menu digital e faturação para restaurantes.
 
-As minhas funções sempre exigiram gestão e coordenação, com parceiros como GIZ, NIRAS e Enabel, e nunca deixei a parte técnica: programo no dia a dia, faço revisão de código, integrações e decisões de arquitectura, acompanho os pipelines e entro directamente na resolução de problemas em produção. Em 2025–2026 coordenei a implementação do FAMS em seis agronegócios apoiados pela NIRAS (VaMoz Competir), hoje com mais de 13 300 produtores registados.
+As minhas funções sempre exigiram gestão e coordenação, com parceiros como GIZ, NIRAS e Enabel, e nunca deixei a parte técnica: programo no dia a dia, faço revisão de código, integrações e decisões de arquitectura, acompanho os pipelines e entro directamente na resolução de problemas em produção. Em 2025–2026 coordenei a implementação do FAMS em seis agronegócios apoiados pela NIRAS (VaMoz Competir), hoje com mais de 13 300 produtores registados. No total, o FAMS tem mais de 55 000 produtores digitalizados (metade mulheres) em 7 províncias e 9 cadeias de valor, mais de 10 000 insumos distribuídos e rastreados, e mais de US$ 1,5 milhões em rendimento pago aos agricultores.
 
-Gosto de decisões simples que aguentam anos de uso real: sincronização offline, releases pequenas e frequentes, e documentação que a próxima pessoa consegue seguir.
+Gosto de problemas complexos e de os resolver com decisões simples que aguentam anos de uso real: sincronização offline, isolamento de dados por empresa, releases pequenas e frequentes, e documentação que a próxima pessoa consegue seguir.
 
 Portefólio: https://edsonfrancisco-portfolio.vercel.app
 Aberto a projectos remotos, com coordenação internacional, consultoria e funções de engenharia.
@@ -48,9 +48,9 @@ Around FAMS I built and maintained:
 • SIGA — modernising a polytechnic institute's academic system: security, automated invoice tests and a Coolify deploy.
 • Karibu Menu — a digital menu and billing product for restaurants.
 
-My roles have always required management and coordination, with partners such as GIZ, NIRAS and Enabel, and I have never left the technical side: I code every day, review code, build integrations, make architecture decisions, watch pipelines and step in directly to fix production problems. In 2025–2026 I coordinated the FAMS rollout to six agribusinesses supported by NIRAS (VaMoz Competir), now with more than 13,300 registered farmers.
+My roles have always required management and coordination, with partners such as GIZ, NIRAS and Enabel, and I have never left the technical side: I code every day, review code, build integrations, make architecture decisions, watch pipelines and step in directly to fix production problems. In 2025–2026 I coordinated the FAMS rollout to six agribusinesses supported by NIRAS (VaMoz Competir), now with more than 13,300 registered farmers. Across all companies, FAMS holds more than 55,000 digitised farmers (half of them women) in 7 provinces and 9 value chains, has tracked over 10,000 inputs distributed, and has recorded more than US$1.5 million in income paid to farmers.
 
-I like simple decisions that survive years of real use: offline sync, small and frequent releases, and documentation the next person can follow.
+I enjoy complex problems and solving them with simple decisions that survive years of real use: offline sync, per-company data isolation, small and frequent releases, and documentation the next person can follow.
 
 Portfolio: https://edsonfrancisco-portfolio.vercel.app
 Open to remote and internationally coordinated projects, consulting and engineering roles.

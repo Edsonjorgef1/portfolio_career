@@ -110,6 +110,23 @@ Fora do site (decisão 2026-09): Recall e SecureLink API (0 commits próprios), 
 
 - **JURIS**: em produção; o Edson é supervisor do departamento técnico que o mantém; Juris Bot (sistema de chat no WhatsApp) lançado a 30 Set 2026. Sem repositório do bot localizado nem commits recentes na `juris_api` — a fonte destes factos é o próprio Edson; **não há** detalhes técnicos do bot no site. Para a próxima actualização: indicar o repositório do bot para se poder descrever o que ele faz.
 
+- **Impacto do FAMS (todas as empresas)** — painel de impacto do FAMS, capturas enviadas pelo Edson a 2026-10-04: 55 422 agricultores digitalizados (alcançados: 1454); 27 997 mulheres (50,52%); 26 198,63 ha; volume total 8952,12 t (campo 5645,96 · fábrica 966,35); produção 2 339 800 kg; compras na fábrica 966 353,80 kg (339 fornecedores); 10 126 insumos distribuídos (343 distribuições, 321 produtores); rendimento aos agricultores 1 526 984,42 USD (97 552 190,24 MZN); valor total de compra 1 775 360,95 USD (113 419 853,54 MZN); 9 cadeias de valor (copra, algodão, milho, soja, gado caprino, arroz, gado bovino, mel Chimanimani, gado bovino macho); 7 províncias (Gaza, Niassa, Sofala, Zambézia, Nampula, Manica, Inhambane). Copra = 6293 t / 1 633 634 USD do total de compras. O painel não indica período: **não** dizer "por ano". Substitui os "60 000+ / até US$ 2M/ano" ditos de memória e os "55.000" retirados em 2026-09. O número da NIRAS (13 300+) continua só no caso VaMoz.
+
+- **Juris Bot — imagens** (enviadas pelo Edson a 2026-10-04): campanha "Conhece os teus direitos", instruções de uso, banner de lançamento, cartaz com QR e foto do bolo do lançamento → `public/work/juris/06–10.webp`. Material de comunicação do próprio projecto (número do bot é o oficial, público).
+- **Fontes no site**: o rótulo "Fonte/Source" deixou de aparecer; só se mostra o link quando a fonte é pública e verificável (`url` no Fact).
+- **Capas e partilha**: capas tipográficas com fluxo do processo (MHC, OLIMAX) quando não há capturas; imagens Open Graph geradas no build (`app/[locale]/opengraph-image.tsx`, `lib/og.tsx`, fontes Geist em `assets/fonts`).
+
+## Informação dada pelo Edson (2026-10-06)
+
+- **Experiência desde 2018**: o hero passa de "2019–2026" para "2018 – hoje" (estágio ENSYS, Out 2018).
+- **Consultorias NIRAS e GIZ** na experiência: NIRAS/VaMoz Competir (Out 2025 – Jul 2026, Especialista Técnico Nacional em Digitalização) e GIZ/ProEcon com COMO Consult (Fev 2021 – Nov 2023). Datas e papéis vêm dos casos `vamoz-competir` e `proecon`.
+- **OLIMAX**: sistema implementado em Maio de 2023; até US$ 1 700 000 em compras de copra (campo + fábrica) registadas no FAMS desde então — número dado pelo Edson (coerente com o painel de impacto: copra = 1 633 634 USD). Período do caso passou a 2023–2026.
+- **Imagens MHC e OLIMAX** → `public/work/mhc/01–13.webp` e `public/work/olimax/01–10.webp`. EXIF (incl. GPS) removido em todas.
+  - MHC 01–10: fotos enviadas pelo Edson a 2026-10-06 (Zomba/Chimanimani e fábrica de Chimoio, 23–24 Set 2026), em ordem do processo: placa do centro de serviços de mel → compra e pesagem no campo → registo → terminal FAMS (recortado para excluir uma t-shirt de campanha política; crachá desfocado) → etiqueta do balde (nome do técnico desfocado) → baldes com código de barras no armazém → enchimento → palete → produtos finais (clareada). 11: ecrã da app (nome desfocado). 12–13: equipas FAMS + MHC (`~/Downloads/IMG_1702.heic`, `IMG_1698.heic`). **Não usada:** foto das apicultoras sentadas com crianças.
+  - OLIMAX: `~/DEV_SETUP/EQUIPMOZ/fams-website/images/olimax/**`; nomes de utilizadores desfocados. Não usados: recibos impressos e lista de compras (nomes de produtores), perfil de utilizador, quadro branco com produção por linha, fichas em papel da MHC.
+  - **Capas**: projectos com `flow` (MHC, OLIMAX) mostram sempre a capa tipográfica com as etapas digitalizadas — nos cartões (início e galeria) e no topo da página do projecto, com legenda "Etapas digitalizadas no FAMS". As fotos ficam na secção "Imagens" (antes "Capturas").
+- **/now**: removido o ponto "A aprender React Native" (micacao-wallet). O projecto `micacao-wallet` continua na galeria.
+
 ## Para a próxima actualização
 
 1. Correr o levantamento: procurar repositórios em `~/DEV_SETUP` e `/Applications/MAMP/htdocs`, contar commits com a regra 1 e comparar com a tabela acima.
