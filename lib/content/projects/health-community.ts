@@ -198,8 +198,8 @@ export const projects: Project[] = [
       en: "Much of the population does not know the laws that protect them, and legal texts are hard to read. People facing injustice need a way to report it without exposing themselves.",
     },
     solution: {
-      pt: "Fui o primeiro programador a seguir ao arranque do repositório: autenticação da API, CRUD de leis, categorias e perguntas com ilustração e áudio, curiosidades, quiz, e o módulo de denúncias com código de acompanhamento. Acrescentei notificações por email e no painel, e endpoints para o bot de WhatsApp. No website fiz a newsletter, o formulário de contacto e, em 2024, o deploy automático. Hoje supervisiono o departamento técnico que mantém o JURIS em produção. O projecto ganhou novas proporções com o Juris Bot, um novo sistema de chat no WhatsApp lançado a 30 de Setembro de 2026.",
-      en: "I was the first developer after the repository bootstrap: API authentication, CRUD for laws, categories and Q&A with illustrations and audio, trivia, quizzes, and the reporting module with tracking codes. I added email and in-panel notifications, and endpoints for the WhatsApp bot. On the website I built the newsletter, contact form and, in 2024, automated deployment. Today I supervise the technical department that keeps JURIS in production. The project took on new proportions with Juris Bot, a new chat system on WhatsApp launched on 30 September 2026.",
+      pt: "Fui o primeiro programador a seguir ao arranque do repositório: autenticação da API, CRUD de leis, categorias e perguntas com ilustração e áudio, curiosidades, quiz, e o módulo de denúncias com código de acompanhamento. Acrescentei notificações por email e no painel, e endpoints para o bot de WhatsApp. No website fiz a newsletter, o formulário de contacto e, em 2024, o deploy automático. Hoje supervisiono o departamento técnico que mantém o JURIS em produção. O projecto ganhou novas proporções com o Juris Bot, um novo sistema de chat no WhatsApp lançado a 30 de Setembro de 2026: basta guardar o número e perguntar, e o bot responde em linguagem simples citando a lei e os artigos de referência, com o aviso de que é informação legal e não aconselhamento jurídico.",
+      en: "I was the first developer after the repository bootstrap: API authentication, CRUD for laws, categories and Q&A with illustrations and audio, trivia, quizzes, and the reporting module with tracking codes. I added email and in-panel notifications, and endpoints for the WhatsApp bot. On the website I built the newsletter, contact form and, in 2024, automated deployment. Today I supervise the technical department that keeps JURIS in production. The project took on new proportions with Juris Bot, a new chat system on WhatsApp launched on 30 September 2026: save the number and ask, and the bot answers in plain language citing the law and the articles it relies on, with a notice that it is legal information, not legal advice.",
     },
     decisions: [
       {
@@ -263,6 +263,7 @@ export const projects: Project[] = [
         value: "10 mil+",
         label: { pt: "downloads da app Android", en: "Android app downloads" },
         source: { pt: "Google Play, página da app (Out 2026)", en: "Google Play, app page (Oct 2026)" },
+        url: "https://play.google.com/store/apps/details?id=org.equipmoz.juris",
       },
       {
         value: "43",
@@ -283,6 +284,56 @@ export const projects: Project[] = [
         },
         width: 1440,
         height: 900,
+        device: "desktop",
+      },
+      {
+        src: "/work/juris/06.webp",
+        alt: {
+          pt: "Campanha do Juris Bot: conversa no WhatsApp em que o bot responde sobre multas do Código da Estrada, citando os artigos da lei",
+          en: "Juris Bot campaign: a WhatsApp chat in which the bot answers about Highway Code fines, citing the articles of the law",
+        },
+        width: 1080,
+        height: 1080,
+        device: "mobile",
+      },
+      {
+        src: "/work/juris/07.webp",
+        alt: {
+          pt: "Instruções para usar o Juris Bot: guardar o número oficial, abrir uma conversa no WhatsApp e fazer uma pergunta sobre as leis moçambicanas",
+          en: "How to use Juris Bot: save the official number, open a WhatsApp chat and ask a question about Mozambican law",
+        },
+        width: 1080,
+        height: 1080,
+        device: "mobile",
+      },
+      {
+        src: "/work/juris/08.webp",
+        alt: {
+          pt: "Banner de lançamento do Juris Bot — «Esclareça as suas dúvidas sobre as leis moçambicanas pelo WhatsApp» — com os parceiros do projecto",
+          en: "Juris Bot launch banner — “Get answers about Mozambican law on WhatsApp” — with the project partners",
+        },
+        width: 659,
+        height: 1600,
+        device: "mobile",
+      },
+      {
+        src: "/work/juris/09.webp",
+        alt: {
+          pt: "Cartaz com o código QR que abre a conversa com o Juris Bot no WhatsApp",
+          en: "Poster with the QR code that opens the Juris Bot chat on WhatsApp",
+        },
+        width: 1080,
+        height: 1516,
+        device: "mobile",
+      },
+      {
+        src: "/work/juris/10.webp",
+        alt: {
+          pt: "Bolo com a marca do Juris Bot na cerimónia de lançamento, a 30 de Setembro de 2026",
+          en: "Cake with the Juris Bot brand at the launch ceremony on 30 September 2026",
+        },
+        width: 1600,
+        height: 1066,
         device: "desktop",
       },
       {
@@ -410,6 +461,7 @@ export const projects: Project[] = [
         value: "50 mil+",
         label: { pt: "downloads da app Android", en: "Android app downloads" },
         source: { pt: "Google Play, página da app (Out 2026)", en: "Google Play, app page (Oct 2026)" },
+        url: "https://play.google.com/store/apps/details?id=com.equipmozambique.fontedavida",
       },
     ],
     learnings: {
@@ -759,6 +811,7 @@ export const projects: Project[] = [
         value: "187",
         label: { pt: "postos no mapa público", en: "stations on the public map" },
         source: { pt: "abastece.co.mz/bombas, 29 Set 2026", en: "abastece.co.mz/bombas, 29 Sep 2026" },
+        url: "https://abastece.co.mz/bombas",
       },
     ],
     learnings: {
@@ -1344,6 +1397,7 @@ export const projects: Project[] = [
         value: "1 h → ~10 min",
         label: { pt: "tempo de registo dos fiéis à entrada, do papel para a app", en: "time to register attendees at the door, from paper to app" },
         source: { pt: "equipmoz.org, página \"Other Apps\"", en: "equipmoz.org, \"Other Apps\" page" },
+        url: "https://equipmoz.org/projects/tech-team/other-apps",
       },
     ],
     images: [
