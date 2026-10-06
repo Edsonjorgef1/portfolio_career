@@ -1282,6 +1282,7 @@ export const projects: Project[] = [
         value: "500+",
         label: { pt: "downloads da app no Google Play", en: "app downloads on Google Play" },
         source: { pt: "página da app no Google Play (Out 2026)", en: "Google Play app page (Oct 2026)" },
+        url: "https://play.google.com/store/apps/details?id=mz.cmmaputo.eacacia",
       },
     ],
     images: [
