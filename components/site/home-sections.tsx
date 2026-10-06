@@ -21,8 +21,24 @@ function SectionHeading({ id, title, intro }: { id: string; title: string; intro
 export function Hero({ locale, cvHref }: { locale: Locale; cvHref: string | null }) {
   return (
     <section aria-labelledby="hero-title" className="container-page pb-16 pt-16 sm:pt-24">
-      <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+      <div className="grid gap-10 lg:grid-cols-[1fr_20rem] lg:items-center xl:gap-16">
         <div className="fade-up max-w-3xl">
+          <div className="mb-6 flex items-center gap-4 lg:hidden">
+            <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full border border-border-strong">
+              <Image
+                src="/profile/avatar.jpg"
+                alt={locale === "pt" ? "Retrato de Edson Francisco" : "Portrait of Edson Francisco"}
+                fill
+                sizes="80px"
+                priority
+                className="object-cover"
+              />
+            </div>
+            <div className="text-sm">
+              <p className="font-semibold text-foreground">{PERSON.name}</p>
+              <p className="text-muted">{PERSON.location[locale]}</p>
+            </div>
+          </div>
           <p className="eyebrow">{t(locale, HERO.eyebrow)}</p>
           <h1 id="hero-title" className="mt-4 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {t(locale, HERO.headline)}
@@ -51,25 +67,39 @@ export function Hero({ locale, cvHref }: { locale: Locale; cvHref: string | null
             )}
           </div>
         </div>
-        <div className="fade-up-delay relative hidden h-40 w-40 overflow-hidden rounded-2xl border border-border lg:block">
-          <Image
-            src="/profile/profile.jpg"
-            alt={locale === "pt" ? "Retrato de Edson Francisco" : "Portrait of Edson Francisco"}
-            fill
-            sizes="160px"
-            priority
-            className="object-cover object-top"
+        <figure className="fade-up-delay relative hidden lg:block">
+          <div
+            aria-hidden="true"
+            className="absolute -inset-4 rounded-[2rem] bg-[radial-gradient(circle_at_30%_20%,rgba(52,211,153,0.22),transparent_60%)] blur-2xl"
           />
-        </div>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border-strong bg-surface-2 shadow-2xl shadow-black/50">
+            <Image
+              src="/profile/portrait.webp"
+              alt={locale === "pt" ? "Retrato de Edson Francisco" : "Portrait of Edson Francisco"}
+              fill
+              sizes="320px"
+              priority
+              className="object-cover object-top"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent p-5 pt-16">
+              <figcaption>
+                <span className="block text-base font-semibold text-white">{PERSON.name}</span>
+                <span className="block text-sm text-neutral-300">{PERSON.title[locale]}</span>
+                <span className="mt-1 block font-mono text-[11px] uppercase tracking-[0.14em] text-neutral-400">
+                  {PERSON.location[locale]}
+                </span>
+              </figcaption>
+            </div>
+          </div>
+        </figure>
       </div>
 
-      <dl className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
+      <dl className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
         {PROOF.map((fact) => (
-          <div key={fact.value} className="flex flex-col bg-background p-5">
+          <div key={fact.label.en} className="flex flex-col bg-background p-5">
             <dt className="text-sm text-muted">{fact.label[locale]}</dt>
-            <dd className="mt-1 order-first text-3xl font-semibold tracking-tight text-foreground">{fact.value}</dd>
-            <dd className="mt-3 font-mono text-[11px] leading-relaxed text-subtle">
-              {t(locale, UI.project.source)}: {fact.source[locale]}
+            <dd className="mt-1 order-first text-3xl font-semibold tracking-tight text-foreground">
+              {typeof fact.value === "string" ? fact.value : fact.value[locale]}
             </dd>
           </div>
         ))}
