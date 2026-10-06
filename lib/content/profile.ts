@@ -32,30 +32,35 @@ export const HERO = {
 };
 
 /** Hero proof points. Every value has a source (product changelog, project reports). */
-export const PROOF: Fact[] = [
+export const PROOF: (Omit<Fact, "value"> & { value: string | L })[] = [
   {
-    value: "2019–2026",
+    value: { pt: "2018 – hoje", en: "2018 – now" },
     label: { pt: "a construir e manter sistemas em produção", en: "building and running production systems" },
     source: {
-      pt: "do Consultare (2019) ao FAMS, JURIS e Kukura (2026)",
-      en: "from Consultare (2019) to FAMS, JURIS and Kukura (2026)",
+      pt: "da ENSYS (2018) ao FAMS, JURIS e Kukura (hoje)",
+      en: "from ENSYS (2018) to FAMS, JURIS and Kukura (today)",
     },
+  },
+  {
+    value: "55 000+",
+    label: {
+      pt: "produtores digitalizados no FAMS, metade mulheres, em 7 províncias",
+      en: "farmers digitised in FAMS, half of them women, across 7 provinces",
+    },
+    source: { pt: "painel de impacto do FAMS (Out 2026)", en: "FAMS impact dashboard (Oct 2026)" },
+  },
+  {
+    value: "1 500 000+",
+    label: {
+      pt: "dólares (USD) em rendimento pago aos agricultores, registado no FAMS",
+      en: "US dollars in income paid to farmers, recorded in FAMS",
+    },
+    source: { pt: "painel de impacto do FAMS (Out 2026)", en: "FAMS impact dashboard (Oct 2026)" },
   },
   {
     value: "99",
     label: { pt: "versões do FAMS publicadas, v10 → v114", en: "FAMS releases shipped, v10 → v114" },
     source: { pt: "changelog do produto, Abr 2021 – Set 2026", en: "product changelog, Apr 2021 – Sep 2026" },
-  },
-  {
-    value: "13 300+",
-    label: {
-      pt: "produtores registados no FAMS em agronegócios apoiados pela NIRAS",
-      en: "farmers registered in FAMS at agribusinesses supported by NIRAS",
-    },
-    source: {
-      pt: "relatório técnico do FAMS para a NIRAS, painéis a 10 Set 2026",
-      en: "FAMS technical report to NIRAS, dashboards as of 10 Sep 2026",
-    },
   },
 ];
 
@@ -74,8 +79,8 @@ export const ABOUT: { paragraphs: L[] } = {
       en: "My roles have always required management and coordination — of teams, clients and projects with partners such as GIZ, NIRAS and Enabel — and I have never left the technical side. I code every day, review code, build integrations, make architecture decisions, watch deploy pipelines and step in directly to fix production problems. I'm ready for internationally coordinated projects.",
     },
     {
-      pt: "Trabalho na fronteira entre produto e engenharia: gosto de decisões simples que aguentam anos de uso real — sincronização offline, isolamento de dados por empresa, releases pequenas e frequentes, e documentação que a próxima pessoa consegue seguir.",
-      en: "I work where product meets engineering: I like simple decisions that survive years of real use — offline sync, per-company data isolation, small and frequent releases, and documentation the next person can follow.",
+      pt: "Trabalho na fronteira entre produto e engenharia. Gosto de problemas complexos e de os resolver com decisões simples que aguentam anos de uso real — sincronização offline, isolamento de dados por empresa, releases pequenas e frequentes, e documentação que a próxima pessoa consegue seguir.",
+      en: "I work where product meets engineering. I enjoy complex problems and solving them with simple decisions that survive years of real use — offline sync, per-company data isolation, small and frequent releases, and documentation the next person can follow.",
     },
   ],
 };
@@ -104,6 +109,10 @@ export const EXPERIENCE: ExperienceItem[] = [
       {
         pt: "99 versões publicadas entre Abril de 2021 e Setembro de 2026, com changelog em PT/EN visível para os clientes.",
         en: "99 releases shipped between April 2021 and September 2026, with a PT/EN changelog visible to customers.",
+      },
+      {
+        pt: "Mais de 55 000 produtores digitalizados em 7 províncias e 9 cadeias de valor (metade mulheres), mais de 10 000 insumos distribuídos e rastreados e mais de US$ 1,5 milhões em rendimento pago aos agricultores, registado no FAMS.",
+        en: "More than 55,000 farmers digitised across 7 provinces and 9 value chains (half of them women), over 10,000 inputs distributed and tracked, and more than US$1.5 million in income paid to farmers, recorded in FAMS.",
       },
       {
         pt: "Módulos à medida, como a rastreabilidade do mel, e evolução para SaaS multi-empresa (FAMS Mahala).",
@@ -139,6 +148,28 @@ export const EXPERIENCE: ExperienceItem[] = [
     ],
   },
   {
+    company: "NIRAS – VaMoz Competir (GIZ) · consultoria",
+    role: {
+      pt: "Especialista Técnico Nacional em Digitalização",
+      en: "National Short-Term Expert for Digitalisation",
+    },
+    period: { pt: "Out 2025 – Jul 2026", en: "Oct 2025 – Jul 2026" },
+    bullets: [
+      {
+        pt: "Coordenação da implementação do FAMS nas empresas apoiadas pela NIRAS no VaMoz Competir, um projecto da GIZ encomendado pelo BMZ e cofinanciado pela UE.",
+        en: "Coordinated the FAMS rollout to the companies supported by NIRAS under VaMoz Competir, a GIZ project commissioned by BMZ and co-financed by the EU.",
+      },
+      {
+        pt: "Missões de campo na DREAM Agro, Green Agro Commodities, PROIMAC e Moz Agri: configuração, formação em registo de produtores com georreferenciação e seguimento da adopção.",
+        en: "Field missions at DREAM Agro, Green Agro Commodities, PROIMAC and Moz Agri: configuration, training in farmer registration with georeferencing, and adoption follow-up.",
+      },
+      {
+        pt: "Acesso directo da NIRAS e da equipa de Monitoria e Avaliação da GIZ aos dados do FAMS, e exportação das presenças para a análise GIZ/Reframe.",
+        en: "Direct FAMS data access for NIRAS and GIZ's Monitoring and Evaluation team, and attendance exports for the GIZ/Reframe analysis.",
+      },
+    ],
+  },
+  {
     company: "TechSolutions, Lda (freelance)",
     role: { pt: "Programador e consultor técnico", en: "Developer & technical consultant" },
     period: { pt: "2025 – 2026", en: "2025 – 2026" },
@@ -150,6 +181,21 @@ export const EXPERIENCE: ExperienceItem[] = [
       {
         pt: "E.Acacia — revisão, testes e submissão na App Store e Google Play de uma app de pagamento de taxas municipais.",
         en: "E.Acacia — review, testing and App Store / Google Play submission of a municipal fee payment app.",
+      },
+    ],
+  },
+  {
+    company: "GIZ – ProEcon (com COMO Consult) · consultoria",
+    role: { pt: "Consultor, formador e líder técnico do FAMS", en: "Consultant, trainer and FAMS technical lead" },
+    period: { pt: "Fev 2021 – Nov 2023", en: "Feb 2021 – Nov 2023" },
+    bullets: [
+      {
+        pt: "Implementação do FAMS em dez agronegócios de quatro cadeias de valor: levantamento de requisitos, migração de dados, configuração, formação e suporte.",
+        en: "FAMS rollout to ten agribusinesses in four value chains: requirements, data migration, configuration, training and support.",
+      },
+      {
+        pt: "Os pedidos destes clientes tornaram-se módulos que programei no backend; em 2022 a empresa foi seleccionada num concurso nacional da GIZ para implementar o FAMS.",
+        en: "Requests from these clients became modules I built in the backend; in 2022 the company was selected in a GIZ national tender to implement FAMS.",
       },
     ],
   },
@@ -228,7 +274,7 @@ export const AWARDS: { title: L; issuer: string; date: L; place: L }[] = [
 
 /** "Now" page. Each item is backed by recent dated activity (`evidence`). */
 export const NOW = {
-  updated: "2026-10-04",
+  updated: "2026-10-06",
   items: [
     {
       title: { pt: "SIGA — sistema académico do Instituto Politécnico Planalto", en: "SIGA — academic system for Instituto Politécnico Planalto" },
@@ -261,14 +307,6 @@ export const NOW = {
         en: "Tests for credit, payment gateways and balance top-ups in the digital menu for restaurants (formerly Manna Software).",
       },
       evidence: { pt: "trabalho de 6 Set 2026", en: "work from 6 Sep 2026" },
-    },
-    {
-      title: { pt: "A aprender React Native", en: "Learning React Native" },
-      body: {
-        pt: "Plano de estudo de 8 semanas sobre o micacao-wallet, uma app open source de rastreabilidade de cacau, com documentação contribuída pelo caminho.",
-        en: "An 8-week study plan on micacao-wallet, an open-source cacao traceability app, contributing documentation along the way.",
-      },
-      evidence: { pt: "Ago–Set 2026", en: "Aug–Sep 2026" },
     },
   ],
 };
