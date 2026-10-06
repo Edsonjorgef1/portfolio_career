@@ -8,14 +8,12 @@ export function pageMetadata({
   path,
   title,
   description,
-  image,
 }: {
   locale: Locale;
   /** Path after the locale, e.g. "" or "/projects/fams" */
   path: string;
   title?: string;
   description?: string;
-  image?: string;
 }): Metadata {
   const desc = description ?? HERO.intro[locale];
   const url = `/${locale}${path}`;
@@ -30,8 +28,8 @@ export function pageMetadata({
       description: desc,
       locale: locale === "pt" ? "pt_MZ" : "en_US",
       siteName: "Edson Francisco",
-      ...(image ? { images: [{ url: image }] } : {}),
     },
-    twitter: { card: image ? "summary_large_image" : "summary" },
+    // Images come from the opengraph-image routes (app/[locale]/…).
+    twitter: { card: "summary_large_image" },
   };
 }

@@ -25,7 +25,6 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     path: `/projects/${slug}`,
     title: nameOf(project, locale as Locale),
     description: project.tagline[locale as Locale],
-    image: project.images[0]?.src,
   });
 }
 
