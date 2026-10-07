@@ -111,12 +111,24 @@ export const EXPERIENCE: ExperienceItem[] = [
         en: "99 releases shipped between April 2021 and September 2026, with a PT/EN changelog visible to customers.",
       },
       {
-        pt: "Mais de 55 000 produtores digitalizados em 7 províncias e 9 cadeias de valor (metade mulheres), mais de 10 000 insumos distribuídos e rastreados e mais de US$ 1,5 milhões em rendimento pago aos agricultores, registado no FAMS.",
-        en: "More than 55,000 farmers digitised across 7 provinces and 9 value chains (half of them women), over 10,000 inputs distributed and tracked, and more than US$1.5 million in income paid to farmers, recorded in FAMS.",
+        pt: "Mais de 55 000 produtores digitalizados em 7 províncias e 9 cadeias de valor (metade mulheres), mais de 10 000 insumos distribuídos e rastreados e até US$ 1,7 milhões em pagamentos acumulados aos produtores, registados no FAMS.",
+        en: "More than 55,000 farmers digitised across 7 provinces and 9 value chains (half of them women), over 10,000 inputs distributed and tracked, and up to US$1.7 million in cumulative payments to farmers, recorded in FAMS.",
       },
       {
-        pt: "Módulos à medida, como a rastreabilidade do mel, e evolução para SaaS multi-empresa (FAMS Mahala).",
-        en: "Custom modules such as honey traceability, and the move to multi-tenant SaaS (FAMS Mahala).",
+        pt: "Contribui para os ODS 2, 8, 9 e 12 (e, de forma complementar, 1, 5, 10 e 16): produtividade e rendimento dos pequenos produtores, pagamentos transparentes, cadeias de valor digitais e rastreabilidade do produtor à indústria.",
+        en: "Contributes to SDGs 2, 8, 9 and 12 (and, as complementary goals, 1, 5, 10 and 16): smallholder productivity and income, transparent payments, digital value chains and traceability from farmer to factory.",
+      },
+      {
+        pt: "Casos de uso de rastreabilidade: mel (MHC), do apicultor ao lote processado, e copra (OLIMAX), da compra no campo e na fábrica ao óleo produzido, armazenado e expedido — incluindo importação de dados.",
+        en: "Traceability use cases: honey (MHC), from beekeeper to processed batch, and copra (OLIMAX), from field and factory-gate purchases to oil produced, stored and shipped — including data import.",
+      },
+      {
+        pt: "Mapeamento georreferenciado dos campos de produção e dossiê do produtor, com cartão de identificação do produtor.",
+        en: "Geo-referenced mapping of production fields and a farmer dossier, with a farmer ID card.",
+      },
+      {
+        pt: "Evolução para SaaS multi-empresa (FAMS Mahala); em preparação, um sistema de credit score para os produtores.",
+        en: "Move to multi-tenant SaaS (FAMS Mahala); a farmer credit-scoring system is planned next.",
       },
       {
         pt: "Implementação e formação no terreno para empresas de agronegócio, com parceiros como GIZ, NIRAS e COMO Consult.",
