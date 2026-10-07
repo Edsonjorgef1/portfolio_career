@@ -148,6 +148,31 @@ export function ProjectPage({
           )}
         </Block>
 
+        {project.videos && project.videos.length > 0 && (
+          <Block id="videos" title={t(locale, UI.project.videos)}>
+            <ul className="grid gap-6">
+              {project.videos.map((video) => (
+                <li key={video.src}>
+                  <figure>
+                    <video
+                      controls
+                      preload="none"
+                      playsInline
+                      poster={video.poster}
+                      className="aspect-video w-full rounded-xl border border-border bg-surface-2"
+                    >
+                      <source src={video.src} type="video/mp4" />
+                    </video>
+                    <figcaption className="mt-2 text-xs text-subtle">
+                      {video.title[locale]} · {video.duration}
+                    </figcaption>
+                  </figure>
+                </li>
+              ))}
+            </ul>
+          </Block>
+        )}
+
         {project.tech.length > 0 && (
           <Block id="tech" title={t(locale, UI.project.tech)}>
             <ul className="flex flex-wrap gap-2">

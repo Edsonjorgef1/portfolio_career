@@ -34,6 +34,16 @@ export type ProjectImage = {
   device: "desktop" | "mobile";
 };
 
+export type ProjectVideo = {
+  /** Path under /public, e.g. "/work/fams/video/fams-demo-en.mp4" */
+  src: string;
+  /** Still frame shown before playback. */
+  poster: string;
+  title: L;
+  /** e.g. "2:01" */
+  duration: string;
+};
+
 /** A number or fact. `source` is kept for our records; only `url` (a public, checkable link) is shown. */
 export type Fact = {
   value: string;
@@ -81,6 +91,8 @@ export type Project = {
   results: Fact[];
   learnings?: L;
   images: ProjectImage[];
+  /** Demo videos, shown after the images on the project page. */
+  videos?: ProjectVideo[];
   /** Process steps digitised in FAMS, drawn on the cover (cards and project page) instead of a screenshot. */
   flow?: L[];
   links: ProjectLink[];

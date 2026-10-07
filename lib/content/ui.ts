@@ -85,6 +85,7 @@ export const UI = {
     authorship: { pt: "Autoria", en: "Authorship" },
     client: { pt: "Cliente", en: "Client" },
     partners: { pt: "Parceiros", en: "Partners" },
+    videos: { pt: "Vídeos", en: "Videos" },
     openImage: { pt: "Abrir imagem em tamanho real", en: "Open full-size image" },
     next: { pt: "Projecto seguinte", en: "Next project" },
     prev: { pt: "Projecto anterior", en: "Previous project" },
