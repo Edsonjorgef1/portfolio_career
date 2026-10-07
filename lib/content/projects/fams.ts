@@ -745,7 +745,7 @@ export const projects: Project[] = [
       pt: "Da copra comprada no campo ao óleo embarcado: lotes, rendimento, acidez (FFA) e transporte rastreados no FAMS.",
       en: "From copra bought in the field to shipped oil: batches, yield, acidity (FFA) and transport traced in FAMS.",
     },
-    period: "2023–2026",
+    period: "2024–2026",
     status: "production",
     categories: ["agritech"],
     tech: ["Laravel", "PHP", "MySQL"],
@@ -755,14 +755,13 @@ export const projects: Project[] = [
     },
     authorship: "lead",
     client: "OLIMAX (ECOMOZ)",
-    partners: ["NIRAS (VaMoz Competir)"],
     problem: {
       pt: "A OLIMAX compra copra no campo e à porta da fábrica, transforma-a em óleo em várias linhas, guarda-o em depósitos e expede-o em camiões e contentores. Precisava de saber, por lote, de onde veio a copra, quanto óleo rendeu, com que qualidade e para onde foi.",
       en: "OLIMAX buys copra in the field and at the factory gate, turns it into oil on several lines, stores it in tanks and ships it in trucks and containers. It needed to know, per batch, where the copra came from, how much oil it yielded, at what quality and where it went.",
     },
     solution: {
-      pt: "A OLIMAX foi o primeiro cliente a contratar o FAMS directamente, sem financiamento de doadores. O sistema foi implementado em Maio de 2023 para as compras de copra no campo e na fábrica; em 2024 juntou-se a análise de qualidade do óleo (FFA) e em 2025 juntaram-se o registo do óleo produzido por linha, os depósitos e o transporte (camião, contentor, data de embarque e peso). Em Setembro de 2026 a produção de copra passou a módulo próprio, com rastreabilidade do lote redesenhada, relatórios da fábrica e um bloco no painel de controlo.",
-      en: "OLIMAX was the first client to contract FAMS directly, without donor funding. The system went live in May 2023 for copra purchases in the field and at the factory; oil quality analysis (FFA) followed in 2024, and in 2025 came oil output per line, tanks and transport (truck, container, shipping date and weight). In September 2026 copra production became its own module, with redesigned batch traceability, factory reports and a dashboard block.",
+      pt: "A OLIMAX foi o primeiro cliente a contratar o FAMS directamente, sem financiamento de doadores. O sistema foi implementado em Junho de 2024 para as compras de copra no campo e na fábrica, com a análise de qualidade do óleo (FFA); em 2025 juntaram-se o registo do óleo produzido por linha, os depósitos e o transporte (camião, contentor, data de embarque e peso). Em Setembro de 2026 a produção de copra passou a módulo próprio, com rastreabilidade do lote redesenhada, relatórios da fábrica e um bloco no painel de controlo.",
+      en: "OLIMAX was the first client to contract FAMS directly, without donor funding. The system went live in June 2024 for copra purchases in the field and at the factory, with oil quality analysis (FFA); in 2025 came oil output per line, tanks and transport (truck, container, shipping date and weight). In September 2026 copra production became its own module, with redesigned batch traceability, factory reports and a dashboard block.",
     },
     decisions: [
       {
@@ -796,17 +795,12 @@ export const projects: Project[] = [
     ],
     results: [
       {
-        value: "US$ 1 700 000",
+        value: "Jun 2024 →",
         label: {
-          pt: "em compras de copra registadas no FAMS — no campo e na fábrica — desde a implementação em Maio de 2023",
-          en: "in copra purchases recorded in FAMS — in the field and at the factory — since go-live in May 2023",
+          pt: "compras de copra registadas no FAMS — no campo e na fábrica — desde a implementação até hoje",
+          en: "copra purchases recorded in FAMS — in the field and at the factory — from go-live until today",
         },
-        source: { pt: "dados do FAMS da OLIMAX, indicados pelo Edson (Out 2026)", en: "OLIMAX FAMS data, provided by Edson (Oct 2026)" },
-      },
-      {
-        value: "2023 → 2026",
-        label: { pt: "das primeiras compras no FAMS ao módulo próprio de produção de copra", en: "from the first purchases in FAMS to a dedicated copra production module" },
-        source: { pt: "changelog do FAMS", en: "FAMS changelog" },
+        source: { pt: "Edson (Out 2026)", en: "Edson (Oct 2026)" },
       },
       {
         value: "1.º",
