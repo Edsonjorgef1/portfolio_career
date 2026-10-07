@@ -34,7 +34,7 @@ Caminhos de repositórios são relativos a `~/DEV_SETUP/` (excepto os que começ
 
 | Ordem | Slug | Nome | Período | Estado | Autoria | Imagens | Fonte |
 |---|---|---|---|---|---|---|---|
-| 1 | `fams` | FAMS – Farmer & Agribusiness Management System | 2021–2026 | production | main | 6 | EQUIPMOZ/FAMS_Backend, EQUIPMOZ/fams-desktop (changelog.json), EQUIPMOZ/fams-mobile, EQUIPMOZ/fams-electron-desktop, fams-pwa-monorepo |
+| 1 | `fams` | FAMS – Farmer & Agent Management System | 2021–2026 | production | main | 6 | EQUIPMOZ/FAMS_Backend, EQUIPMOZ/fams-desktop (changelog.json), EQUIPMOZ/fams-mobile, EQUIPMOZ/fams-electron-desktop, fams-pwa-monorepo |
 | 2 | `fams-mahala` | FAMS Mahala – plano gratuito multi-empresa | 2026 | production | contributor | 2 | EQUIPMOZ/fams-desktop (branch deploy/mahala), EQUIPMOZ/FAMS_Freemium |
 | 3 | `fams-implementations` | Implementações do FAMS em clientes | 2024–2026 | production | consulting | 0 | sem repo — relatórios NIRAS/GIZ, CV |
 | 4 | `vamoz-competir` | VaMoz Competir – GIZ / NIRAS | 2025–2026 | production | consulting | 0 | sem repo — relatório NIRAS |

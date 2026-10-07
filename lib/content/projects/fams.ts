@@ -4,7 +4,7 @@ export const projects: Project[] = [
   // ───────────────────────────────────────────── FAMS (featured case study)
   {
     slug: "fams",
-    name: "FAMS – Farmer & Agribusiness Management System",
+    name: "FAMS – Farmer & Agent Management System",
     tagline: {
       pt: "Plataforma Laravel para agronegócios gerirem produtores, compras no campo, stock e fábrica — com API para a app de campo offline.",
       en: "Laravel platform for agribusinesses to manage farmers, field purchases, stock and processing — with an API for the offline field app.",

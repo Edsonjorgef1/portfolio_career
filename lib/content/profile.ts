@@ -95,7 +95,7 @@ export type ExperienceItem = {
 /** Career history as stated by Edson; metrics without a source were removed. */
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    company: "FAMS – Farmer & Agribusiness Management System",
+    company: "FAMS – Farmer & Agent Management System",
     role: {
       pt: "Cofundador · Director de Tecnologia e Produto · Programador líder",
       en: "Co-founder · Chief Technology & Product Officer · Lead developer",
