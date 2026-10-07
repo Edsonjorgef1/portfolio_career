@@ -158,6 +158,16 @@ export const projects: Project[] = [
     },
     images: [
       {
+        src: "/work/fams/00.webp",
+        alt: {
+          pt: "FAMS — recolha directa de dados no campo: registo de novos produtores, compras e insumos, com verificação na sede",
+          en: "FAMS — direct data input in the field: onboarding new farmers, recording purchases and inputs, verified at headquarters",
+        },
+        width: 1600,
+        height: 900,
+        device: "desktop",
+      },
+      {
         src: "/work/fams/01.webp",
         alt: {
           pt: "Mapa do FAMS com pontos de colecta, produtores e áreas no Niassa, com totais agregados por ponto de colecta",
