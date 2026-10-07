@@ -354,6 +354,19 @@ export const projects: Project[] = [
         ],
       },
       {
+        heading: { pt: "Objectivos de Desenvolvimento Sustentável (ODS)", en: "Sustainable Development Goals (SDGs)" },
+        paragraphs: [
+          {
+            pt: "ODS principais: ODS 2 — Fome Zero e Agricultura Sustentável (metas 2.3 e 2.4: cadastro e acompanhamento de pequenos produtores, monitoria da produção, distribuição de insumos e formações); ODS 8 — Trabalho Digno e Crescimento Económico (8.2, 8.3, 8.10: operações digitalizadas, pagamentos exactos e transparentes, menos fraude e custos administrativos); ODS 9 — Indústria, Inovação e Infra-estruturas (9.3, 9.4, 9.c: aplicações web e móvel com operação offline, ligação entre produtores, pontos de recolha, armazéns e fábricas, e API para outros sistemas); ODS 12 — Consumo e Produção Responsáveis (12.3, 12.6: stock, movimentação e rastreabilidade do produtor à indústria, com dados auditáveis para certificações).",
+            en: "Primary SDGs: SDG 2 — Zero Hunger (targets 2.3 and 2.4: registering and following up smallholders, monitoring production, input distribution and trainings); SDG 8 — Decent Work and Economic Growth (8.2, 8.3, 8.10: digitised operations, accurate and transparent payments, less fraud and admin cost); SDG 9 — Industry, Innovation and Infrastructure (9.3, 9.4, 9.c: web and mobile apps that work offline, linking farmers, collection points, warehouses and factories, and an API for other systems); SDG 12 — Responsible Consumption and Production (12.3, 12.6: stock, movements and traceability from farmer to factory, with auditable data for certifications).",
+          },
+          {
+            pt: "ODS complementares: ODS 1 (rendimento e registos financeiros dos produtores), ODS 5 (dados desagregados por género, quando o cliente os recolhe), ODS 10 (inclusão de produtores antes informais e funcionamento offline em zonas sem rede) e ODS 16 (pesagens, compras e pagamentos auditáveis, com utilizadores, funções e permissões). O contributo para o ODS 13 (Acção Climática) é apenas habilitador: o FAMS ainda não tem funcionalidades climáticas próprias.",
+            en: "Complementary SDGs: SDG 1 (farmer income and financial records), SDG 5 (gender-disaggregated data, where the client collects it), SDG 10 (including previously informal farmers and working offline in areas without coverage) and SDG 16 (auditable weighings, purchases and payments, with users, roles and permissions). The contribution to SDG 13 (Climate Action) is only enabling: FAMS has no climate features of its own yet.",
+          },
+        ],
+      },
+      {
         heading: { pt: "Próximo passo (proposta): PWA offline-first", en: "What's next (proposal): an offline-first PWA" },
         paragraphs: [
           {
