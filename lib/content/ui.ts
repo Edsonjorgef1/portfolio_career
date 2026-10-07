@@ -16,6 +16,7 @@ export const UI = {
     contact: { pt: "Contacto", en: "Contact" },
   },
   langSwitch: { pt: "Read in English", en: "Ler em português" },
+  themeToggle: { pt: "Alternar entre tema claro e escuro", en: "Switch between light and dark theme" },
   cv: { pt: "Currículo (PDF)", en: "Résumé (PDF)" },
   featured: {
     title: { pt: "Projectos em destaque", en: "Featured work" },

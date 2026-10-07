@@ -41,7 +41,7 @@ export function ProjectCover({
         aria-hidden="true"
         className={`cover relative flex ${aspect} w-full flex-col justify-between gap-4 overflow-hidden bg-surface-2 p-5 sm:p-6`}
         style={{
-          backgroundImage: `radial-gradient(circle at 90% 0%, rgba(${rgb},0.26), transparent 55%), radial-gradient(circle at 0% 100%, rgba(${rgb},0.10), transparent 50%), linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle at 90% 0%, rgba(${rgb},0.26), transparent 55%), radial-gradient(circle at 0% 100%, rgba(${rgb},0.10), transparent 50%), linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px)`,
           backgroundSize: "auto, auto, 28px 28px, 28px 28px",
         }}
       >

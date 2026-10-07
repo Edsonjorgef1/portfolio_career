@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { LangSwitch } from "@/components/site/lang-switch";
+import { ThemeToggle } from "@/components/site/theme-toggle";
 import { PERSON } from "@/lib/content/profile";
 import { UI, t } from "@/lib/content/ui";
 import type { Locale } from "@/types/content";
@@ -16,7 +17,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-[rgba(10,10,10,0.85)] backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-border bg-[var(--header-bg)] backdrop-blur">
       <div className="container-page flex h-14 items-center justify-between gap-4">
         <Link href={home} className="text-sm font-semibold tracking-tight text-foreground">
           {PERSON.name}
@@ -40,6 +41,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           >
             {t(locale, UI.nav.work)}
           </Link>
+          <ThemeToggle label={t(locale, UI.themeToggle)} />
           <LangSwitch locale={locale} label={t(locale, UI.langSwitch)} />
         </nav>
       </div>
