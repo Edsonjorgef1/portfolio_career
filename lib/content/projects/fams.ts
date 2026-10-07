@@ -228,6 +228,44 @@ export const projects: Project[] = [
         device: "desktop",
       },
     ],
+    videos: [
+      {
+        src: "/work/fams/video/fams-pt.mp4",
+        poster: "/work/fams/video/fams-pt.webp",
+        title: {
+          pt: "O que é o FAMS: visão e benefícios, apresentado por Edson Famanda, gestor do sistema (português)",
+          en: "What FAMS is: vision and benefits, presented by Edson Famanda, system manager (Portuguese)",
+        },
+        duration: "0:39",
+      },
+      {
+        src: "/work/fams/video/fams-en.mp4",
+        poster: "/work/fams/video/fams-en.webp",
+        title: {
+          pt: "O que é o FAMS: visão e benefícios, apresentado por Edson Famanda, gestor do sistema (inglês)",
+          en: "What FAMS is: vision and benefits, presented by Edson Famanda, system manager",
+        },
+        duration: "0:40",
+      },
+      {
+        src: "/work/fams/video/fams-demo-en.mp4",
+        poster: "/work/fams/video/fams-demo-en.webp",
+        title: {
+          pt: "Vídeo de apresentação do FAMS (inglês): campo, sede, SMS, mapas e relatórios",
+          en: "FAMS presentation video: field, headquarters, SMS, maps and reports",
+        },
+        duration: "2:01",
+      },
+      {
+        src: "/work/fams/video/fams-edson-en.mp4",
+        poster: "/work/fams/video/fams-edson-en.webp",
+        title: {
+          pt: "O Edson apresenta o FAMS (inglês)",
+          en: "Edson presents FAMS",
+        },
+        duration: "0:58",
+      },
+    ],
     links: [
       { label: { pt: "Site do FAMS", en: "FAMS website" }, href: "https://fams.co.mz" },
       { label: { pt: "FAMS Mahala (plano gratuito)", en: "FAMS Mahala (free plan)" }, href: "https://mahala.fams.co.mz" },
