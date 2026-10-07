@@ -49,7 +49,7 @@ export default async function CvPage({ params }: { params: Params }) {
           <p className="mt-1 text-base text-neutral-700">{PERSON.title[locale]}</p>
           <p className="mt-2 text-neutral-700">
             {PERSON.location[locale]} · {PERSON.email} · linkedin.com/in/edsonjorgef1 · github.com/edsonjorgef1 ·{" "}
-            {LABELS.portfolio[locale]}: edsonfrancisco-portfolio.vercel.app
+            {LABELS.portfolio[locale]}: portfolio.edsonfrancisco.site
           </p>
         </header>
 

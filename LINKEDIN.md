@@ -32,7 +32,7 @@ As minhas funções sempre exigiram gestão e coordenação, com parceiros como 
 
 Gosto de problemas complexos e de os resolver com decisões simples que aguentam anos de uso real: sincronização offline, isolamento de dados por empresa, releases pequenas e frequentes, e documentação que a próxima pessoa consegue seguir.
 
-Portefólio: https://edsonfrancisco-portfolio.vercel.app
+Portefólio: https://portfolio.edsonfrancisco.site
 Aberto a projectos remotos, com coordenação internacional, consultoria e funções de engenharia.
 
 ### EN
@@ -52,7 +52,7 @@ My roles have always required management and coordination, with partners such as
 
 I enjoy complex problems and solving them with simple decisions that survive years of real use: offline sync, per-company data isolation, small and frequent releases, and documentation the next person can follow.
 
-Portfolio: https://edsonfrancisco-portfolio.vercel.app
+Portfolio: https://portfolio.edsonfrancisco.site
 Open to remote and internationally coordinated projects, consulting and engineering roles.
 
 ---

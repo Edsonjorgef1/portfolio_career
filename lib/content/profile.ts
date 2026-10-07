@@ -1,6 +1,6 @@
 import type { Fact, L } from "@/types/content";
 
-export const SITE_URL = "https://edsonfrancisco-portfolio.vercel.app";
+export const SITE_URL = "https://portfolio.edsonfrancisco.site";
 
 export const PERSON = {
   name: "Edson Francisco",
