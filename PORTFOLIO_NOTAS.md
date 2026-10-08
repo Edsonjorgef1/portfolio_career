@@ -127,6 +127,20 @@ Fora do site (decisão 2026-09): Recall e SecureLink API (0 commits próprios), 
   - **Capas**: projectos com `flow` (MHC, OLIMAX) mostram sempre a capa tipográfica com as etapas digitalizadas — nos cartões (início e galeria) e no topo da página do projecto, com legenda "Etapas digitalizadas no FAMS". As fotos ficam na secção "Imagens" (antes "Capturas").
 - **/now**: removido o ponto "A aprender React Native" (micacao-wallet). O projecto `micacao-wallet` continua na galeria.
 
+## Informação dada pelo Edson (2026-10-08) — sectores e ODS
+
+Contexto: análise para uma candidatura do FAMS, registada aqui como referência para futuros formulários.
+
+**Sector principal:** "Traceability, Transparency & Resilient Value Chains" — rastreabilidade, códigos de barras, controlo de qualidade, compras, pagamentos, stock e histórico completo do produto (muito forte). **Secundários recomendados:** "Market Access, Aggregation & Farmer Platforms" (cadastro, agregação, pontos de recolha, ligação produtor–agronegócio) e, como terceiro, "Farm Productivity, Inputs & Precision Agriculture"; se a candidatura enfatizar pagamentos móveis e crédito, o terceiro passa a "Agri-Fintech & Farmer Financial Resilience" (M-Pesa, dívidas, reconciliação). Alinhamentos mais fracos: Supply Chain/Logistics (médio — não destacar cold chain, não há controlo de temperatura), Post-Harvest (médio), Data & Climate Intelligence (médio/forte), Food Security (indirecto), Climate-Smart (potencial, não principal), Water/Irrigation (fraco — sem funcionalidade central de água).
+
+**ODS declarados na candidatura:** principais 2 (2.3, 2.4), 8 (8.2, 8.3, 8.10), 9 (9.3, 9.4, 9.c) e 12 (12.3, 12.6); complementares 1, 5, 10 e 16; ODS 13 só se houver funcionalidades climáticas concretas (hoje o contributo é apenas habilitador — dados de impactos, práticas resilientes, alertas por SMS; faltam previsões meteorológicas, alertas de seca, calendários climáticos e indicadores de solo).
+
+**O que está no site:**
+- FAMS: bloco ODS estruturado na página do projecto (4 principais: 2, 8, 9, 12; 5 complementares: 1, 5, 10, 16 e 13 como contributo apenas habilitador), e ponto na experiência (`profile.ts`). O antigo capítulo de ODS em prosa no estudo de caso foi substituído por este bloco, para não duplicar.
+- Novo campo `sdgs` no tipo `Project` (`types/content.ts`), com títulos e cores oficiais em `lib/content/sdgs.ts`, renderizado na página do projecto (`components/site/project-page.tsx`) depois de "O que aprendi", com etiqueta "principal"/"complementar".
+- ODS por projecto (2026-10-08): fams 2, 8, 9, 12 (principais) + 1, 5, 10, 16, 13 · fams-mahala 2, 8, 9 · fams-implementations 2, 8, 10 · mhc-honey-traceability 2, 12, 15 · olimax-copra 2, 12, 8 · vamoz-competir 2, 9, 8 · proecon 2, 9 · funae-mgqr 16, 7 · siga-ipp 4, 9 · municipio-do-dondo 16, 11, 10 · e-acacia 16, 11 · start-escolar 4, 8 · djobar 8, 10 · consultare 3 · juris 16, 5 · kukura 17, 10 · hlink 3 · abastece 7 · mozsaude 3 · doamoz 3 · kukanela 10 · semmo 3 · aidai 11, 13 · kultuare 3 · karibu-menu 8 · mygym 8 · hospitality-networks 9 · micacao-wallet 15, 2.
+- **Sem ODS** (de propósito): fams-website, laravel-teams-logging, github-actions-template, sitehealth, perpi-dashboard, residencial-bendiak, edsonfrancisco-site, casa-msika, aem-controle-ponto, c-yanga, fonte-da-vida, donante, sigem-plus (registo de membros de um partido — sem enquadramento defensável), grievance-saas e alto-molocue-website (ocultos), learning-wisdom, sms-usendit, mozlab.
+
 ## Para a próxima actualização
 
 1. Correr o levantamento: procurar repositórios em `~/DEV_SETUP` e `/Applications/MAMP/htdocs`, contar commits com a regra 1 e comparar com a tabela acima.
