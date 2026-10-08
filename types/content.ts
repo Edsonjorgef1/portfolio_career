@@ -67,6 +67,19 @@ export type CaseStudySection = {
   paragraphs: L[];
 };
 
+/**
+ * How the project contributes to a UN Sustainable Development Goal (ODS).
+ * Titles and colours come from SDGS in lib/content/sdgs.ts.
+ */
+export type ProjectSdg = {
+  /** SDG number, 1–17. */
+  goal: number;
+  /** How this project contributes to the goal. */
+  contribution: L;
+  /** Primary goals come before complementary ones; default: complementary. */
+  primary?: boolean;
+};
+
 export type Project = {
   slug: string;
   /** Proper name, or a localized name when it contains descriptive words. */
@@ -90,6 +103,8 @@ export type Project = {
   decisions: Decision[];
   results: Fact[];
   learnings?: L;
+  /** Contribution to the Sustainable Development Goals (ODS), shown after the learnings. */
+  sdgs?: ProjectSdg[];
   images: ProjectImage[];
   /** Demo videos, shown after the images on the project page. */
   videos?: ProjectVideo[];

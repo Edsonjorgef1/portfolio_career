@@ -111,6 +111,16 @@ export const projects: Project[] = [
       pt: "Num mercado onde o pagamento é muitas vezes manual, a regra de negócio certa foi degradar o serviço com suavidade em vez de o cortar. E generalizar um domínio que já está em uso só é seguro com migrações aditivas e testes escritos antes.",
       en: "In a market where payment is often manual, the right business rule was to degrade the service gently instead of cutting it. And generalising a domain that is already in use is only safe with additive migrations and tests written first.",
     },
+    sdgs: [
+      {
+        goal: 8,
+        primary: true,
+        contribution: {
+          pt: "Carta digital, pedidos à mesa e controlo de estado do pedido dão a pequenos restaurantes e negócios ferramentas que antes só existiam em soluções estrangeiras caras.",
+          en: "A digital menu, table ordering and order-status tracking give small restaurants and businesses tools that used to exist only in expensive foreign products.",
+        },
+      },
+    ],
     images: [
       {
         src: "/work/karibu-menu/01.webp",
@@ -264,6 +274,16 @@ export const projects: Project[] = [
       pt: "Mudar de stack três vezes custou semanas. A lição foi escrever a comparação antes de começar e escolher a opção que deixa entregar o MVP mais cedo, deixando a app móvel para depois.",
       en: "Switching stacks three times cost weeks. The lesson was to write the comparison before starting and pick the option that ships the MVP soonest, leaving the mobile app for later.",
     },
+    sdgs: [
+      {
+        goal: 8,
+        primary: true,
+        contribution: {
+          pt: "Membros, mensalidades e check-in por QR substituem cadernos e folhas de cálculo num pequeno ginásio, com relatórios e meios de pagamento locais (M-Pesa, e-Mola, mKesh).",
+          en: "Members, subscriptions and QR check-in replace notebooks and spreadsheets at a small gym, with reports and local payment methods (M-Pesa, e-Mola, mKesh).",
+        },
+      },
+    ],
     images: [
       {
         src: "/work/mygym/01.webp",
@@ -369,6 +389,16 @@ export const projects: Project[] = [
         source: {
           pt: "painel Ruijie Cloud, 12–18 Mai 2025",
           en: "Ruijie Cloud dashboard, 12–18 May 2025",
+        },
+      },
+    ],
+    sdgs: [
+      {
+        goal: 9,
+        primary: true,
+        contribution: {
+          pt: "Starlink como ligação principal e redes Wi-Fi geridas na cloud levam conectividade a hotéis fora das cidades, onde a fibra não chega.",
+          en: "Starlink as the main uplink and cloud-managed Wi-Fi bring connectivity to hotels outside the cities, where fibre does not reach.",
         },
       },
     ],
@@ -1090,7 +1120,24 @@ export const projects: Project[] = [
         label: { pt: "linhas de guia de onboarding", en: "lines of onboarding guide" },
         source: {
           pt: "git show --stat, fork micacao-wallet",
-          en: "git show --stat, micacao-wallet fork",
+          en: "git show --stat, fork micacao-wallet",
+        },
+      },
+    ],
+    sdgs: [
+      {
+        goal: 15,
+        primary: true,
+        contribution: {
+          pt: "A rastreabilidade do cacau em blockchain existe para cumprir o regulamento europeu contra a desflorestação (EUDR): cada lote tem de provar que não vem de áreas desflorestadas.",
+          en: "Cocoa traceability on a blockchain exists to comply with the EU deforestation regulation (EUDR): every batch must prove it does not come from deforested areas.",
+        },
+      },
+      {
+        goal: 2,
+        contribution: {
+          pt: "A prova de origem liga os produtores de cacau a mercados que cada vez mais exigem cadeias de abastecimento rastreadas e sem desflorestação.",
+          en: "Proof of origin links cocoa farmers to markets that increasingly require traced, deforestation-free supply chains.",
         },
       },
     ],

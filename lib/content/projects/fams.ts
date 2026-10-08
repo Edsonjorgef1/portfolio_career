@@ -354,19 +354,6 @@ export const projects: Project[] = [
         ],
       },
       {
-        heading: { pt: "Objectivos de Desenvolvimento Sustentável (ODS)", en: "Sustainable Development Goals (SDGs)" },
-        paragraphs: [
-          {
-            pt: "ODS principais: ODS 2 — Fome Zero e Agricultura Sustentável (metas 2.3 e 2.4: cadastro e acompanhamento de pequenos produtores, monitoria da produção, distribuição de insumos e formações); ODS 8 — Trabalho Digno e Crescimento Económico (8.2, 8.3, 8.10: operações digitalizadas, pagamentos exactos e transparentes, menos fraude e custos administrativos); ODS 9 — Indústria, Inovação e Infra-estruturas (9.3, 9.4, 9.c: aplicações web e móvel com operação offline, ligação entre produtores, pontos de recolha, armazéns e fábricas, e API para outros sistemas); ODS 12 — Consumo e Produção Responsáveis (12.3, 12.6: stock, movimentação e rastreabilidade do produtor à indústria, com dados auditáveis para certificações).",
-            en: "Primary SDGs: SDG 2 — Zero Hunger (targets 2.3 and 2.4: registering and following up smallholders, monitoring production, input distribution and trainings); SDG 8 — Decent Work and Economic Growth (8.2, 8.3, 8.10: digitised operations, accurate and transparent payments, less fraud and admin cost); SDG 9 — Industry, Innovation and Infrastructure (9.3, 9.4, 9.c: web and mobile apps that work offline, linking farmers, collection points, warehouses and factories, and an API for other systems); SDG 12 — Responsible Consumption and Production (12.3, 12.6: stock, movements and traceability from farmer to factory, with auditable data for certifications).",
-          },
-          {
-            pt: "ODS complementares: ODS 1 (rendimento e registos financeiros dos produtores), ODS 5 (dados desagregados por género, quando o cliente os recolhe), ODS 10 (inclusão de produtores antes informais e funcionamento offline em zonas sem rede) e ODS 16 (pesagens, compras e pagamentos auditáveis, com utilizadores, funções e permissões). O contributo para o ODS 13 (Acção Climática) é apenas habilitador: o FAMS ainda não tem funcionalidades climáticas próprias.",
-            en: "Complementary SDGs: SDG 1 (farmer income and financial records), SDG 5 (gender-disaggregated data, where the client collects it), SDG 10 (including previously informal farmers and working offline in areas without coverage) and SDG 16 (auditable weighings, purchases and payments, with users, roles and permissions). The contribution to SDG 13 (Climate Action) is only enabling: FAMS has no climate features of its own yet.",
-          },
-        ],
-      },
-      {
         heading: { pt: "Próximo passo (proposta): PWA offline-first", en: "What's next (proposal): an offline-first PWA" },
         paragraphs: [
           {
@@ -378,6 +365,75 @@ export const projects: Project[] = [
             en: "It is only a proposal: three design documents and a monorepo skeleton, with no application code. The MVP scope is farmers, agents and field purchases.",
           },
         ],
+      },
+    ],
+    sdgs: [
+      {
+        goal: 2,
+        primary: true,
+        contribution: {
+          pt: "Cadastro e acompanhamento georreferenciado de pequenos produtores, monitoria da produção, distribuição de insumos rastreados e formações no terreno (metas 2.3 e 2.4).",
+          en: "Georeferenced registration and follow-up of smallholders, production monitoring, tracked input distribution and on-site trainings (targets 2.3 and 2.4).",
+        },
+      },
+      {
+        goal: 8,
+        primary: true,
+        contribution: {
+          pt: "Operações digitalizadas em cooperativas e agronegócios, com pesos e pagamentos exactos e transparentes, menos fraude e menos custos administrativos (8.2, 8.3, 8.10).",
+          en: "Digitised operations in cooperatives and agribusinesses, with accurate and transparent weights and payments, less fraud and lower administrative costs (8.2, 8.3, 8.10).",
+        },
+      },
+      {
+        goal: 9,
+        primary: true,
+        contribution: {
+          pt: "Aplicações web e móvel com operação offline, ligação entre produtores, pontos de recolha, armazéns e fábricas, e API para integração com outros sistemas (9.3, 9.4, 9.c).",
+          en: "Web and mobile apps that work offline, linking farmers, collection points, warehouses and factories, plus an API for integration with other systems (9.3, 9.4, 9.c).",
+        },
+      },
+      {
+        goal: 12,
+        primary: true,
+        contribution: {
+          pt: "Stock, movimentações e rastreabilidade do produtor à indústria, com dados auditáveis para certificações e redução de perdas ao longo da cadeia (12.3, 12.6).",
+          en: "Stock, movements and traceability from farmer to factory, with auditable data for certifications and to cut losses along the chain (12.3, 12.6).",
+        },
+      },
+      {
+        goal: 1,
+        contribution: {
+          pt: "Rendimento e registos financeiros dos produtores guardados no sistema, com histórico de compras, créditos de insumos e pagamentos.",
+          en: "Farmer income and financial records kept in the system, with a history of purchases, input credit and payments.",
+        },
+      },
+      {
+        goal: 5,
+        contribution: {
+          pt: "Dados desagregados por género, quando o cliente os recolhe; no painel de impacto do FAMS, cerca de metade dos produtores digitalizados são mulheres.",
+          en: "Gender-disaggregated data where the client collects it; in the FAMS impact dashboard, about half of the farmers digitised are women.",
+        },
+      },
+      {
+        goal: 10,
+        contribution: {
+          pt: "Inclusão de produtores antes informais e operação offline em zonas sem rede, com sincronização planeada quando volta a ligação.",
+          en: "Inclusion of previously informal farmers and offline operation in areas without coverage, with planned sync once the connection returns.",
+        },
+      },
+      {
+        goal: 16,
+        contribution: {
+          pt: "Pesagens, compras e pagamentos auditáveis, com utilizadores, funções e permissões por empresa e histórico completo para prestação de contas.",
+          en: "Auditable weighings, purchases and payments, with per-company users, roles and permissions and a full history for accountability.",
+        },
+      },
+      {
+        goal: 13,
+        contribution: {
+          pt: "Contributo apenas habilitador — recolha de dados no terreno e comunicação por SMS. O FAMS ainda não tem funcionalidades climáticas próprias.",
+          en: "An enabling contribution only — field data collection and SMS communication. FAMS has no climate features of its own yet.",
+        },
       },
     ],
     featured: true,
@@ -456,6 +512,31 @@ export const projects: Project[] = [
       pt: "Passar de uma instalação por cliente para multi-empresa é sobretudo caçar pressupostos escondidos: cada Company::first() ou config de empresa era um sítio onde os dados de uma empresa podiam aparecer noutra.",
       en: "Moving from one install per client to multi-tenant is mostly hunting hidden assumptions: every Company::first() or company config value was a place where one company's data could leak into another's.",
     },
+    sdgs: [
+      {
+        goal: 2,
+        primary: true,
+        contribution: {
+          pt: "O plano gratuito leva o cadastro e o acompanhamento de pequenos produtores a cooperativas e pequenas empresas que não tinham orçamento para um servidor próprio.",
+          en: "The free plan brings smallholder registration and follow-up to cooperatives and small companies that could not afford their own server.",
+        },
+      },
+      {
+        goal: 8,
+        primary: true,
+        contribution: {
+          pt: "Empresas registam-se sozinhas em minutos e só pagam quando crescem, baixando o custo de digitalizar a operação e os pagamentos.",
+          en: "Companies sign up on their own within minutes and only pay when they grow, lowering the cost of digitising operations and payments.",
+        },
+      },
+      {
+        goal: 9,
+        contribution: {
+          pt: "Uma só instalação multi-empresa partilha a mesma infra-estrutura digital entre muitas organizações, em vez de um servidor por cliente.",
+          en: "A single multi-tenant installation shares one digital infrastructure across many organisations, instead of a server per client.",
+        },
+      },
+    ],
     images: [
       {
         src: "/work/fams-mahala/01.webp",
@@ -567,6 +648,31 @@ export const projects: Project[] = [
       pt: "Instalar não é adoptar. Numa missão de seguimento, de cerca de 25 agentes, 11 usavam a app no dispositivo e só 1 sincronizava com regularidade: o problema não era técnico, era de rotina e supervisão. A resposta foi de produto e de operação ao mesmo tempo — um painel com a última sincronização de cada agente, metas de uso, janelas de sincronização planeadas e partilha de hotspot no campo.",
       en: "Installing is not adopting. On one follow-up mission, of about 25 agents, 11 used the app on their device and only 1 synced regularly: the problem was not technical but routine and supervision. The answer was both product and operations — a dashboard with each agent's last sync, usage targets, planned sync windows and hotspot sharing in the field.",
     },
+    sdgs: [
+      {
+        goal: 2,
+        primary: true,
+        contribution: {
+          pt: "Cada implementação passa os produtores de listas em papel e Excel para registos digitais e georreferenciados, com formações, inquéritos e compras que a empresa e os financiadores conseguem acompanhar.",
+          en: "Each rollout moves farmers from paper and Excel lists into georeferenced digital records, with trainings, surveys and purchases the company and its funders can follow.",
+        },
+      },
+      {
+        goal: 8,
+        primary: true,
+        contribution: {
+          pt: "Configuração, migração de dados e formação no terreno profissionalizam a operação das empresas e dão mais previsibilidade aos créditos e pagamentos dos produtores.",
+          en: "Configuration, data migration and on-site training professionalise the companies' operations and make farmer credit and payments more predictable.",
+        },
+      },
+      {
+        goal: 10,
+        contribution: {
+          pt: "As missões chegam a zonas com pouca rede — em Niassa, Manica e Zambézia — onde o registo offline e a sincronização por janelas planeadas são a única forma de os dados existirem.",
+          en: "The missions reach areas with poor coverage — in Niassa, Manica and Zambézia — where offline capture and planned sync windows are the only way the data can exist at all.",
+        },
+      },
+    ],
     images: [],
     links: [],
     order: 7,
@@ -652,6 +758,31 @@ export const projects: Project[] = [
       pt: "Desenhar o processo com o campo e a fábrica na mesma sala encurta tudo: as lacunas aparecem durante a formação, são resolvidas no mesmo dia e o teste de campo do dia seguinte já valida a solução.",
       en: "Designing the process with field and factory staff in the same room shortens everything: gaps surface during training, get fixed the same day, and the next day's field test already validates the fix.",
     },
+    sdgs: [
+      {
+        goal: 2,
+        primary: true,
+        contribution: {
+          pt: "Cada compra fica ligada ao apicultor, com peso confirmado e recibo impresso, para que o rendimento do mel chegue com pagamentos exactos e identificáveis.",
+          en: "Every purchase is tied to its beekeeper, with confirmed weight and a printed receipt, so honey income arrives as accurate, identifiable payments.",
+        },
+      },
+      {
+        goal: 12,
+        primary: true,
+        contribution: {
+          pt: "Rastreabilidade do balde à garrafa: humidade, açúcar (Brix), cor e lote permitem reduzir perdas e responder por cada fase do processamento, com relatórios de produção assinados.",
+          en: "Traceability from bucket to bottle: moisture, sugar (Brix), colour and lot make it possible to cut losses and account for every processing stage, with signed production reports.",
+        },
+      },
+      {
+        goal: 15,
+        contribution: {
+          pt: "O centro de serviços de mel de Zomba fica na zona tampão do Parque Nacional de Chimanimani: dados auditáveis apoiam uma cadeia de mel compatível com a conservação.",
+          en: "The Zomba honey service centre sits in the Chimanimani National Park buffer zone: auditable data supports a honey value chain compatible with conservation.",
+        },
+      },
+    ],
     flow: [
       { pt: "Apicultor", en: "Beekeeper" },
       { pt: "Compra + código do balde", en: "Purchase + bucket code" },
@@ -873,6 +1004,31 @@ export const projects: Project[] = [
       pt: "Um cliente que paga directamente pede números em que pode confiar. Assinalar o que está fora do esperado — rendimento, acidez — valeu mais do que acrescentar gráficos.",
       en: "A client paying directly wants numbers it can trust. Flagging what falls outside expectations — yield, acidity — was worth more than adding charts.",
     },
+    sdgs: [
+      {
+        goal: 2,
+        primary: true,
+        contribution: {
+          pt: "As compras de copra ficam ligadas às áreas de origem e aos produtores que venderam, com registo de quanto entregou cada um, no campo e à porta da fábrica.",
+          en: "Copra purchases are linked to their source areas and the farmers who sold, recording what each delivered, in the field and at the factory gate.",
+        },
+      },
+      {
+        goal: 12,
+        primary: true,
+        contribution: {
+          pt: "Lote, rendimento, acidez (FFA) e embarque ficam rastreados do campo ao óleo expedido, para reduzir perdas e inconsistências entre linhas de produção e depósitos.",
+          en: "Batch, yield, acidity (FFA) and shipping stay traced from the field to the shipped oil, cutting losses and inconsistencies across production lines and tanks.",
+        },
+      },
+      {
+        goal: 8,
+        contribution: {
+          pt: "Compras registadas em sistema desde Junho de 2024, no primeiro cliente a contratar o FAMS directamente, sem financiamento de doadores.",
+          en: "Purchases recorded in the system since June 2024, at the first client to contract FAMS directly, without donor funding.",
+        },
+      },
+    ],
     flow: [
       { pt: "Copra no campo", en: "Copra in the field" },
       { pt: "Guia de transporte", en: "Waybill" },
@@ -1068,6 +1224,31 @@ export const projects: Project[] = [
         source: { pt: "Relatório técnico geral do FAMS para a NIRAS (Out 2025 – Jul 2026), dados dos painéis a 10 Set 2026", en: "FAMS general technical report to NIRAS (Oct 2025 – Jul 2026), dashboard data as of 10 Sep 2026" },
       },
     ],
+    sdgs: [
+      {
+        goal: 2,
+        primary: true,
+        contribution: {
+          pt: "Cadastro georreferenciado de mais de 13 300 produtores nas cinco empresas implementadas, com formações, inquéritos e compras para acompanhar a produtividade e o rendimento dos pequenos produtores.",
+          en: "Georeferenced registration of more than 13,300 farmers across the five companies where it was rolled out, with trainings, surveys and purchases to follow smallholder productivity and income.",
+        },
+      },
+      {
+        goal: 9,
+        primary: true,
+        contribution: {
+          pt: "A linha de trabalho do programa de soluções digitais para a gestão da cadeia de abastecimento passou a assentar no FAMS: os dados dos produtores e das compras ficam acessíveis à NIRAS e à equipa de Monitoria e Avaliação da GIZ.",
+          en: "The programme's work stream on digital solutions for supply chain management now rests on FAMS: farmer and purchase data are directly accessible to NIRAS and GIZ's Monitoring and Evaluation team.",
+        },
+      },
+      {
+        goal: 8,
+        contribution: {
+          pt: "Compras e créditos de insumos registados digitalmente nas empresas-âncora, para pagamentos mais exactos e relatórios fiáveis que sustentam o acesso a crédito e compradores.",
+          en: "Purchases and input credit recorded digitally at the lead companies, for more accurate payments and reliable reports that support access to credit and buyers.",
+        },
+      },
+    ],
     images: [],
     links: [
       { label: { pt: "Ficha do projecto VaMoz Competir (GIZ, PDF)", en: "VaMoz Competir project factsheet (GIZ, PDF)" }, href: "https://www.giz.de/sites/default/files/media/pkb-document/2025-12/giz2025-en-vamoz-competir-factsheet.pdf" },
@@ -1127,6 +1308,23 @@ export const projects: Project[] = [
         value: "Fev 2021",
         label: { pt: "lançamento oficial do FAMS", en: "official FAMS launch" },
         source: { pt: "Nota da GIZ sobre o FAMS, 2023", en: "GIZ note on FAMS, 2023" },
+      },
+    ],
+    sdgs: [
+      {
+        goal: 2,
+        primary: true,
+        contribution: {
+          pt: "Dez agronegócios e quatro cadeias de valor passaram de registos em papel para o cadastro e acompanhamento digital dos pequenos produtores que lhes vendem.",
+          en: "Ten agribusinesses in four value chains moved from paper records to digital registration and follow-up of the smallholders who sell to them.",
+        },
+      },
+      {
+        goal: 9,
+        contribution: {
+          pt: "O FAMS nasceu neste programa como infra-estrutura digital das empresas parceiras da GIZ, com rastreabilidade e códigos de barras para transparência na cadeia.",
+          en: "FAMS was born in this programme as the digital infrastructure of GIZ's partner companies, with traceability and barcodes for transparency along the chain.",
+        },
       },
     ],
     images: [],

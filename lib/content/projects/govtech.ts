@@ -101,6 +101,23 @@ export const projects: Project[] = [
       pt: "Numa equipa de nove programadores no mesmo repositório, issues numeradas e uma divisão clara de áreas valem mais do que qualquer ferramenta. E uma regra de atribuição simples, com saída para um humano, é mais fácil de explicar ao cliente do que um algoritmo sofisticado.",
       en: "With nine developers in one repository, numbered issues and clear ownership of areas matter more than any tool. And a simple assignment rule with a way out to a human is easier to explain to a client than a clever algorithm.",
     },
+    sdgs: [
+      {
+        goal: 16,
+        primary: true,
+        contribution: {
+          pt: "Mecanismo formal de queixas e reclamações: qualquer pessoa afectada por um projecto de electrificação submite identificada ou anónima, com prazos legais, histórico auditável e uma referência pública para acompanhar o estado.",
+          en: "A formal grievance redress mechanism: anyone affected by an electrification project submits identified or anonymously, with legal deadlines, an auditable history and a public reference to track the case.",
+        },
+      },
+      {
+        goal: 7,
+        contribution: {
+          pt: "As queixas servem os projectos de acesso à energia financiados pela Enabel, para que a expansão da rede responda também às comunidades afectadas.",
+          en: "The grievances serve Enabel-funded energy access projects, so that grid expansion also answers to the communities it affects.",
+        },
+      },
+    ],
     images: [
       {
         src: "/work/funae-mgqr/01.webp",
@@ -338,6 +355,23 @@ export const projects: Project[] = [
       pt: "Num sistema herdado, reproduzir o erro com uma cópia local da base vale mais do que adivinhar. E muitas vezes o problema está nos dados (anos a NULL, facturas duplicadas) e não no código.",
       en: "In an inherited system, reproducing the bug against a local copy of the database beats guessing. And the problem is often in the data (NULL years, duplicated invoices) rather than the code.",
     },
+    sdgs: [
+      {
+        goal: 4,
+        primary: true,
+        contribution: {
+          pt: "Inscrição online, portal do estudante e módulo financeiro testado: o instituto gere matrículas e propinas com menos erros, e o estudante trata do seu processo sem vir ao balcão.",
+          en: "Online enrolment, a student portal and a tested finance module: the institute manages registrations and fees with fewer errors, and students handle their own process without visiting the office.",
+        },
+      },
+      {
+        goal: 9,
+        contribution: {
+          pt: "Auditoria de segurança, base de dados normalizada e deploy em Coolify modernizam a infra-estrutura digital de um sistema herdado em PHP, sem o reescrever.",
+          en: "A security audit, a normalised database and Coolify deployment modernise the digital infrastructure of an inherited PHP system, without rewriting it.",
+        },
+      },
+    ],
     images: [
       {
         src: "/work/siga-ipp/01.webp",
@@ -430,6 +464,31 @@ export const projects: Project[] = [
         body: {
           pt: "Em vez de obrigar a criar conta numa plataforma nova, a Secretaria Municipal Virtual apresenta os serviços no sítio e recebe os pedidos por e-mail, chamada, SMS ou WhatsApp. Isto baixa a barreira de entrada para quem só tem telemóvel.",
           en: "Rather than making residents sign up to a new platform, the Virtual Municipal Secretariat lists the services on the site and takes requests by email, call, SMS or WhatsApp. That lowers the barrier for people who only have a phone.",
+        },
+      },
+    ],
+    sdgs: [
+      {
+        goal: 16,
+        primary: true,
+        contribution: {
+          pt: "Portal oficial com prestação de contas e ligação ao Portal Transparência, e uma Secretaria Municipal Virtual que recebe e responde a pedidos de serviços municipais.",
+          en: "An official portal with public accounts and a link to the Transparency Portal, plus a Virtual Municipal Secretariat that receives and answers requests for municipal services.",
+        },
+      },
+      {
+        goal: 11,
+        primary: true,
+        contribution: {
+          pt: "Munícipes pedem regularização de terreno, atestados, licenças de construção e audiências sem se deslocarem várias vezes ao Conselho Municipal.",
+          en: "Residents request land regularisation, certificates, building permits and audiences without making repeated trips to the Municipal Council.",
+        },
+      },
+      {
+        goal: 10,
+        contribution: {
+          pt: "Os pedidos entram por e-mail, chamada, SMS ou WhatsApp, para quem só tem telemóvel e não pode perder um dia no balcão.",
+          en: "Requests come in by email, call, SMS or WhatsApp, for people who only have a phone and cannot spend a day at the counter.",
         },
       },
     ],
@@ -694,6 +753,23 @@ export const projects: Project[] = [
       pt: "Foi o meu primeiro contacto com hardware ligado a uma aplicação web: o leitor de cartões obriga a pensar em duplicados, falhas de rede e sincronização desde o início.",
       en: "This was my first time connecting hardware to a web app: a card reader forces you to think about duplicates, network failures and syncing from day one.",
     },
+    sdgs: [
+      {
+        goal: 4,
+        primary: true,
+        contribution: {
+          pt: "Escolas ganham matrículas, notas, pagamentos e presenças num só sistema, com recibos e facturas com NUIT emitidos pelo próprio sistema.",
+          en: "Schools get enrolment, grades, payments and attendance in one system, with receipts and invoices bearing the tax number issued by the system itself.",
+        },
+      },
+      {
+        goal: 8,
+        contribution: {
+          pt: "Uma só instalação partilhada por várias escolas reduz o custo de digitalizar a gestão de escolas pequenas.",
+          en: "One installation shared by several schools lowers the cost of digitising small schools' administration.",
+        },
+      },
+    ],
     images: [],
     links: [],
     order: 24,
@@ -768,6 +844,23 @@ export const projects: Project[] = [
       pt: "Foi o meu primeiro projecto Laravel grande em equipa: filas, integrações externas e um domínio de recursos humanos extenso.",
       en: "My first large team Laravel project: queues, external integrations and a broad HR domain.",
     },
+    sdgs: [
+      {
+        goal: 8,
+        primary: true,
+        contribution: {
+          pt: "Vagas publicadas, perfis de candidato e provas cronometradas ligam empresas a quem procura emprego, com avaliação em plataforma.",
+          en: "Published vacancies, candidate profiles and timed tests link companies with job seekers, with assessment on the platform itself.",
+        },
+      },
+      {
+        goal: 10,
+        contribution: {
+          pt: "Os alertas de vagas chegam por SMS a candidatos que não usam e-mail, e a importação por Excel permite criar contas em massa.",
+          en: "Job alerts reach candidates who do not use email by SMS, and Excel import creates accounts in bulk.",
+        },
+      },
+    ],
     images: [],
     links: [],
     order: 25,
@@ -1283,6 +1376,23 @@ export const projects: Project[] = [
         label: { pt: "downloads da app no Google Play", en: "app downloads on Google Play" },
         source: { pt: "página da app no Google Play (Out 2026)", en: "Google Play app page (Oct 2026)" },
         url: "https://play.google.com/store/apps/details?id=mz.cmmaputo.eacacia",
+      },
+    ],
+    sdgs: [
+      {
+        goal: 16,
+        primary: true,
+        contribution: {
+          pt: "Impostos autárquicos consultáveis e pagáveis online, documentos municipais verificáveis e indicadores de arrecadação para a gestão do município.",
+          en: "Municipal taxes that can be looked up and paid online, verifiable municipal documents and revenue indicators for the council's management.",
+        },
+      },
+      {
+        goal: 11,
+        contribution: {
+          pt: "Munícipes e empresas tratam de impostos, licenças de transporte e vistorias sem filas nem deslocações, num portal e app oficiais do município.",
+          en: "Citizens and companies handle taxes, transport licensing and inspections without queues or trips, through the council's official portal and app.",
+        },
       },
     ],
     images: [

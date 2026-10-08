@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { ProjectCover } from "@/components/site/project-cover";
 import { CATEGORIES, STATUS_LABEL } from "@/lib/content/categories";
+import { SDGS } from "@/lib/content/sdgs";
 import { UI, projectHref, t, nameOf } from "@/lib/content/ui";
 import type { Locale, Project } from "@/types/content";
 
@@ -210,6 +211,37 @@ export function ProjectPage({
         {project.learnings && (
           <Block id="learnings" title={t(locale, UI.project.learnings)}>
             <p className="max-w-prose leading-relaxed text-muted">{project.learnings[locale]}</p>
+          </Block>
+        )}
+
+        {project.sdgs && project.sdgs.length > 0 && (
+          <Block id="sdgs" title={t(locale, UI.project.sdgs)}>
+            <ul className="grid gap-4 sm:grid-cols-2">
+              {project.sdgs.map((sdg) => {
+                const goal = SDGS[sdg.goal];
+                if (!goal) return null;
+                return (
+                  <li key={sdg.goal} className="card flex gap-4 p-5">
+                    <span
+                      aria-hidden="true"
+                      className="mt-0.5 flex h-10 w-10 flex-none items-center justify-center rounded-md font-mono text-sm font-semibold text-white"
+                      style={{ backgroundColor: goal.colour }}
+                    >
+                      {sdg.goal}
+                    </span>
+                    <div>
+                      <p className="text-sm font-medium text-foreground">
+                        {t(locale, UI.project.sdgPrefix)} {sdg.goal} · {goal.title[locale]}
+                        <span className="ml-2 font-mono text-[11px] font-normal text-subtle">
+                          {sdg.primary ? t(locale, UI.project.sdgPrimary) : t(locale, UI.project.sdgComplementary)}
+                        </span>
+                      </p>
+                      <p className="mt-1.5 text-sm leading-relaxed text-muted">{sdg.contribution[locale]}</p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </Block>
         )}
 

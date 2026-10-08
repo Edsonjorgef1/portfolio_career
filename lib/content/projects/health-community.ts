@@ -102,6 +102,16 @@ export const projects: Project[] = [
       pt: "Desenhar uma API para uma app offline: payload completo, recursos embebidos e uma data de actualização para decidir quando sincronizar.",
       en: "Designing an API for an offline app: a full payload, embedded assets and an update date to decide when to sync.",
     },
+    sdgs: [
+      {
+        goal: 3,
+        primary: true,
+        contribution: {
+          pt: "Informação de primeiros socorros estruturada — sintomas, tratamentos passo-a-passo e prevenção — disponível no telemóvel mesmo sem internet, para acidentes domésticos e doenças comuns.",
+          en: "Structured first-aid information — symptoms, step-by-step treatments and prevention — available on the phone even without internet, for household accidents and common diseases.",
+        },
+      },
+    ],
     images: [
       {
         src: "/work/consultare/01.webp",
@@ -275,6 +285,23 @@ export const projects: Project[] = [
       pt: "Passar de CRUD simples para um sistema com notificações, controlo de acesso e sincronização para uma app offline; e o meu primeiro pipeline de CI/CD.",
       en: "Moving from plain CRUD to a system with notifications, access control and sync for an offline app; and my first CI/CD pipeline.",
     },
+    sdgs: [
+      {
+        goal: 16,
+        primary: true,
+        contribution: {
+          pt: "A lei moçambicana em linguagem simples, denúncias anónimas com código de acompanhamento e, desde 2026, um bot no WhatsApp que responde citando os artigos da lei.",
+          en: "Mozambican law in plain language, anonymous reports with a tracking code and, since 2026, a WhatsApp bot that answers citing the articles of the law.",
+        },
+      },
+      {
+        goal: 5,
+        contribution: {
+          pt: "Conteúdo gratuito sobre direito de família, violência doméstica e uniões prematuras, na app, no site e pelo WhatsApp, com perguntas ilustradas e áudio.",
+          en: "Free content on family law, domestic violence and early marriage, on the app, website and WhatsApp, with illustrated questions and audio.",
+        },
+      },
+    ],
     images: [
       {
         src: "/work/juris/01.webp",
@@ -598,6 +625,23 @@ export const projects: Project[] = [
       pt: "Fiabilidade do email em produção pede um segundo canal; e CI/CD em alojamento partilhado exige muitas iterações até ficar estável.",
       en: "Email reliability in production calls for a second channel; and CI/CD on shared hosting takes many iterations to get stable.",
     },
+    sdgs: [
+      {
+        goal: 17,
+        primary: true,
+        contribution: {
+          pt: "Perfil da organização, questionário de avaliação e causas dão às organizações da sociedade civil uma forma de provar impacto e de chegar a doadores.",
+          en: "An organisation profile, an assessment questionnaire and causes give civil-society organisations a way to prove impact and reach donors.",
+        },
+      },
+      {
+        goal: 10,
+        contribution: {
+          pt: "Pequenas organizações fora dos grandes centros ganham um canal digital de captação numa app para o telemóvel.",
+          en: "Small organisations outside the main cities gain a digital fundraising channel in an app on the phone.",
+        },
+      },
+    ],
     images: [
       {
         src: "/work/kukura/01.webp",
@@ -721,6 +765,16 @@ export const projects: Project[] = [
       pt: "Autorização por regra de negócio, optimização de queries com cache, e integração com um cliente Ionic em Android.",
       en: "Business-rule authorisation, query optimisation with caching, and integration with an Ionic client on Android.",
     },
+    sdgs: [
+      {
+        goal: 3,
+        primary: true,
+        contribution: {
+          pt: "Referência de pacientes entre unidades sanitárias com informação de camas, testes e ventiladores disponíveis, criada durante a COVID-19 para acabar com o 'porta a porta' em busca de atendimento.",
+          en: "Patient referral between health facilities with data on available beds, tests and ventilators, built during COVID-19 to end the door-to-door search for care.",
+        },
+      },
+    ],
     images: [
       {
         src: "/work/hlink/01.webp",
@@ -818,6 +872,16 @@ export const projects: Project[] = [
       pt: "Passar um site de dados estáticos para uma API real sem piorar a experiência quando a rede falha.",
       en: "Moving a site from static data to a real API without hurting the experience when the network fails.",
     },
+    sdgs: [
+      {
+        goal: 7,
+        primary: true,
+        contribution: {
+          pt: "Em períodos de escassez, o mapa comunitário mostra que postos têm combustível e onde há fila, reduzindo deslocações à procura de combustível.",
+          en: "During shortages, the community map shows which stations have fuel and where queues are, cutting the trips made hunting for fuel.",
+        },
+      },
+    ],
     images: [
       {
         src: "/work/abastece/01.webp",
@@ -1006,6 +1070,16 @@ export const projects: Project[] = [
       pt: "Para um projecto académico, JSON estático em vez de uma API em produção foi a escolha mais simples e barata de manter.",
       en: "For an academic project, static JSON instead of a production API was the simplest and cheapest option to maintain.",
     },
+    sdgs: [
+      {
+        goal: 3,
+        primary: true,
+        contribution: {
+          pt: "Informação de saúde pública — causas, sintomas, prevenção e tratamento de doenças comuns — numa app simples e em português, para qualquer pessoa.",
+          en: "Public-health information — causes, symptoms, prevention and treatment of common diseases — in a simple app in Portuguese, for anyone.",
+        },
+      },
+    ],
     images: [
       {
         src: "/work/mozsaude/01.webp",
@@ -1214,6 +1288,16 @@ export const projects: Project[] = [
         },
       },
     ],
+    sdgs: [
+      {
+        goal: 3,
+        primary: true,
+        contribution: {
+          pt: "Gestão de dadores de sangue com cartão digital e calendário de elegibilidade, para apoiar uma rede transfusional com dados fragmentados e dadores que se perdem.",
+          en: "Blood donor management with a digital card and an eligibility calendar, to support a transfusion network with fragmented data and donors who get lost.",
+        },
+      },
+    ],
     results: [],
     images: [
       {
@@ -1292,6 +1376,16 @@ export const projects: Project[] = [
     results: [],
     images: [],
     links: [],
+    sdgs: [
+      {
+        goal: 10,
+        primary: true,
+        contribution: {
+          pt: "Apoio à comunicação em língua gestual moçambicana no dia-a-dia, pensado para a inclusão de pessoas surdas.",
+          en: "Support for everyday communication in Mozambican sign language, designed for the inclusion of deaf people.",
+        },
+      },
+    ],
     order: 50,
   },
 
@@ -1321,6 +1415,16 @@ export const projects: Project[] = [
     results: [],
     images: [],
     links: [],
+    sdgs: [
+      {
+        goal: 3,
+        primary: true,
+        contribution: {
+          pt: "Protocolos de urgência obstétrica acessíveis em segundos, para apoiar a redução da mortalidade materna em unidades com poucos recursos.",
+          en: "Obstetric emergency protocols reachable in seconds, to help reduce maternal mortality in facilities with few resources.",
+        },
+      },
+    ],
     order: 51,
   },
 
@@ -1365,6 +1469,23 @@ export const projects: Project[] = [
     ],
     links: [
       { label: { pt: "Página \"Other Apps\" na Equip Moçambique", en: "\"Other Apps\" page at Equip Mozambique" }, href: "https://equipmoz.org/projects/tech-team/other-apps/" },
+    ],
+    sdgs: [
+      {
+        goal: 11,
+        primary: true,
+        contribution: {
+          pt: "Mapa em tempo real de abrigos, clínicas e pontos de comida depois do ciclone Idai, com recurso reconhecido pelo Programa Alimentar Mundial, que o usou noutros desastres.",
+          en: "A live map of shelters, clinics and food points after Cyclone Idai, with use acknowledged by the World Food Programme, which also used it in other disasters.",
+        },
+      },
+      {
+        goal: 13,
+        contribution: {
+          pt: "Informação de socorro que funcionou sem electricidade nem internet estáveis — o cenário típico em que os desastres climáticos deixam as comunidades.",
+          en: "Relief information that worked without stable electricity or internet — the typical situation climate disasters leave communities in.",
+        },
+      },
     ],
     order: 52,
   },
@@ -1414,6 +1535,16 @@ export const projects: Project[] = [
     ],
     links: [
       { label: { pt: "Página \"Other Apps\" na Equip Moçambique", en: "\"Other Apps\" page at Equip Mozambique" }, href: "https://equipmoz.org/projects/tech-team/other-apps/" },
+    ],
+    sdgs: [
+      {
+        goal: 3,
+        primary: true,
+        contribution: {
+          pt: "Registo digital à entrada das igrejas durante a reabertura na pandemia, para o rastreio de contactos cumprir as regras de saúde sem travar a recepção.",
+          en: "Digital check-in at church doors during the pandemic reopening, so contact tracing met health rules without stalling the welcome team.",
+        },
+      },
     ],
     order: 53,
   },
