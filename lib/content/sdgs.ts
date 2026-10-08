@@ -1,4 +1,4 @@
-import type { L } from "@/types/content";
+import type { L, Locale } from "@/types/content";
 
 /**
  * UN Sustainable Development Goals (ODS), with the official goal titles
@@ -74,3 +74,8 @@ export const SDGS: Record<number, { title: L; colour: string }> = {
     colour: "#19486A",
   },
 };
+
+/** Official UN icon for a goal (PT from UNRIC, EN from sdgs.un.org), under public/sdg. */
+export function sdgIcon(goal: number, locale: Locale): string {
+  return `/sdg/${locale}/${String(goal).padStart(2, "0")}.webp`;
+}
