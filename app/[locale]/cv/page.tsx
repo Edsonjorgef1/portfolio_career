@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { CERTIFICATION_GROUPS } from "@/lib/content/certifications";
-import { ABOUT, AWARDS, EDUCATION, EXPERIENCE, PERSON } from "@/lib/content/profile";
+import { ABOUT, AWARDS, EDUCATION, EXPERIENCE, HERO, PERSON, STRENGTHS } from "@/lib/content/profile";
 import { PROJECTS, getUsedTech } from "@/lib/content/projects";
 import { LOCALES, t, nameOf } from "@/lib/content/ui";
 import type { Locale } from "@/types/content";
@@ -17,7 +17,7 @@ export function generateStaticParams() {
 
 export const metadata: Metadata = { title: "CV", robots: { index: false } };
 
-const CV_PROJECTS = ["fams", "juris", "kukura", "mhc-honey-traceability", "olimax-copra", "vamoz-competir", "funae-mgqr", "siga-ipp", "fonte-da-vida", "consultare"];
+const CV_PROJECTS = ["fams", "juris", "kukura", "mhc-honey-traceability", "olimax-copra", "mutuali-cotton", "moz-agri-fams-implementation", "vamoz-competir", "funae-mgqr", "siga-ipp", "fonte-da-vida", "consultare"];
 
 const LABELS = {
   summary: { pt: "Perfil", en: "Profile" },
@@ -28,6 +28,7 @@ const LABELS = {
   awards: { pt: "Reconhecimentos", en: "Recognition" },
   certs: { pt: "Certificações", en: "Certifications" },
   languages: { pt: "Línguas", en: "Languages" },
+  strengths: { pt: "Pontos fortes (CliftonStrengths, Gallup 2024)", en: "Strengths (CliftonStrengths, Gallup 2024)" },
   portfolio: { pt: "Portefólio", en: "Portfolio" },
 };
 
@@ -56,6 +57,19 @@ export default async function CvPage({ params }: { params: Params }) {
         <section className="mt-5">
           <h2 className="text-xs font-semibold uppercase tracking-widest text-neutral-500">{t(locale, LABELS.summary)}</h2>
           <p className="mt-2">{ABOUT.paragraphs[0][locale]}</p>
+          <p className="mt-1.5">{HERO.commitment[locale]}</p>
+        </section>
+
+        <section className="mt-5 break-inside-avoid">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-neutral-500">{t(locale, LABELS.strengths)}</h2>
+          <p className="mt-2">
+            {STRENGTHS.map((s, i) => (
+              <span key={s.name.en}>
+                {i > 0 && " · "}
+                <span className="font-semibold">{s.name[locale]}</span> — {s.summary[locale]}
+              </span>
+            ))}
+          </p>
         </section>
 
         <section className="mt-5">

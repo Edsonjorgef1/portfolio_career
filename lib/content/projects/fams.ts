@@ -563,7 +563,7 @@ export const projects: Project[] = [
       { label: { pt: "FAMS Mahala", en: "FAMS Mahala" }, href: "https://mahala.fams.co.mz" },
       { label: { pt: "Página do Mahala no site", en: "Mahala page on the website" }, href: "https://fams.co.mz/mahala.html" },
     ],
-    order: 9,
+    order: 11,
   },
 
   // ───────────────────────────────────────────── FAMS implementations
@@ -571,8 +571,8 @@ export const projects: Project[] = [
     slug: "fams-implementations",
     name: { pt: "Implementações do FAMS em clientes", en: "FAMS client implementations" },
     tagline: {
-      pt: "Configuração, importação de dados, formação no terreno e funcionalidades à medida para agronegócios como Thandizana, Moz Agri, DREAM Agro e Green Agro — com a OLIMAX e a MHC em páginas próprias.",
-      en: "Configuration, data import, on-site training and custom features for agribusinesses such as Thandizana, Moz Agri, DREAM Agro and Green Agro — with OLIMAX and MHC on their own pages.",
+      pt: "Configuração, importação de dados, formação no terreno e funcionalidades à medida para agronegócios como Thandizana, Moz Agri, DREAM Agro e Green Agro — com a OLIMAX, a MHC, a Sociedade de Mutuali e a Moz Agri em páginas próprias.",
+      en: "Configuration, data import, on-site training and custom features for agribusinesses such as Thandizana, Moz Agri, DREAM Agro and Green Agro — with OLIMAX, MHC, Sociedade de Mutuali and Moz Agri on their own pages.",
     },
     period: "2024–2026",
     status: "production",
@@ -675,7 +675,7 @@ export const projects: Project[] = [
     ],
     images: [],
     links: [],
-    order: 7,
+    order: 9,
   },
 
   // ───────────────────────────────────────────── MHC (Eco-Micaia)
@@ -952,8 +952,8 @@ export const projects: Project[] = [
       en: "OLIMAX buys copra in the field and at the factory gate, turns it into oil on several lines, stores it in tanks and ships it in trucks and containers. It needed to know, per batch, where the copra came from, how much oil it yielded, at what quality and where it went.",
     },
     solution: {
-      pt: "A OLIMAX foi o primeiro cliente a contratar o FAMS directamente, sem financiamento de doadores. O sistema foi implementado em Junho de 2024 para as compras de copra no campo e na fábrica, com a análise de qualidade do óleo (FFA); em 2025 juntaram-se o registo do óleo produzido por linha, os depósitos e o transporte (camião, contentor, data de embarque e peso). Em Setembro de 2026 a produção de copra passou a módulo próprio, com rastreabilidade do lote redesenhada, relatórios da fábrica e um bloco no painel de controlo.",
-      en: "OLIMAX was the first client to contract FAMS directly, without donor funding. The system went live in June 2024 for copra purchases in the field and at the factory, with oil quality analysis (FFA); in 2025 came oil output per line, tanks and transport (truck, container, shipping date and weight). In September 2026 copra production became its own module, with redesigned batch traceability, factory reports and a dashboard block.",
+      pt: "A OLIMAX foi o primeiro cliente a contratar o FAMS directamente, sem financiamento de doadores. O sistema foi implementado em 2024 para as compras de copra no campo e na fábrica, com a análise de qualidade do óleo (FFA), e continua em uso até hoje; em 2025 juntaram-se o registo do óleo produzido por linha, os depósitos e o transporte (camião, contentor, data de embarque e peso). Em Setembro de 2026 a produção de copra passou a módulo próprio, com rastreabilidade do lote redesenhada, relatórios da fábrica e um bloco no painel de controlo. As melhorias continuam nos relatórios de rastreabilidade e no painel de impacto com métricas.",
+      en: "OLIMAX was the first client to contract FAMS directly, without donor funding. The system went live in 2024 for copra purchases in the field and at the factory, with oil quality analysis (FFA), and is still in use today; in 2025 came oil output per line, tanks and transport (truck, container, shipping date and weight). In September 2026 copra production became its own module, with redesigned batch traceability, factory reports and a dashboard block. Improvements continue on the traceability reports and the impact dashboard with metrics.",
     },
     decisions: [
       {
@@ -987,7 +987,7 @@ export const projects: Project[] = [
     ],
     results: [
       {
-        value: "Jun 2024 →",
+        value: "2024 →",
         label: {
           pt: "compras de copra registadas no FAMS — no campo e na fábrica — desde a implementação até hoje",
           en: "copra purchases recorded in FAMS — in the field and at the factory — from go-live until today",
@@ -1024,8 +1024,8 @@ export const projects: Project[] = [
       {
         goal: 8,
         contribution: {
-          pt: "Compras registadas em sistema desde Junho de 2024, no primeiro cliente a contratar o FAMS directamente, sem financiamento de doadores.",
-          en: "Purchases recorded in the system since June 2024, at the first client to contract FAMS directly, without donor funding.",
+          pt: "Compras registadas em sistema desde 2024, no primeiro cliente a contratar o FAMS directamente, sem financiamento de doadores.",
+          en: "Purchases recorded in the system since 2024, at the first client to contract FAMS directly, without donor funding.",
         },
       },
     ],
@@ -1145,6 +1145,173 @@ export const projects: Project[] = [
     order: 5,
   },
 
+  // ───────────────────────────────────────────── Sociedade de Mutuali (cotton)
+  {
+    slug: "mutuali-cotton",
+    name: { pt: "Sociedade de Mutuali — fábrica de fibra de algodão", en: "Sociedade de Mutuali — cotton fibre factory" },
+    tagline: {
+      pt: "Do registo do produtor e dos insumos a crédito à fibra classificada: compra de algodão com abate de dívida, transporte, armazém e produção no FAMS.",
+      en: "From farmer registration and inputs on credit to graded fibre: cotton purchases with debt deduction, transport, storage and production in FAMS.",
+    },
+    period: "2023",
+    status: "archived",
+    categories: ["agritech"],
+    tech: ["Laravel", "PHP", "MySQL"],
+    role: {
+      pt: "Consultor e líder técnico do FAMS: implementação, configuração e formação",
+      en: "Consultant and FAMS technical lead: rollout, configuration and training",
+    },
+    authorship: "consulting",
+    client: "Sociedade de Mutuali",
+    partners: ["GIZ – ProEcon", "COMO Consult"],
+    problem: {
+      pt: "A Sociedade de Mutuali trabalha com produtores de algodão a quem adianta insumos a crédito e de quem compra o algodão de primeira e de segunda qualidade, que depois transporta, armazena e transforma em fibra na fábrica. Precisava de ligar cada compra ao produtor e à dívida dele, e de seguir o algodão até à fibra classificada.",
+      en: "Sociedade de Mutuali works with cotton farmers to whom it advances inputs on credit and from whom it buys first- and second-grade cotton, which it then transports, stores and processes into fibre at its factory. It needed to link each purchase to the farmer and their debt, and follow the cotton through to graded fibre.",
+    },
+    solution: {
+      pt: "Em 2023, no âmbito do projecto ProEcon da GIZ com a COMO Consult, o FAMS foi implementado de ponta a ponta: registo de produtores, distribuição de insumos a crédito, compra de algodão de primeira e de segunda qualidade com abate da dívida, transporte, armazenamento, produção e classificação da qualidade do algodão.",
+      en: "In 2023, within GIZ's ProEcon project with COMO Consult, FAMS was rolled out end to end: farmer registration, inputs distributed on credit, purchases of first- and second-grade cotton with debt deduction, transport, storage, production and cotton quality grading.",
+    },
+    decisions: [
+      {
+        title: { pt: "A dívida é abatida no acto da compra", en: "Debt is deducted at the moment of purchase" },
+        body: {
+          pt: "Os insumos entregues a crédito ficam ligados ao produtor; quando ele vende o algodão, o valor da dívida é abatido na própria compra, separando primeira e segunda qualidade.",
+          en: "Inputs delivered on credit stay linked to the farmer; when they sell their cotton, the debt is deducted in the purchase itself, keeping first and second grade apart.",
+        },
+      },
+    ],
+    results: [
+      {
+        value: "2023",
+        label: {
+          pt: "implementação do campo à fábrica, no âmbito do ProEcon (GIZ) com a COMO Consult",
+          en: "field-to-factory rollout, within GIZ's ProEcon with COMO Consult",
+        },
+        source: { pt: "Edson (Out 2026)", en: "Edson (Oct 2026)" },
+      },
+    ],
+    sdgs: [
+      {
+        goal: 2,
+        primary: true,
+        contribution: {
+          pt: "Os produtores de algodão ficam registados, com os insumos a crédito e as vendas de cada um ligadas ao seu perfil.",
+          en: "Cotton farmers are registered, with each one's inputs on credit and sales linked to their profile.",
+        },
+      },
+      {
+        goal: 8,
+        contribution: {
+          pt: "O abate da dívida na compra torna transparente o que cada produtor recebeu e o que ainda devia pelos insumos.",
+          en: "Deducting debt at purchase makes it transparent what each farmer received and what they still owed for inputs.",
+        },
+      },
+      {
+        goal: 12,
+        contribution: {
+          pt: "O algodão é seguido da compra ao armazém e à produção, com a qualidade classificada.",
+          en: "Cotton is followed from purchase to storage and production, with its quality graded.",
+        },
+      },
+    ],
+    flow: [
+      { pt: "Registo do produtor", en: "Farmer registration" },
+      { pt: "Insumos a crédito", en: "Inputs on credit" },
+      { pt: "Compra 1.ª / 2.ª + abate de dívida", en: "1st / 2nd grade purchase + debt deduction" },
+      { pt: "Transporte", en: "Transport" },
+      { pt: "Armazém", en: "Storage" },
+      { pt: "Produção", en: "Production" },
+      { pt: "Classificação da qualidade", en: "Quality grading" },
+    ],
+    images: [],
+    links: [],
+    order: 6,
+  },
+
+  // ───────────────────────────────────────────── Moz Agri (goats and meat)
+  {
+    slug: "moz-agri-fams-implementation",
+    name: { pt: "Moz Agri — implementação do FAMS", en: "Moz Agri — FAMS implementation" },
+    tagline: {
+      pt: "Compra de caprinos e de carne no FAMS: produtores registados, animais por espécie e sexo, validação no campo, na fábrica e no matadouro.",
+      en: "Goat and meat purchases in FAMS: registered farmers, animals by species and sex, validated in the field, the factory and the slaughterhouse.",
+    },
+    period: "2026",
+    status: "production",
+    categories: ["agritech"],
+    tech: ["Laravel", "PHP", "MySQL"],
+    role: {
+      pt: "Implementador técnico e formador: configuração, formação no terreno e seguimento",
+      en: "Technical implementer and trainer: configuration, on-site training and follow-up",
+    },
+    authorship: "consulting",
+    client: "Moz Agri, LDA",
+    partners: ["NIRAS (VaMoz Competir)"],
+    problem: {
+      pt: "A Moz Agri, em Chuala (Bárue, Manica), compra a pequenos produtores — incluindo cabritos e carne — e precisava de registar quem vende, o quê e quanto, ligando o campo à fábrica e ao matadouro.",
+      en: "Moz Agri, in Chuala (Bárue, Manica), buys from smallholders — including goats and meat — and needed to record who sells what and how much, linking the field to the factory and the slaughterhouse.",
+    },
+    solution: {
+      pt: "Missão presencial de cinco dias (26–30 de Janeiro de 2026) de configuração e formação, com validação em ambiente real: escritório, campo, fábrica e matadouro. Depois, o registo de produtos foi alargado a gado caprino e bovino (macho e fêmea), para que as compras de animais e de carne fiquem no FAMS. Seguiu-se uma missão de reforço e seguimento em Julho de 2026 e suporte por WhatsApp.",
+      en: "A five-day on-site mission (26–30 January 2026) of configuration and training, validated in real settings: office, field, factory and slaughterhouse. Afterwards the product register was extended to goats and cattle (male and female), so that animal and meat purchases are recorded in FAMS. A reinforcement and follow-up mission followed in July 2026, with support over WhatsApp.",
+    },
+    decisions: [
+      {
+        title: { pt: "Animais registados por espécie e sexo", en: "Animals recorded by species and sex" },
+        body: {
+          pt: "Em vez de um produto genérico \"gado\", o registo de produtos distingue caprino e bovino, macho e fêmea, porque o preço e o destino do animal dependem disso.",
+          en: "Instead of a generic \"livestock\" product, the product register tells goats from cattle, male from female, because the animal's price and destination depend on it.",
+        },
+      },
+      {
+        title: { pt: "Validar onde o trabalho acontece", en: "Validate where the work happens" },
+        body: {
+          pt: "A formação não ficou no escritório: o fluxo foi testado no campo, na fábrica e no matadouro, com os dados de treino limpos antes do arranque.",
+          en: "Training did not stay in the office: the flow was tested in the field, the factory and the slaughterhouse, with training data cleaned before go-live.",
+        },
+      },
+    ],
+    results: [
+      {
+        value: "4 780",
+        label: { pt: "produtores da Moz Agri no FAMS — eram 72 em Jan 2026", en: "Moz Agri farmers in FAMS — up from 72 in Jan 2026" },
+        source: { pt: "Relatório técnico geral do FAMS para a NIRAS (Out 2025 – Jul 2026), dados dos painéis a 10 Set 2026", en: "FAMS general technical report to NIRAS (Oct 2025 – Jul 2026), dashboard data as of 10 Sep 2026" },
+      },
+      {
+        value: "5",
+        label: { pt: "dias de missão presencial em Manica, do escritório ao matadouro", en: "days of on-site mission in Manica, from office to slaughterhouse" },
+        source: { pt: "Relatório de viagem (Jan 2026)", en: "Trip report (Jan 2026)" },
+      },
+    ],
+    sdgs: [
+      {
+        goal: 2,
+        primary: true,
+        contribution: {
+          pt: "Os produtores que vendem animais e carne à Moz Agri ficam registados, com o que cada um entregou.",
+          en: "Farmers selling animals and meat to Moz Agri are registered, with what each one delivered.",
+        },
+      },
+      {
+        goal: 8,
+        contribution: {
+          pt: "Compras registadas em sistema dão transparência ao que cada produtor vende e recebe.",
+          en: "Purchases recorded in the system make what each farmer sells and receives transparent.",
+        },
+      },
+    ],
+    flow: [
+      { pt: "Registo do produtor", en: "Farmer registration" },
+      { pt: "Compra de caprinos", en: "Goat purchase" },
+      { pt: "Compra de carne", en: "Meat purchase" },
+      { pt: "Fábrica e matadouro", en: "Factory and slaughterhouse" },
+    ],
+    images: [],
+    links: [],
+    order: 7,
+  },
+
   // ───────────────────────────────────────────── VaMoz Competir
   {
     slug: "vamoz-competir",
@@ -1254,7 +1421,7 @@ export const projects: Project[] = [
       { label: { pt: "Ficha do projecto VaMoz Competir (GIZ, PDF)", en: "VaMoz Competir project factsheet (GIZ, PDF)" }, href: "https://www.giz.de/sites/default/files/media/pkb-document/2025-12/giz2025-en-vamoz-competir-factsheet.pdf" },
       { label: { pt: "VaMoz Competir na NIRAS", en: "VaMoz Competir at NIRAS" }, href: "https://library.niras.com/capstat/agri/inclusive-resilient-agriculture-market-systems" },
     ],
-    order: 6,
+    order: 8,
   },
 
   // ───────────────────────────────────────────── ProEcon
@@ -1281,8 +1448,8 @@ export const projects: Project[] = [
       en: "In GIZ's local company promotion programme, with COMO Consult as implementing partner, each company partnership aims to improve competitiveness and benefit the smallholders who sell to it — and COMO highlights digital solutions, such as barcodes, for transparency and traceability in supply chains. ProEcon's partner companies worked with thousands of smallholders but recorded everything on paper. In 2020 GIZ decided to build its own software for them, after assessing around 20 companies.",
     },
     solution: {
-      pt: "Desde o lançamento do FAMS em Fevereiro de 2021 até Novembro de 2023, o Edson levou o sistema a dez agronegócios: levantamento de requisitos, migração de dados, configuração, formação e suporte. Os pedidos destes clientes deram origem a módulos que ele próprio programou no backend.",
-      en: "From the FAMS launch in February 2021 until November 2023, Edson took the system to ten agribusinesses: requirements, data migration, configuration, training and support. Requests from these clients became modules he built himself in the backend.",
+      pt: "Desde o lançamento do FAMS em Fevereiro de 2021 até Novembro de 2023, o Edson levou o sistema a dez agronegócios: levantamento de requisitos, migração de dados, configuração, formação e suporte. Os pedidos destes clientes deram origem a módulos que ele próprio programou no backend — entre eles, em 2023, a fábrica de fibra de algodão da Sociedade de Mutuali.",
+      en: "From the FAMS launch in February 2021 until November 2023, Edson took the system to ten agribusinesses: requirements, data migration, configuration, training and support. Requests from these clients became modules he built himself in the backend — among them, in 2023, the cotton fibre factory of Sociedade de Mutuali.",
     },
     decisions: [
       {
@@ -1334,7 +1501,7 @@ export const projects: Project[] = [
         href: "https://como-consult.de/en/cases/promotionoflocalcompaniesinmozambiqueandtheirsuppliers/",
       },
     ],
-    order: 10,
+    order: 12,
   },
 
   // ───────────────────────────────────────────── FAMS website
@@ -1440,7 +1607,7 @@ export const projects: Project[] = [
       { label: { pt: "fams.co.mz", en: "fams.co.mz" }, href: "https://fams.co.mz" },
       { label: { pt: "Página do Mahala", en: "Mahala page" }, href: "https://fams.co.mz/mahala.html" },
     ],
-    order: 11,
+    order: 13,
   },
 
   // ───────────────────────────────────────────── laravel-teams-logging
@@ -1530,6 +1697,6 @@ export const projects: Project[] = [
       { label: { pt: "GitHub", en: "GitHub" }, href: "https://github.com/Edsonjorgef1/laravel-teams-logging" },
       { label: { pt: "Packagist", en: "Packagist" }, href: "https://packagist.org/packages/edsonjorgef1/laravel-teams-logging" },
     ],
-    order: 12,
+    order: 14,
   },
 ];

@@ -268,7 +268,7 @@ export const projects: Project[] = [
         ],
       },
     ],
-    order: 8,
+    order: 10,
   },
 
   // ───────────────────────── SIGA IPP ─────────────────────────

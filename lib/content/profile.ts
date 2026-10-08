@@ -1,4 +1,4 @@
-import type { Fact, L } from "@/types/content";
+import type { L } from "@/types/content";
 
 export const SITE_URL = "https://portfolio.edsonfrancisco.site";
 
@@ -29,40 +29,11 @@ export const HERO = {
     pt: "Liderança técnica com perfil hands-on: coordeno equipas e projectos com parceiros internacionais e continuo no código todos os dias — backends, APIs e plataformas SaaS para agricultura, instituições públicas, saúde e comunidades em Moçambique, com apps que funcionam sem rede.",
     en: "Hands-on technical leadership: I coordinate teams and projects with international partners and stay in the code every day — backends, APIs and SaaS platforms for agriculture, public institutions, health and communities in Mozambique, with apps that work offline.",
   } satisfies L,
+  commitment: {
+    pt: "Comprometido em simultâneo com vários projectos privados, nacionais e internacionais de relevância e impacto socioeconómico — do sector privado e agronegócio a instituições públicas e programas de cooperação.",
+    en: "Committed in parallel to multiple private, national and international projects of real relevance and socio-economic impact — from private companies and agribusiness to public institutions and development cooperation programmes.",
+  } satisfies L,
 };
-
-/** Hero proof points. Every value has a source (product changelog, project reports). */
-export const PROOF: (Omit<Fact, "value"> & { value: string | L })[] = [
-  {
-    value: { pt: "2018 – hoje", en: "2018 – now" },
-    label: { pt: "a construir e manter sistemas em produção", en: "building and running production systems" },
-    source: {
-      pt: "da ENSYS (2018) ao FAMS, JURIS e Kukura (hoje)",
-      en: "from ENSYS (2018) to FAMS, JURIS and Kukura (today)",
-    },
-  },
-  {
-    value: "55 000+",
-    label: {
-      pt: "produtores digitalizados no FAMS, metade mulheres, em 7 províncias",
-      en: "farmers digitised in FAMS, half of them women, across 7 provinces",
-    },
-    source: { pt: "painel de impacto do FAMS (Out 2026)", en: "FAMS impact dashboard (Oct 2026)" },
-  },
-  {
-    value: "1 500 000+",
-    label: {
-      pt: "dólares (USD) em rendimento pago aos agricultores, registado no FAMS",
-      en: "US dollars in income paid to farmers, recorded in FAMS",
-    },
-    source: { pt: "painel de impacto do FAMS (Out 2026)", en: "FAMS impact dashboard (Oct 2026)" },
-  },
-  {
-    value: "99",
-    label: { pt: "versões do FAMS publicadas, v10 → v114", en: "FAMS releases shipped, v10 → v114" },
-    source: { pt: "changelog do produto, Abr 2021 – Set 2026", en: "product changelog, Apr 2021 – Sep 2026" },
-  },
-];
 
 export const ABOUT: { paragraphs: L[] } = {
   paragraphs: [
@@ -119,8 +90,8 @@ export const EXPERIENCE: ExperienceItem[] = [
         en: "Contributes to SDGs 2, 8, 9 and 12 (and, as complementary goals, 1, 5, 10 and 16): smallholder productivity and income, transparent payments, digital value chains and traceability from farmer to factory.",
       },
       {
-        pt: "Casos de uso de rastreabilidade: mel (MHC), do apicultor ao lote processado, e copra (OLIMAX), da compra no campo e na fábrica ao óleo produzido, armazenado e expedido — incluindo importação de dados.",
-        en: "Traceability use cases: honey (MHC), from beekeeper to processed batch, and copra (OLIMAX), from field and factory-gate purchases to oil produced, stored and shipped — including data import.",
+        pt: "Casos de uso de rastreabilidade: mel (MHC), do apicultor ao lote processado, e copra (OLIMAX, desde 2024), da compra no campo e na fábrica ao óleo produzido, armazenado e expedido — incluindo importação de dados, relatórios de rastreabilidade e painel de impacto com métricas.",
+        en: "Traceability use cases: honey (MHC), from beekeeper to processed batch, and copra (OLIMAX, since 2024), from field and factory-gate purchases to oil produced, stored and shipped — including data import, traceability reports and an impact dashboard with metrics.",
       },
       {
         pt: "Mapeamento georreferenciado dos campos de produção e dossiê do produtor, com cartão de identificação do produtor.",
@@ -209,6 +180,10 @@ export const EXPERIENCE: ExperienceItem[] = [
         pt: "Os pedidos destes clientes tornaram-se módulos que programei no backend; em 2022 a empresa foi seleccionada num concurso nacional da GIZ para implementar o FAMS.",
         en: "Requests from these clients became modules I built in the backend; in 2022 the company was selected in a GIZ national tender to implement FAMS.",
       },
+      {
+        pt: "Sociedade de Mutuali (2023) — fábrica de fibra de algodão: registo de produtores, insumos a crédito, compra de algodão de primeira e segunda qualidade com abate de dívida, transporte, armazenamento, produção e classificação da qualidade.",
+        en: "Sociedade de Mutuali (2023) — cotton fibre factory: farmer registration, inputs on credit, first- and second-grade cotton purchases with debt deduction, transport, storage, production and quality grading.",
+      },
     ],
   },
   {
@@ -286,8 +261,24 @@ export const AWARDS: { title: L; issuer: string; date: L; place: L }[] = [
 
 /** "Now" page. Each item is backed by recent dated activity (`evidence`). */
 export const NOW = {
-  updated: "2026-10-06",
+  updated: "2026-10-08",
   items: [
+    {
+      title: { pt: "FAMS — novo website e FAMS Mahala (freemium)", en: "FAMS — new website and FAMS Mahala (freemium)" },
+      body: {
+        pt: "Trabalho contínuo no FAMS, agora focado no lançamento do novo website do FAMS e da plataforma freemium FAMS Mahala, o plano gratuito multi-empresa com caminho para planos pagos.",
+        en: "Ongoing work on FAMS, now focused on launching the new FAMS website and the freemium FAMS Mahala platform, the free multi-tenant plan with a path to paid plans.",
+      },
+      evidence: { pt: "em curso, Out 2026", en: "in progress, Oct 2026" },
+    },
+    {
+      title: { pt: "FAMS na MHC — em produção e no terreno", en: "FAMS at MHC — in production and in the field" },
+      body: {
+        pt: "O FAMS na Mozambique Honey Company (Eco-Micaia) já está em produção, em fase de deployment e uso efectivo no campo: cada balde ligado ao apicultor na compra e seguido até à garrafa. Falta apenas rever a parte de stock e controlo de produção na fábrica.",
+        en: "FAMS at Mozambique Honey Company (Eco-Micaia) is already in production, being deployed and used in the field: each bucket linked to the beekeeper at purchase and followed to the bottle. Only stock and factory production control are still under review.",
+      },
+      evidence: { pt: "missão na MHC 21–24 Set 2026; v114 a 29 Set 2026", en: "MHC mission 21–24 Sep 2026; v114 on 29 Sep 2026" },
+    },
     {
       title: { pt: "SIGA — sistema académico do Instituto Politécnico Planalto", en: "SIGA — academic system for Instituto Politécnico Planalto" },
       body: {
@@ -304,21 +295,44 @@ export const NOW = {
       },
       evidence: { pt: "lançamento a 30 Set 2026", en: "launched on 30 Sep 2026" },
     },
-    {
-      title: { pt: "FAMS — enchimento de produtos e rastreabilidade do mel", en: "FAMS — product filling and honey traceability" },
-      body: {
-        pt: "Reactivação da Mozambique Honey Company (Eco-Micaia): cada balde ligado ao apicultor na compra e seguido pela filtração, prensagem e classificação por cor até à garrafa. A versão v114 trouxe o registo diário de processamento e o saldo de mel de um dia para o seguinte.",
-        en: "Reactivating Mozambique Honey Company (Eco-Micaia): each bucket linked to the beekeeper at purchase and followed through filtering, pressing and colour sorting to the bottle. Release v114 added daily processing records and a honey balance carried from one day to the next.",
-      },
-      evidence: { pt: "missão na MHC 21–24 Set 2026; v114 a 29 Set 2026", en: "MHC mission 21–24 Sep 2026; v114 on 29 Sep 2026" },
-    },
-    {
-      title: { pt: "Karibu Menu — faturação e carregamento de saldo", en: "Karibu Menu — billing and balance top-ups" },
-      body: {
-        pt: "Testes a crédito, gateways de pagamento e carregamento de saldo no menu digital para restaurantes (antes Manna Software).",
-        en: "Tests for credit, payment gateways and balance top-ups in the digital menu for restaurants (formerly Manna Software).",
-      },
-      evidence: { pt: "trabalho de 6 Set 2026", en: "work from 6 Sep 2026" },
-    },
   ],
 };
+
+/** Top 5 CliftonStrengths (Gallup), assessed 20 Jun 2024. Certificates in /public/cliftonstrengths-*.pdf. */
+export const STRENGTHS: { name: L; summary: L }[] = [
+  {
+    name: { pt: "Estratégico", en: "Strategic" },
+    summary: {
+      pt: "cria caminhos alternativos e detecta rapidamente padrões e questões relevantes",
+      en: "creates alternative ways forward and quickly spots relevant patterns and issues",
+    },
+  },
+  {
+    name: { pt: "Positivo", en: "Positivity" },
+    summary: {
+      pt: "entusiasmo contagiante que mobiliza as equipas",
+      en: "contagious enthusiasm that gets teams moving",
+    },
+  },
+  {
+    name: { pt: "Carisma", en: "Woo" },
+    summary: {
+      pt: "gosta de conhecer pessoas novas e de criar ligação",
+      en: "enjoys meeting new people and building connection",
+    },
+  },
+  {
+    name: { pt: "Organização", en: "Arranger" },
+    summary: {
+      pt: "organiza com flexibilidade pessoas e recursos para máxima produtividade",
+      en: "arranges people and resources flexibly for maximum productivity",
+    },
+  },
+  {
+    name: { pt: "Excelência", en: "Maximizer" },
+    summary: {
+      pt: "transforma o que é bom em excelente",
+      en: "turns something strong into something superb",
+    },
+  },
+];

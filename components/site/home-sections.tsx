@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { ProjectCover } from "@/components/site/project-cover";
 import { CERTIFICATION_GROUPS } from "@/lib/content/certifications";
-import { ABOUT, AWARDS, EDUCATION, EXPERIENCE, HERO, PERSON, PROOF } from "@/lib/content/profile";
+import { ABOUT, AWARDS, EDUCATION, EXPERIENCE, HERO, PERSON, STRENGTHS } from "@/lib/content/profile";
 import { UI, fill, projectHref, t, nameOf } from "@/lib/content/ui";
 import type { Locale, Project } from "@/types/content";
 
@@ -44,6 +44,7 @@ export function Hero({ locale, cvHref }: { locale: Locale; cvHref: string | null
             {t(locale, HERO.headline)}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{t(locale, HERO.intro)}</p>
+          <p className="mt-4 max-w-2xl leading-relaxed text-muted">{t(locale, HERO.commitment)}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href={`/${locale}/projects`}
@@ -93,17 +94,6 @@ export function Hero({ locale, cvHref }: { locale: Locale; cvHref: string | null
           </div>
         </figure>
       </div>
-
-      <dl className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-        {PROOF.map((fact) => (
-          <div key={fact.label.en} className="flex flex-col bg-background p-5">
-            <dt className="text-sm text-muted">{fact.label[locale]}</dt>
-            <dd className="mt-1 order-first text-3xl font-semibold tracking-tight text-foreground">
-              {typeof fact.value === "string" ? fact.value : fact.value[locale]}
-            </dd>
-          </div>
-        ))}
-      </dl>
     </section>
   );
 }
@@ -247,6 +237,19 @@ export function About({ locale }: { locale: Locale }) {
                 </li>
               ))}
             </ul>
+          </div>
+          <div>
+            <h3 className="eyebrow">{t(locale, UI.about.strengths)}</h3>
+            <ol className="mt-3 space-y-1 text-muted">
+              {STRENGTHS.map((strength) => (
+                <li key={strength.name.en} title={strength.summary[locale]}>
+                  {strength.name[locale]}
+                </li>
+              ))}
+            </ol>
+            <a className="link mt-3 inline-block" href={`/cliftonstrengths-${locale}.pdf`} target="_blank" rel="noopener">
+              {t(locale, UI.about.strengthsCert)}
+            </a>
           </div>
           <div>
             <h3 className="eyebrow">{t(locale, UI.about.awards)}</h3>

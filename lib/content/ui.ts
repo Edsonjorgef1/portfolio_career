@@ -59,6 +59,8 @@ export const UI = {
     languages: { pt: "Línguas", en: "Languages" },
     education: { pt: "Formação", en: "Education" },
     awards: { pt: "Reconhecimentos", en: "Recognition" },
+    strengths: { pt: "Pontos fortes · CliftonStrengths", en: "Strengths · CliftonStrengths" },
+    strengthsCert: { pt: "Ver certificado Gallup (PDF)", en: "View Gallup certificate (PDF)" },
     certifications: { pt: "Certificações ({n})", en: "Certifications ({n})" },
   },
   contact: {

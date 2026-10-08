@@ -187,6 +187,61 @@ export const projects: Project[] = [
     order: 70,
   },
 
+  // ───────────────────────────────────────────── Manna Software (archived, became Karibu Menu)
+  {
+    slug: "manna-software",
+    name: "Manna Software",
+    tagline: {
+      pt: "Sistema para restaurantes: cardápio digital, pedidos por mesa via QR Code, promoções e gestão multi-restaurante. Continuou como Karibu Menu.",
+      en: "Restaurant system: digital menu, per-table QR ordering, promotions and multi-restaurant management. Continued as Karibu Menu.",
+    },
+    period: "2025–2026",
+    status: "archived",
+    categories: ["hospitality", "saas"],
+    tech: ["Laravel", "PHP", "MySQL"],
+    role: {
+      pt: "Líder técnico e co-criador do produto",
+      en: "Technical lead and product co-creator",
+    },
+    authorship: "main",
+    problem: {
+      pt: "Restaurantes precisavam de actualizar a carta sem a reimprimir e de acompanhar os pedidos de cada mesa, sem soluções pensadas para o mercado moçambicano.",
+      en: "Restaurants needed to update the menu without reprinting it and to follow each table's orders, without tools designed for the Mozambican market.",
+    },
+    solution: {
+      pt: "Plataforma em Laravel com cardápio digital, gestão de conteúdos e promoções, pedidos por mesa via QR Code com acompanhamento do estado em tempo real, e administração de vários restaurantes. Liderança da equipa de desenvolvimento, definição do roadmap e validação da arquitectura. O projecto Manna Software foi arquivado em Fevereiro de 2026 e o produto continuou com o nome Karibu Menu.",
+      en: "A Laravel platform with a digital menu, content and promotion management, per-table QR ordering with real-time status tracking, and multi-restaurant administration. Led the development team, set the roadmap and validated the architecture. The Manna Software project was archived in February 2026 and the product continued under the name Karibu Menu.",
+    },
+    decisions: [
+      {
+        title: { pt: "Um QR Code por mesa", en: "One QR code per table" },
+        body: {
+          pt: "Cada mesa tem o seu QR Code, por isso o pedido chega à cozinha já associado à mesa e o cliente acompanha o estado no telemóvel.",
+          en: "Each table has its own QR code, so the order reaches the kitchen already tied to the table and the customer follows its status on their phone.",
+        },
+      },
+    ],
+    results: [
+      {
+        value: "04/2025 – 02/2026",
+        label: { pt: "período do projecto, antes de passar a Karibu Menu", en: "project period, before it became Karibu Menu" },
+        source: { pt: "Edson (Out 2026)", en: "Edson (Oct 2026)" },
+      },
+    ],
+    sdgs: [
+      {
+        goal: 8,
+        contribution: {
+          pt: "Ferramentas digitais para pequenos restaurantes gerirem a carta e os pedidos sem custos de impressão.",
+          en: "Digital tools for small restaurants to manage their menu and orders without printing costs.",
+        },
+      },
+    ],
+    images: [],
+    links: [],
+    order: 71,
+  },
+
   // ───────────────────────────────────────────── MyGym / FF Gym
   {
     slug: "mygym",
@@ -307,7 +362,7 @@ export const projects: Project[] = [
       },
     ],
     links: [],
-    order: 71,
+    order: 72,
   },
 
   // ───────────────────────────────────────────── Hospitality networks
@@ -445,7 +500,7 @@ export const projects: Project[] = [
       },
     ],
     links: [],
-    order: 72,
+    order: 73,
   },
 
   // ───────────────────────────────────────────── edsonfrancisco.site
@@ -537,7 +592,7 @@ export const projects: Project[] = [
     links: [
       { label: { pt: "Ver o site", en: "Visit the site" }, href: "https://www.edsonfrancisco.site" },
     ],
-    order: 73,
+    order: 74,
   },
 
   // ───────────────────────────────────────────── Casa Msika
@@ -602,7 +657,7 @@ export const projects: Project[] = [
       },
     ],
     links: [{ label: { pt: "Ver o site", en: "Visit the site" }, href: "https://casamsika.com" }],
-    order: 74,
+    order: 75,
   },
 
   // ───────────────────────────────────────────── GitHub Actions template
@@ -676,7 +731,7 @@ export const projects: Project[] = [
         href: "https://github.com/Edsonjorgef1/GitHub-Actions-Template",
       },
     ],
-    order: 75,
+    order: 76,
   },
 
   // ───────────────────────────────────────────── SiteHealth
@@ -749,7 +804,7 @@ export const projects: Project[] = [
     },
     images: [],
     links: [],
-    order: 76,
+    order: 77,
   },
 
   // ───────────────────────────────────────────── Perpi Dashboard
@@ -824,7 +879,7 @@ export const projects: Project[] = [
     ],
     images: [],
     links: [],
-    order: 77,
+    order: 78,
   },
 
   // ───────────────────────────────────────────── Residencial Bendiak
@@ -911,7 +966,7 @@ export const projects: Project[] = [
       },
     ],
     links: [],
-    order: 78,
+    order: 79,
   },
 
   // ───────────────────────────────────────────── MozLab
@@ -997,7 +1052,7 @@ export const projects: Project[] = [
     ],
     images: [],
     links: [],
-    order: 79,
+    order: 80,
   },
 
   // ───────────────────────────────────────────── SMS uSendIt
@@ -1063,7 +1118,7 @@ export const projects: Project[] = [
     ],
     images: [],
     links: [],
-    order: 80,
+    order: 81,
   },
 
   // ───────────────────────────────────────────── MiCacao Wallet
@@ -1152,7 +1207,7 @@ export const projects: Project[] = [
         href: "https://github.com/Identi-OpenSource/micacao-wallet",
       },
     ],
-    order: 81,
+    order: 82,
   },
 
   // ───────────────────────────────────────────── Learning Wisdom
@@ -1184,6 +1239,6 @@ export const projects: Project[] = [
     results: [],
     images: [],
     links: [],
-    order: 82,
+    order: 83,
   },
 ];
