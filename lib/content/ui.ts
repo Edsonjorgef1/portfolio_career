@@ -93,6 +93,10 @@ export const UI = {
     partners: { pt: "Parceiros", en: "Partners" },
     videos: { pt: "Vídeos", en: "Videos" },
     openImage: { pt: "Abrir imagem em tamanho real", en: "Open full-size image" },
+    carousel: { pt: "Imagens do projecto", en: "Project images" },
+    prevImage: { pt: "Imagem anterior", en: "Previous image" },
+    nextImage: { pt: "Imagem seguinte", en: "Next image" },
+    slide: { pt: "Imagem {n} de {total}", en: "Image {n} of {total}" },
     next: { pt: "Projecto seguinte", en: "Next project" },
     prev: { pt: "Projecto anterior", en: "Previous project" },
     noScreens: {

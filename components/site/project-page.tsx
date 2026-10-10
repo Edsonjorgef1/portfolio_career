@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { ImageCarousel } from "@/components/site/image-carousel";
 import { ProjectCover } from "@/components/site/project-cover";
 import { CATEGORIES, STATUS_LABEL } from "@/lib/content/categories";
 import { SDGS, sdgIcon } from "@/lib/content/sdgs";
@@ -118,7 +119,9 @@ export function ProjectPage({
         )}
 
         <Block id="screens" title={t(locale, UI.project.screens)}>
-          {project.images.length > 0 ? (
+          {project.images.length > 1 ? (
+            <ImageCarousel images={project.images} locale={locale} />
+          ) : project.images.length === 1 ? (
             <ul className="grid gap-4 sm:grid-cols-2">
               {project.images.map((image) => (
                 <li key={image.src} className={image.device === "desktop" ? "sm:col-span-2" : ""}>
