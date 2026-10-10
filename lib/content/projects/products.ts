@@ -4,6 +4,7 @@ export const projects: Project[] = [
   // ───────────────────────────────────────────── Karibu Menu
   {
     slug: "karibu-menu",
+    hidden: true,
     name: "Karibu Menu",
     tagline: {
       pt: "Menu digital por QR Code e pedidos à mesa para restaurantes e pequenos negócios (antes Manna Software).",
@@ -187,13 +188,13 @@ export const projects: Project[] = [
     order: 70,
   },
 
-  // ───────────────────────────────────────────── Manna Software (archived, became Karibu Menu)
+  // ───────────────────────────────────────────── Manna Software (archived)
   {
     slug: "manna-software",
     name: "Manna Software",
     tagline: {
-      pt: "Sistema para restaurantes: cardápio digital, pedidos por mesa via QR Code, promoções e gestão multi-restaurante. Continuou como Karibu Menu.",
-      en: "Restaurant system: digital menu, per-table QR ordering, promotions and multi-restaurant management. Continued as Karibu Menu.",
+      pt: "Sistema para restaurantes: cardápio digital, pedidos por mesa via QR Code, promoções e gestão multi-restaurante. Arquivado em Fevereiro de 2026.",
+      en: "Restaurant system: digital menu, per-table QR ordering, promotions and multi-restaurant management. Archived in February 2026.",
     },
     period: "2025–2026",
     status: "archived",
@@ -209,8 +210,8 @@ export const projects: Project[] = [
       en: "Restaurants needed to update the menu without reprinting it and to follow each table's orders, without tools designed for the Mozambican market.",
     },
     solution: {
-      pt: "Plataforma em Laravel com cardápio digital, gestão de conteúdos e promoções, pedidos por mesa via QR Code com acompanhamento do estado em tempo real, e administração de vários restaurantes. Liderança da equipa de desenvolvimento, definição do roadmap e validação da arquitectura. O projecto Manna Software foi arquivado em Fevereiro de 2026 e o produto continuou com o nome Karibu Menu.",
-      en: "A Laravel platform with a digital menu, content and promotion management, per-table QR ordering with real-time status tracking, and multi-restaurant administration. Led the development team, set the roadmap and validated the architecture. The Manna Software project was archived in February 2026 and the product continued under the name Karibu Menu.",
+      pt: "Plataforma em Laravel com cardápio digital, gestão de conteúdos e promoções, pedidos por mesa via QR Code com acompanhamento do estado em tempo real, e administração de vários restaurantes. Liderança da equipa de desenvolvimento, definição do roadmap e validação da arquitectura. O projecto foi arquivado em Fevereiro de 2026.",
+      en: "A Laravel platform with a digital menu, content and promotion management, per-table QR ordering with real-time status tracking, and multi-restaurant administration. Led the development team, set the roadmap and validated the architecture. The project was archived in February 2026.",
     },
     decisions: [
       {
@@ -224,7 +225,7 @@ export const projects: Project[] = [
     results: [
       {
         value: "04/2025 – 02/2026",
-        label: { pt: "período do projecto, antes de passar a Karibu Menu", en: "project period, before it became Karibu Menu" },
+        label: { pt: "período do projecto, até ser arquivado", en: "project period, until it was archived" },
         source: { pt: "Edson (Out 2026)", en: "Edson (Oct 2026)" },
       },
     ],
@@ -237,7 +238,68 @@ export const projects: Project[] = [
         },
       },
     ],
-    images: [],
+    images: [
+      {
+        src: "/work/manna-software/01.webp",
+        alt: {
+          pt: "Estado do pedido no telemóvel do cliente: \"Em preparo\", mesa, hora, tempo estimado de preparo e selector PT/EN",
+          en: "Order status on the customer's phone: \"Preparing\", table, time, estimated preparation time and PT/EN selector",
+        },
+        width: 862,
+        height: 1766,
+        device: "mobile",
+      },
+      {
+        src: "/work/manna-software/02.webp",
+        alt: {
+          pt: "Detalhe do pedido no telemóvel com número, mesa, pratos, quantidades e preços em meticais",
+          en: "Order detail on a phone with order number, table, dishes, quantities and prices in meticais",
+        },
+        width: 980,
+        height: 1814,
+        device: "mobile",
+      },
+      {
+        src: "/work/manna-software/03.webp",
+        alt: {
+          pt: "Cartão de pedido \"Em preparo\" com pratos locais, observações (\"sem sal\") e total em meticais",
+          en: "\"Preparing\" order card with local dishes, notes (\"no salt\") and total in meticais",
+        },
+        width: 1240,
+        height: 1258,
+        device: "desktop",
+      },
+      {
+        src: "/work/manna-software/04.webp",
+        alt: {
+          pt: "Cartão de pedido com o estado \"Entregue\" e a lista de itens",
+          en: "Order card with the \"Delivered\" status and the item list",
+        },
+        width: 1252,
+        height: 1294,
+        device: "desktop",
+      },
+      {
+        src: "/work/manna-software/05.webp",
+        alt: {
+          pt: "Cartão de pedido com o estado \"Pronto\" e o total",
+          en: "Order card with the \"Ready\" status and the total",
+        },
+        width: 1284,
+        height: 922,
+        device: "desktop",
+      },
+      {
+        src: "/work/manna-software/06.webp",
+        alt: {
+          pt: "Cartão de pedido com o estado \"Recebido\" antes de a cozinha o aceitar",
+          en: "Order card with the \"Received\" status before the kitchen accepts it",
+        },
+        width: 1290,
+        height: 1058,
+        device: "desktop",
+      },
+    ],
     links: [],
     order: 71,
   },
