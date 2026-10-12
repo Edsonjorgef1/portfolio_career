@@ -116,6 +116,8 @@ export type Project = {
   featured?: boolean;
   /** Kept in the source but not shown on the site. */
   hidden?: boolean;
+  /** Has a page reachable by URL (not indexed), but is left out of every list. */
+  unlisted?: boolean;
   /** Lower comes first in the gallery. */
   order: number;
 };

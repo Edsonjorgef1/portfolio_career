@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { PROJECTS, getProject } from "@/lib/content/projects";
+import { PAGE_PROJECTS, getProject } from "@/lib/content/projects";
 import { LOCALES } from "@/lib/content/ui";
 import { OG_SIZE, projectOgImage } from "@/lib/og";
 import type { Locale } from "@/types/content";
@@ -10,7 +10,7 @@ export const contentType = "image/png";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return LOCALES.flatMap((locale) => PROJECTS.map((project) => ({ locale, slug: project.slug })));
+  return LOCALES.flatMap((locale) => PAGE_PROJECTS.map((project) => ({ locale, slug: project.slug })));
 }
 
 export const alt = "Edson Francisco — project";

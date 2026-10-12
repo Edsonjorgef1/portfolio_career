@@ -4,13 +4,13 @@ export const projects: Project[] = [
   // ───────────────────────────────────────────── Karibu Menu
   {
     slug: "karibu-menu",
-    hidden: true,
+    unlisted: true,
     name: "Karibu Menu",
     tagline: {
-      pt: "Menu digital por QR Code e pedidos à mesa para restaurantes e pequenos negócios (antes Manna Software).",
-      en: "QR-code digital menu and table ordering for restaurants and small businesses (formerly Manna Software).",
+      pt: "Menu digital por QR Code e pedidos à mesa para restaurantes e pequenos negócios.",
+      en: "QR-code digital menu and table ordering for restaurants and small businesses.",
     },
-    period: "2025–2026",
+    period: "2026",
     status: "development",
     categories: ["hospitality", "saas"],
     tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "Docker"],
@@ -24,8 +24,8 @@ export const projects: Project[] = [
       en: "Restaurants and small businesses in Mozambique reprint the menu every time a price changes and have no view of table orders. Foreign tools assume card payments and cut the service when a subscription payment fails.",
     },
     solution: {
-      pt: "Plataforma SaaS multi-empresa em Laravel: cada negócio gere o seu catálogo, gera QR Codes por mesa e recebe pedidos em tempo real. O cliente acompanha o estado do pedido (recebido, em preparo, pronto, entregue) no telemóvel, em PT ou EN. Produto co-detido; o nome Manna Software passou a Karibu Menu em 2026.",
-      en: "Multi-tenant Laravel SaaS: each business manages its catalogue, generates per-table QR codes and receives orders in real time. The customer follows the order status (received, preparing, ready, delivered) on their phone, in PT or EN. Co-owned product; the Manna Software name became Karibu Menu in 2026.",
+      pt: "Plataforma SaaS multi-empresa em Laravel: cada negócio gere o seu catálogo, gera QR Codes por mesa e recebe pedidos em tempo real. O cliente acompanha o estado do pedido (recebido, em preparo, pronto, entregue) no telemóvel, em PT ou EN. Produto co-detido.",
+      en: "Multi-tenant Laravel SaaS: each business manages its catalogue, generates per-table QR codes and receives orders in real time. The customer follows the order status (received, preparing, ready, delivered) on their phone, in PT or EN. Co-owned product.",
     },
     decisions: [
       {
@@ -126,61 +126,51 @@ export const projects: Project[] = [
       {
         src: "/work/karibu-menu/01.webp",
         alt: {
-          pt: "Estado do pedido no telemóvel do cliente: \"Em preparo\", mesa, hora, tempo estimado de preparo e selector PT/EN",
-          en: "Order status on the customer's phone: \"Preparing\", table, time, estimated preparation time and PT/EN selector",
+          pt: "Topo da landing page: \"O Seu Catálogo Digital de Boas-Vindas\", botões de demonstração e registo, e um cartão de mesa com QR Code e preços em meticais",
+          en: "Landing page hero: \"Your Digital Welcome Catalogue\", demo and sign-up buttons, and a table card with a QR code and prices in meticais",
         },
-        width: 862,
-        height: 1766,
-        device: "mobile",
+        width: 1600,
+        height: 1000,
+        device: "desktop",
       },
       {
         src: "/work/karibu-menu/02.webp",
         alt: {
-          pt: "Detalhe do pedido no telemóvel com número, mesa, pratos, quantidades e preços em meticais",
-          en: "Order detail on a phone with order number, table, dishes, quantities and prices in meticais",
+          pt: "A mesma landing page no telemóvel",
+          en: "The same landing page on a phone",
         },
-        width: 980,
-        height: 1814,
+        width: 780,
+        height: 1688,
         device: "mobile",
       },
       {
         src: "/work/karibu-menu/03.webp",
         alt: {
-          pt: "Cartão de pedido \"Em preparo\" com pratos locais, observações (\"sem sal\") e total em meticais",
-          en: "\"Preparing\" order card with local dishes, notes (\"no salt\") and total in meticais",
+          pt: "Secção \"Para qualquer sector\": doze tipos de negócio, de restaurantes e padarias a farmácias, oficinas e retalho",
+          en: "\"For any sector\" section: twelve business types, from restaurants and bakeries to pharmacies, workshops and retail",
         },
-        width: 1240,
-        height: 1258,
+        width: 1600,
+        height: 1075,
         device: "desktop",
       },
       {
         src: "/work/karibu-menu/04.webp",
         alt: {
-          pt: "Cartão de pedido com o estado \"Entregue\" e a lista de itens",
-          en: "Order card with the \"Delivered\" status and the item list",
+          pt: "\"Como funciona\" em três passos: criar o catálogo, imprimir o QR Code, o cliente aponta e vê",
+          en: "\"How it works\" in three steps: build the catalogue, print the QR code, the customer points and sees",
         },
-        width: 1252,
-        height: 1294,
+        width: 1600,
+        height: 695,
         device: "desktop",
       },
       {
         src: "/work/karibu-menu/05.webp",
         alt: {
-          pt: "Cartão de pedido com o estado \"Pronto\" e o total",
-          en: "Order card with the \"Ready\" status and the total",
+          pt: "Recursos: menu por QR Code, pedidos na mesa, relatórios de vendas, acessos ao perfil, gestão multi-unidade e cupões de fidelidade (em breve)",
+          en: "Features: QR-code menu, table ordering, sales reports, profile visits, multi-unit management and loyalty coupons (coming soon)",
         },
-        width: 1284,
-        height: 922,
-        device: "desktop",
-      },
-      {
-        src: "/work/karibu-menu/06.webp",
-        alt: {
-          pt: "Cartão de pedido com o estado \"Recebido\" antes de a cozinha o aceitar",
-          en: "Order card with the \"Received\" status before the kitchen accepts it",
-        },
-        width: 1290,
-        height: 1058,
+        width: 1600,
+        height: 917,
         device: "desktop",
       },
     ],
@@ -301,7 +291,8 @@ export const projects: Project[] = [
       },
     ],
     links: [],
-    order: 71,
+    // Not next to karibu-menu, so the prev/next links do not pair them.
+    order: 75.5,
   },
 
   // ───────────────────────────────────────────── MyGym / FF Gym

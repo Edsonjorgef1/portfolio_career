@@ -10,14 +10,17 @@ export const ALL_PROJECTS: Project[] = [...fams, ...govtech, ...healthCommunity,
   (a, b) => a.order - b.order,
 );
 
+/** Projects with a page, including unlisted ones. */
+export const PAGE_PROJECTS: Project[] = ALL_PROJECTS.filter((project) => !project.hidden);
+
 /** Projects shown on the site. */
-export const PROJECTS: Project[] = ALL_PROJECTS.filter((project) => !project.hidden);
+export const PROJECTS: Project[] = PAGE_PROJECTS.filter((project) => !project.unlisted);
 
 /** Shown in the "Open source & tooling" strip. */
 export const OPEN_SOURCE_SLUGS = ["laravel-teams-logging", "github-actions-template", "sms-usendit", "micacao-wallet"];
 
 export function getProject(slug: string) {
-  return PROJECTS.find((project) => project.slug === slug);
+  return PAGE_PROJECTS.find((project) => project.slug === slug);
 }
 
 export function getFeatured() {
